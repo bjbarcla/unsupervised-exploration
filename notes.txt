@@ -34,5 +34,8 @@ user    8m19.750s
 sys     4m4.641s
 
 make kmeans-sweepk-ds4
+real    24m11.299s
+user    34m7.578s
+sys     15m55.578s
 
 

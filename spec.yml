@@ -7,9 +7,9 @@ datasets:
         - "unzip austin-animal-center-shelter-intakes-and-outcomes.zip"
       datafile: aac_intakes_outcomes.csv
       k-sweep: [2,86,4]
-      best-k-kmeans: 50?
-      best-k-gmm: ??
-      best-cov-type: ??
+      best-k-kmeans: 40
+      best-k-gmm: 20
+      best-cov-type: tied
       
       kmeans-graph: lda
       #best-k: 10
@@ -65,7 +65,7 @@ datasets:
 #        - "/bin/false"
       datafile: census_income_fixed2.csv
       k-sweep: [2,30,1]
-      best-k-kmeans: 2
+      best-k-kmeans: 5
       best-k-gmm: 7
       best-cov-type: spherical
       kmeans-graph: pca
