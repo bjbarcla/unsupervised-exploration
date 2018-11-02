@@ -1,0 +1,71 @@
+/home/bb/cs7641/proj3/venv/lib/python3.6/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:47: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+  import imp
+Carry on... ds1 : X_train cols (6) == X_test cols (6)
+/home/bb/cs7641/proj3/venv/lib/python3.6/site-packages/sklearn/utils/deprecation.py:58: DeprecationWarning: Class Imputer is deprecated; Imputer was deprecated in version 0.20 and will be removed in 0.22. Import impute.SimpleImputer from sklearn instead.
+  warnings.warn(msg, category=DeprecationWarning)
+/home/bb/cs7641/proj3/venv/lib/python3.6/site-packages/sklearn/utils/deprecation.py:58: DeprecationWarning: Class Imputer is deprecated; Imputer was deprecated in version 0.20 and will be removed in 0.22. Import impute.SimpleImputer from sklearn instead.
+  warnings.warn(msg, category=DeprecationWarning)
+Carry on... ds1 : X_train_prepared cols (16) == X_test_prepared cols (16)
+** -> kmeans ds1 k=2 elapsed seconds 1.088670253753662 <- took 1.0 second
+** -> silscore ds1 k=2 elapsed seconds 87.0624589920044 <- took 1.0 minute, 27.0 seconds
+Dataset=ds1 k=2 sil=0.3692376789897211
+** -> kmeans ds1 k=6 elapsed seconds 2.583972930908203 <- took 2.0 seconds
+** -> silscore ds1 k=6 elapsed seconds 95.99994444847107 <- took 1.0 minute, 35.0 seconds
+Dataset=ds1 k=6 sil=0.28617373084916126
+** -> kmeans ds1 k=10 elapsed seconds 3.3747003078460693 <- took 3.0 seconds
+** -> silscore ds1 k=10 elapsed seconds 107.1197624206543 <- took 1.0 minute, 47.0 seconds
+Dataset=ds1 k=10 sil=0.3543479486985052
+** -> kmeans ds1 k=14 elapsed seconds 5.287046670913696 <- took 5.0 seconds
+** -> silscore ds1 k=14 elapsed seconds 100.33852744102478 <- took 1.0 minute, 40.0 seconds
+Dataset=ds1 k=14 sil=0.3873610519846546
+** -> kmeans ds1 k=18 elapsed seconds 14.631067752838135 <- took 14.0 seconds
+** -> silscore ds1 k=18 elapsed seconds 103.39770412445068 <- took 1.0 minute, 43.0 seconds
+Dataset=ds1 k=18 sil=0.4342390182589654
+** -> kmeans ds1 k=22 elapsed seconds 14.929878950119019 <- took 14.0 seconds
+** -> silscore ds1 k=22 elapsed seconds 97.6139976978302 <- took 1.0 minute, 37.0 seconds
+Dataset=ds1 k=22 sil=0.463769092304017
+** -> kmeans ds1 k=26 elapsed seconds 19.307055473327637 <- took 19.0 seconds
+** -> silscore ds1 k=26 elapsed seconds 90.84816861152649 <- took 1.0 minute, 30.0 seconds
+Dataset=ds1 k=26 sil=0.4804893285362517
+** -> kmeans ds1 k=30 elapsed seconds 17.205341815948486 <- took 17.0 seconds
+** -> silscore ds1 k=30 elapsed seconds 127.08231973648071 <- took 2.0 minutes, 7.0 seconds
+Dataset=ds1 k=30 sil=0.5083881590484388
+** -> kmeans ds1 k=34 elapsed seconds 19.92887306213379 <- took 19.0 seconds
+** -> silscore ds1 k=34 elapsed seconds 101.59056854248047 <- took 1.0 minute, 41.0 seconds
+Dataset=ds1 k=34 sil=0.5271820432912026
+** -> kmeans ds1 k=38 elapsed seconds 27.622358798980713 <- took 27.0 seconds
+** -> silscore ds1 k=38 elapsed seconds 90.10358667373657 <- took 1.0 minute, 30.0 seconds
+Dataset=ds1 k=38 sil=0.5337295841969807
+** -> kmeans ds1 k=42 elapsed seconds 30.099262237548828 <- took 30.0 seconds
+** -> silscore ds1 k=42 elapsed seconds 107.7093734741211 <- took 1.0 minute, 47.0 seconds
+Dataset=ds1 k=42 sil=0.5336320884186502
+** -> kmeans ds1 k=46 elapsed seconds 36.743637800216675 <- took 36.0 seconds
+** -> silscore ds1 k=46 elapsed seconds 151.37598371505737 <- took 2.0 minutes, 31.0 seconds
+Dataset=ds1 k=46 sil=0.5391647092905127
+** -> kmeans ds1 k=50 elapsed seconds 46.19161796569824 <- took 46.0 seconds
+** -> silscore ds1 k=50 elapsed seconds 126.448317527771 <- took 2.0 minutes, 6.0 seconds
+Dataset=ds1 k=50 sil=0.5515550327715515
+** -> kmeans ds1 k=54 elapsed seconds 37.55250787734985 <- took 37.0 seconds
+** -> silscore ds1 k=54 elapsed seconds 148.99131274223328 <- took 2.0 minutes, 28.0 seconds
+Dataset=ds1 k=54 sil=0.5346225235676005
+** -> kmeans ds1 k=58 elapsed seconds 46.428826570510864 <- took 46.0 seconds
+** -> silscore ds1 k=58 elapsed seconds 98.42401337623596 <- took 1.0 minute, 38.0 seconds
+Dataset=ds1 k=58 sil=0.5307536518005064
+** -> kmeans ds1 k=62 elapsed seconds 30.268033504486084 <- took 30.0 seconds
+** -> silscore ds1 k=62 elapsed seconds 91.14850115776062 <- took 1.0 minute, 31.0 seconds
+Dataset=ds1 k=62 sil=0.5363439941913672
+** -> kmeans ds1 k=66 elapsed seconds 61.52591133117676 <- took 1.0 minute, 1.0 second
+** -> silscore ds1 k=66 elapsed seconds 121.6391966342926 <- took 2.0 minutes, 1.0 second
+Dataset=ds1 k=66 sil=0.541359950627381
+** -> kmeans ds1 k=70 elapsed seconds 100.00170040130615 <- took 1.0 minute, 40.0 seconds
+** -> silscore ds1 k=70 elapsed seconds 150.2319712638855 <- took 2.0 minutes, 30.0 seconds
+Dataset=ds1 k=70 sil=0.5498262081729043
+** -> kmeans ds1 k=74 elapsed seconds 95.57201600074768 <- took 1.0 minute, 35.0 seconds
+** -> silscore ds1 k=74 elapsed seconds 132.90060949325562 <- took 2.0 minutes, 12.0 seconds
+Dataset=ds1 k=74 sil=0.5224045822329351
+** -> kmeans ds1 k=78 elapsed seconds 125.53090286254883 <- took 2.0 minutes, 5.0 seconds
+** -> silscore ds1 k=78 elapsed seconds 179.90168929100037 <- took 2.0 minutes, 59.0 seconds
+Dataset=ds1 k=78 sil=0.5380220340686762
+** -> kmeans ds1 k=82 elapsed seconds 128.22404098510742 <- took 2.0 minutes, 8.0 seconds
+** -> silscore ds1 k=82 elapsed seconds 174.46094346046448 <- took 2.0 minutes, 54.0 seconds
+Dataset=ds1 k=82 sil=0.5100364371831041

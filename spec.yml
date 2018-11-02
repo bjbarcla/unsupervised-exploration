@@ -1,0 +1,89 @@
+datasets:
+  ds1:
+      name: aac_intakes_outcomes
+      format: csv
+      getcmds:
+        - "kaggle datasets download -d aaronschlegel/austin-animal-center-shelter-intakes-and-outcomes"
+        - "unzip austin-animal-center-shelter-intakes-and-outcomes.zip"
+      datafile: aac_intakes_outcomes.csv
+      k-sweep: [2,86,4]
+      best-k: 50
+      kmeans-graph: lda
+      #best-k: 10
+      synthesize_attributes:
+        - new_attrib: 'outcome_type'
+          source_attrib: 'outcome_type'
+          method: 'regex_match_threshold'
+          regex:  'Adopt|Return'
+          newval_if_match:   'happy'
+          newval_if_nomatch: 'sad'
+          
+      scoring: f1
+      target_attrib: outcome_type
+      categorical_attributes:
+        - intake_type
+        - animal_type
+#        - breed
+        - 'sex_upon_intake'
+#        - color
+#        - 'intake_weekday'
+        
+      numerical_attributes: 
+        - 'age_upon_intake_(days)'
+        - 'time_in_shelter_days'
+
+      all_attribs: ['age_upon_outcome', 'animal_id_outcome', 'date_of_birth',
+      'outcome_subtype', 'outcome_type', 'sex_upon_outcome',
+      'age_upon_outcome_(days)', 'age_upon_outcome_(years)',
+      'age_upon_outcome_age_group', 'outcome_datetime', 'outcome_month',
+       'outcome_year', 'outcome_monthyear', 'outcome_weekday', 'outcome_hour',
+       'outcome_number', 'dob_year', 'dob_month', 'dob_monthyear',
+       'age_upon_intake', 'animal_id_intake', 'animal_type', 'breed', 'color',
+       'found_location', 'intake_condition', 'intake_type', 'sex_upon_intake',
+       'count', 'age_upon_intake_(days)', 'age_upon_intake_(years)',
+       'age_upon_intake_age_group', 'intake_datetime', 'intake_month',
+       'intake_year', 'intake_monthyear', 'intake_weekday', 'intake_hour',
+       'intake_number', 'time_in_shelter', 'time_in_shelter_days']
+  ds4:
+      name: census_income
+      format: csv
+      getcmds:
+        - "wget http://archive.ics.uci.edu/ml/machine-learning-databases/adult/Index"
+        - "wget http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data"
+        - "wget http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.names"
+        - "wget http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.test"
+      getfiles: [adult.names, adult.test, adult.data]
+      cleancmds:
+        - "cat adult.names | grep -v '^|' | grep : | sed 's/:.*//' | tr '\n' ',' | sed 's/,$//' > header.csv"
+        - "echo ',income_gt_50k' >> header.csv"
+        - "cat adult.data adult.test | sed 's/>50K\\.\\?/y/' | sed 's/<=50K\\.\\?/n/' > all.data"
+        - "cat header.csv all.data | grep -v '^|' > census_income_fixed2.csv"
+#        - "head census_income_fixed2.csv"
+#        - "/bin/false"
+      datafile: census_income_fixed2.csv
+      k-sweep: [2,30,1]
+      best-k: 2
+      best-k-gmm: 7
+      kmeans-graph: pca
+      numerical_attributes:
+        - age
+        - capital-gain
+        - education-num
+        - capital-loss
+        - hours-per-week
+        - fnlwgt
+      categorical_attributes:
+        - workclass
+        - education
+        - marital-status
+        - occupation
+        - relationship
+        - race
+#        - native-country
+      target_attrib: 'income_gt_50k'
+      verdict: ~
+      verdict_reason: ~
+
+#experiments:
+#  e1:
+    
