@@ -253,3 +253,8 @@ Dataset=ds1 k=82 cov_type=spherical sil=0.4295382221092289
 ** -> sil gmm k=82 cov_type=diag elapsed seconds 224.12434768676758 <- took 3.0 minutes, 44.0 seconds
 Dataset=ds1 k=82 cov_type=diag sil=0.26090131740408606
 ** -> gmm k=82 cov_type=tied elapsed seconds 4.172325134277344e-05 <- took less than 1 second
+** -> sil gmm k=82 cov_type=tied elapsed seconds 214.86331152915955 <- took 3.0 minutes, 34.0 seconds
+Dataset=ds1 k=82 cov_type=tied sil=0.49918775501064994
+** -> gmm k=82 cov_type=full elapsed seconds 2.7894973754882812e-05 <- took less than 1 second
+** -> sil gmm k=82 cov_type=full elapsed seconds 221.0227026939392 <- took 3.0 minutes, 41.0 seconds
+Dataset=ds1 k=82 cov_type=full sil=0.2521138549649061

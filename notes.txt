@@ -1,0 +1,11 @@
+make gmm-sweepk-CH-ds4
+real    30m49.786s
+user    89m57.938s
+sys     49m54.953s
+
+make gmm-sweepk-ds1
+real    275m29.679s
+user    328m12.656s
+sys     196m35.531s
+
+

@@ -277,3 +277,68 @@ Dataset=ds4 k=24 cov_type=spherical CH=2050.7851449014893
 ** -> CH gmm k=24 cov_type=diag elapsed seconds 0.05434560775756836 <- took less than 1 second
 Dataset=ds4 k=24 cov_type=diag CH=1066.1272553197261
 ** -> gmm k=24 cov_type=tied elapsed seconds 3.4809112548828125e-05 <- took less than 1 second
+** -> CH gmm k=24 cov_type=tied elapsed seconds 0.0537264347076416 <- took less than 1 second
+Dataset=ds4 k=24 cov_type=tied CH=1291.8546174710525
+** -> gmm k=24 cov_type=full elapsed seconds 2.574920654296875e-05 <- took less than 1 second
+** -> CH gmm k=24 cov_type=full elapsed seconds 0.05212593078613281 <- took less than 1 second
+Dataset=ds4 k=24 cov_type=full CH=1024.3494023987976
+** -> gmm k=25 cov_type=spherical elapsed seconds 2.4557113647460938e-05 <- took less than 1 second
+** -> CH gmm k=25 cov_type=spherical elapsed seconds 0.05261421203613281 <- took less than 1 second
+Dataset=ds4 k=25 cov_type=spherical CH=2018.6830568359355
+** -> gmm k=25 cov_type=diag elapsed seconds 2.7418136596679688e-05 <- took less than 1 second
+** -> CH gmm k=25 cov_type=diag elapsed seconds 0.05425691604614258 <- took less than 1 second
+Dataset=ds4 k=25 cov_type=diag CH=1025.3901608030665
+** -> gmm k=25 cov_type=tied elapsed seconds 2.7418136596679688e-05 <- took less than 1 second
+** -> CH gmm k=25 cov_type=tied elapsed seconds 0.05020856857299805 <- took less than 1 second
+Dataset=ds4 k=25 cov_type=tied CH=1497.8483744085604
+** -> gmm k=25 cov_type=full elapsed seconds 2.5510787963867188e-05 <- took less than 1 second
+** -> CH gmm k=25 cov_type=full elapsed seconds 0.050153255462646484 <- took less than 1 second
+Dataset=ds4 k=25 cov_type=full CH=1135.4451941191412
+** -> gmm k=26 cov_type=spherical elapsed seconds 2.6226043701171875e-05 <- took less than 1 second
+** -> CH gmm k=26 cov_type=spherical elapsed seconds 0.05621600151062012 <- took less than 1 second
+Dataset=ds4 k=26 cov_type=spherical CH=1973.1902912645799
+** -> gmm k=26 cov_type=diag elapsed seconds 2.5033950805664062e-05 <- took less than 1 second
+** -> CH gmm k=26 cov_type=diag elapsed seconds 0.07764005661010742 <- took less than 1 second
+Dataset=ds4 k=26 cov_type=diag CH=919.7441643297169
+** -> gmm k=26 cov_type=tied elapsed seconds 2.8371810913085938e-05 <- took less than 1 second
+** -> CH gmm k=26 cov_type=tied elapsed seconds 0.08260416984558105 <- took less than 1 second
+Dataset=ds4 k=26 cov_type=tied CH=1411.9157338124194
+** -> gmm k=26 cov_type=full elapsed seconds 3.62396240234375e-05 <- took less than 1 second
+** -> CH gmm k=26 cov_type=full elapsed seconds 0.06810975074768066 <- took less than 1 second
+Dataset=ds4 k=26 cov_type=full CH=1119.1754261458004
+** -> gmm k=27 cov_type=spherical elapsed seconds 2.7894973754882812e-05 <- took less than 1 second
+** -> CH gmm k=27 cov_type=spherical elapsed seconds 0.08957433700561523 <- took less than 1 second
+Dataset=ds4 k=27 cov_type=spherical CH=1924.1264443075072
+** -> gmm k=27 cov_type=diag elapsed seconds 2.4318695068359375e-05 <- took less than 1 second
+** -> CH gmm k=27 cov_type=diag elapsed seconds 0.05723381042480469 <- took less than 1 second
+Dataset=ds4 k=27 cov_type=diag CH=976.7025874775074
+** -> gmm k=27 cov_type=tied elapsed seconds 3.170967102050781e-05 <- took less than 1 second
+** -> CH gmm k=27 cov_type=tied elapsed seconds 0.05637526512145996 <- took less than 1 second
+Dataset=ds4 k=27 cov_type=tied CH=1324.3396878180895
+** -> gmm k=27 cov_type=full elapsed seconds 2.7894973754882812e-05 <- took less than 1 second
+** -> CH gmm k=27 cov_type=full elapsed seconds 0.05536508560180664 <- took less than 1 second
+Dataset=ds4 k=27 cov_type=full CH=1063.077444617144
+** -> gmm k=28 cov_type=spherical elapsed seconds 2.8371810913085938e-05 <- took less than 1 second
+** -> CH gmm k=28 cov_type=spherical elapsed seconds 0.053113698959350586 <- took less than 1 second
+Dataset=ds4 k=28 cov_type=spherical CH=1873.7810596625059
+** -> gmm k=28 cov_type=diag elapsed seconds 2.5033950805664062e-05 <- took less than 1 second
+** -> CH gmm k=28 cov_type=diag elapsed seconds 0.06248760223388672 <- took less than 1 second
+Dataset=ds4 k=28 cov_type=diag CH=953.2821580913767
+** -> gmm k=28 cov_type=tied elapsed seconds 2.9325485229492188e-05 <- took less than 1 second
+** -> CH gmm k=28 cov_type=tied elapsed seconds 0.05756568908691406 <- took less than 1 second
+Dataset=ds4 k=28 cov_type=tied CH=1295.894165135302
+** -> gmm k=28 cov_type=full elapsed seconds 3.075599670410156e-05 <- took less than 1 second
+** -> CH gmm k=28 cov_type=full elapsed seconds 0.05870652198791504 <- took less than 1 second
+Dataset=ds4 k=28 cov_type=full CH=1008.8150431647019
+** -> gmm k=29 cov_type=spherical elapsed seconds 2.4318695068359375e-05 <- took less than 1 second
+** -> CH gmm k=29 cov_type=spherical elapsed seconds 0.051759958267211914 <- took less than 1 second
+Dataset=ds4 k=29 cov_type=spherical CH=1820.1776316975727
+** -> gmm k=29 cov_type=diag elapsed seconds 2.2649765014648438e-05 <- took less than 1 second
+** -> CH gmm k=29 cov_type=diag elapsed seconds 0.06374788284301758 <- took less than 1 second
+Dataset=ds4 k=29 cov_type=diag CH=920.0901761108262
+** -> gmm k=29 cov_type=tied elapsed seconds 2.8848648071289062e-05 <- took less than 1 second
+** -> CH gmm k=29 cov_type=tied elapsed seconds 0.0633077621459961 <- took less than 1 second
+Dataset=ds4 k=29 cov_type=tied CH=895.3921322696281
+** -> gmm k=29 cov_type=full elapsed seconds 2.5272369384765625e-05 <- took less than 1 second
+** -> CH gmm k=29 cov_type=full elapsed seconds 0.05881667137145996 <- took less than 1 second
+Dataset=ds4 k=29 cov_type=full CH=981.0262390490575

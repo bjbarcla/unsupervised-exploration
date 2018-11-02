@@ -222,15 +222,24 @@ def gmm_graph(dataset):
     # do all the same data prep as we did in the analysis project
     X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset)
     k = spec['datasets'][dataset]['best-k-gmm']
+    cov_type = spec['datasets'][dataset]['best-cov-type']
 
     from sklearn.decomposition import PCA
+    from sklearn.mixture import GaussianMixture
+    from sklearn import metrics
+
     pca = PCA(n_components=2)
     #oldname#transformed = timeit(lambda: pd.DataFrame(pca.fit_transform(X_train)), f"PCA projection for {dataset}")
     pca_2d = timeit(lambda: pca.fit_transform(X_train), f"PCA projection for {dataset}")
     print(pca_2d.shape)
-    kmeans_model = timeit(lambda: KMeans(n_clusters=k, random_state=1).fit(X_train), f"kmeans {dataset} k={k}")
-    labels = kmeans_model.labels_
-    print(labels)
+
+    clusterer = timeit(lambda: GaussianMixture(n_components=k, covariance_type=cov_type, max_iter=200, random_state=0), f"gmm k={k} cov_type={cov_type}")
+    timeit(lambda: clusterer.fit(X_train), f"gmm fit")
+    labels=timeit(lambda: clusterer.predict(X_train), "gmm run")
+
+    #kmeans_model = timeit(lambda: KMeans(n_clusters=k, random_state=1).fit(X_train), f"kmeans {dataset} k={k}")
+    #labels = kmeans_model.labels_
+    #print(labels)
     # https://www.dummies.com/programming/big-data/data-science/how-to-visualize-the-clusters-in-a-k-means-unsupervised-learning-model/
     import pylab as pl
 
@@ -249,6 +258,6 @@ def gmm_graph(dataset):
         
     pl.title(f'K-means clusters for dataset {dataset}')
     #pl.show()
-    png=f"{dataset}-kmeans-clusterviz.png"
+    png=f"{dataset}-gmm-clusterviz.png"
     pl.savefig(png, bbox_inches='tight')
     print("Wrote "+png)
