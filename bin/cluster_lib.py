@@ -86,11 +86,61 @@ def kmeans_graph_lda(dataset):
 cov_types = ['spherical', 'diag', 'tied', 'full']
 
 
+
+def kmeans_plot_sweep(dataset, measure):
+    algo="kmeans"
+    if measure=="silhouette":
+        logfile = f"{algo}-sweepk-{dataset}.log"
+        patt=f"Dataset={dataset} k=(\\d+) sil=(\S+)"
+    elif measure=="CH":
+        logfile = f"{algo}-sweepk-CH-{dataset}.log"
+        patt=f"Dataset={dataset} k=(\\d+) CH=(\S+)"
+    else:
+        system.exit(f"huh? measure={measure}")
+
+
+    #logfile = f"kmeans-sweepk-{opts.dataset}.log"
+    ks=[]
+    sils=[]
+    #floatpatt="\\d+\\.\\d+"
+    with open(logfile) as fh:
+        for line in fh:
+            #m=re.match(f"Dataset={opts.dataset} k=(\d+) sil=({floatpatt})", line)
+            m=re.match(patt, line)
+            if m:
+                ks.append(int(m.group(1)))
+                sils.append(float(m.group(2)))
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from matplotlib.ticker import FormatStrFormatter
+    fig, ax = plt.subplots()
+    #ax.yaxis.set_major_formatter(FormatStrFormatter('%.3f'))
+
+    bestk=0
+    bestsil=0
+    for k,sil in zip(ks,sils):
+        if sil > bestsil:
+            bestk=k
+            bestsil=sil
+
+
+    #print(ks)
+    #print(sils)
+    plt.plot(ks,sils, 'x-', label=f"{measure} score")
+    plt.title(f"{algo} {measure} Score, varying k\nbest k={bestk} ({measure} score={bestsil:.3f})")
+    plt.xlabel("k")
+    plt.ylabel(f"{measure} Score")
+    png=f"{dataset}-{algo}-{measure}-ksweep.png"
+    plt.savefig(png, bbox_inches='tight')
+    print("Wrote "+png)
+    plt.clf()
+
+
 def gmm_plot_sweep(dataset, measure):
     algo="gmm"
     if measure=="silhouette":
         logfile = f"{algo}-sweepk-{dataset}.log"
-        patt=f"Dataset={dataset} k=(\\d+) cov_type=(\\S+) sil=({floatpatt})"
+        patt=f"Dataset={dataset} k=(\\d+) cov_type=(\\S+) sil=(\S+)"
     elif measure=="CH":
         logfile = f"{algo}-sweepk-CH-{dataset}.log"
         patt=f"Dataset={dataset} k=(\\d+) cov_type=(\\S+) CH=(\S+)"

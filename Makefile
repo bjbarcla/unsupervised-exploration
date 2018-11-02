@@ -81,5 +81,11 @@ plot-gmm-ksweep-%:
 plot-gmm-ksweep-CH-%:
 	$(with_venv) time unbuffer bin/cluster_util.py -s $* -a gmm-plot-ksweep-CH
 
+plot-kmeans-ksweep-CH-%:
+	$(with_venv) time unbuffer bin/cluster_util.py -s $* -a kmeans-plot-ksweep-CH
+
 plot-kmeans-clusters-%:
 	$(with_venv) time unbuffer bin/cluster_util.py -s $* -a kmeans-plot-clusters
+
+all-sweeps: plot-kmeans-ksweep-CH-ds1 plot-kmeans-ksweep-CH-ds4 plot-kmeans-ksweep-ds1 plot-kmeans-ksweep-ds4 plot-gmm-ksweep-CH-ds1 plot-gmm-ksweep-CH-ds4 plot-gmm-ksweep-ds1 plot-gmm-ksweep-ds4
+	echo okay

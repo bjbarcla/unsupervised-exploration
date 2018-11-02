@@ -15,7 +15,7 @@ from cluster_lib import *
 import argparse
 
 
-actions_list="list,kmeans,kmeans-graph,kmeans-plot-ksweep,gmm-sweepk,kmeans-plot-clusters,gmm-plot-ksweep,gmm-sweepk-CH,gmm-plot-ksweep-CH,kmeans-sweepk-CH"
+actions_list="list,kmeans,kmeans-graph,kmeans-plot-ksweep,gmm-sweepk,kmeans-plot-clusters,gmm-plot-ksweep,gmm-sweepk-CH,gmm-plot-ksweep-CH,kmeans-sweepk-CH,kmeans-plot-ksweep-CH"
 
 
 if __name__ == '__main__':
@@ -108,47 +108,15 @@ if __name__ == '__main__':
     elif opts.action=="gmm-plot-ksweep-CH":
         gmm_plot_sweep(dataset, "CH")
         exit(0)        
-
+    elif opts.action=="kmeans-plot-ksweep-CH":
+        kmeans_plot_sweep(dataset, "CH")
+        exit(0)        
     elif opts.action=="kmeans-plot-ksweep":
-        logfile = f"kmeans-sweepk-{opts.dataset}.log"
-        ks=[]
-        sils=[]
-        floatpatt="\\d+\\.\\d+"
-        with open(logfile) as fh:
-            for line in fh:
-                m=re.match(f"Dataset={opts.dataset} k=(\d+) sil=({floatpatt})", line)
-                if m:
-                    ks.append(int(m.group(1)))
-                    sils.append(float(m.group(2)))
-        import numpy as np
-        import matplotlib.pyplot as plt
-        from matplotlib.ticker import FormatStrFormatter
-        fig, ax = plt.subplots()
-        #ax.yaxis.set_major_formatter(FormatStrFormatter('%.3f'))
-
-        bestk=0
-        bestsil=0
-        for k,sil in zip(ks,sils):
-            if sil > bestsil:
-                bestk=k
-                bestsil=sil
-            
-        
-        #print(ks)
-        #print(sils)
-        plt.plot(ks,sils, 'x-', label="silhouette score")
-        plt.title(f"k-means Silhouette Score, varying k\nbest k={bestk} (silhouette score={bestsil:.3f})")
-        plt.xlabel("k")
-        plt.ylabel("Silhouette Score")
-        png=f"{dataset}-kmeans-ksweep.png"
-        plt.savefig(png, bbox_inches='tight')
-        print("Wrote "+png)
-        plt.clf()
+        kmeans_plot_sweep(dataset, "silhouette")
         exit(0)
     elif opts.action=="kmeans-plot-clusters":
         kmeans_graph(dataset)
         exit(0)
-        
     else:
         print(f"Action not implemented: {opts.action}")
         exit(1)
