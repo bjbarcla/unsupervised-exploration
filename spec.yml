@@ -11,7 +11,7 @@ datasets:
       best-k-gmm: 20
       best-cov-type: tied
       
-      kmeans-graph: lda
+      kmeans-graph: pca
       #best-k: 10
       synthesize_attributes:
         - new_attrib: 'outcome_type'

@@ -36,7 +36,7 @@ def bench_k_means(labels,estimator, name, data):
 def kmeans_graph_lda(dataset):
     # do all the same data prep as we did in the analysis project
     X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset)
-    k = spec['datasets'][dataset]['best-k']
+    k = spec['datasets'][dataset]['best-k-kmeans']
 
     #from sklearn.lda import LDA
     from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
@@ -211,7 +211,7 @@ def gmm_plot_sweep(dataset, measure):
 def kmeans_graph_pca(dataset):
     # do all the same data prep as we did in the analysis project
     X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset)
-    k = spec['datasets'][dataset]['best-k']
+    k = spec['datasets'][dataset]['best-k-kmeans']
 
     from sklearn.decomposition import PCA
     pca = PCA(n_components=2)

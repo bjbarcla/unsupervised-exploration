@@ -15,7 +15,7 @@ from cluster_lib import *
 import argparse
 
 
-actions_list="list,kmeans,kmeans-graph,kmeans-plot-ksweep,gmm-sweepk,kmeans-plot-clusters,gmm-plot-ksweep,gmm-sweepk-CH,gmm-plot-ksweep-CH,kmeans-sweepk-CH,kmeans-plot-ksweep-CH"
+actions_list="list,kmeans,kmeans-graph,kmeans-plot-ksweep,gmm-sweepk,kmeans-plot-clusters,gmm-plot-ksweep,gmm-sweepk-CH,gmm-plot-ksweep-CH,kmeans-sweepk-CH,kmeans-plot-ksweep-CH,gmm-graph"
 
 
 if __name__ == '__main__':
@@ -101,6 +101,8 @@ if __name__ == '__main__':
         
     elif opts.action=="kmeans-graph":
         kmeans_graph(opts.dataset)
+    elif opts.action=="gmm-graph":
+        gmm_graph(opts.dataset)
 
     elif opts.action=="gmm-plot-ksweep":
         gmm_plot_sweep(dataset, "silhouette")
