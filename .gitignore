@@ -2,6 +2,7 @@ ABAGAIL
 old_results
 oldresults
 *~
+*.pkl
 datasets/*.pkl
 *venv/
 typescript
