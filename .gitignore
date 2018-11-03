@@ -2,7 +2,7 @@ ABAGAIL
 old_results
 oldresults
 *~
-datasets
+datasets/*.pkl
 *venv/
 typescript
 tf/
