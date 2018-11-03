@@ -6,3 +6,96 @@
 | Starting time  : Sat Nov  3 00:36:09 2018          Qwait:   0h:00m:02s      |
 | Command        : unbuffer python bin/part1.py -s ds4 -a kmeans-sweepk-CH    |
 +-----------------------------------------------------------------------------+
+/nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/mlai/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
+  from numpy.core.umath_tests import inner1d
+** -> kmeans ds4 k=2 elapsed seconds 2.124769687652588 <- took 2.0 seconds
+** -> CH ds4 k=2 elapsed seconds 0.02121138572692871 <- took less than 1 second
+Dataset=ds4 k=2 CH=2175.7515982406794
+** -> kmeans ds4 k=3 elapsed seconds 1.8949906826019287 <- took 1.0 second
+** -> CH ds4 k=3 elapsed seconds 0.019344091415405273 <- took less than 1 second
+Dataset=ds4 k=3 CH=1832.8804040266411
+** -> kmeans ds4 k=4 elapsed seconds 2.3759357929229736 <- took 2.0 seconds
+** -> CH ds4 k=4 elapsed seconds 0.01930069923400879 <- took less than 1 second
+Dataset=ds4 k=4 CH=1569.9609029331866
+** -> kmeans ds4 k=5 elapsed seconds 3.5296311378479004 <- took 3.0 seconds
+** -> CH ds4 k=5 elapsed seconds 0.019003868103027344 <- took less than 1 second
+Dataset=ds4 k=5 CH=1439.349386069705
+** -> kmeans ds4 k=6 elapsed seconds 2.8143787384033203 <- took 2.0 seconds
+** -> CH ds4 k=6 elapsed seconds 0.018701553344726562 <- took less than 1 second
+Dataset=ds4 k=6 CH=1297.1590138250963
+** -> kmeans ds4 k=7 elapsed seconds 3.5722837448120117 <- took 3.0 seconds
+** -> CH ds4 k=7 elapsed seconds 0.01910996437072754 <- took less than 1 second
+Dataset=ds4 k=7 CH=1240.2199671587296
+** -> kmeans ds4 k=8 elapsed seconds 3.232398748397827 <- took 3.0 seconds
+** -> CH ds4 k=8 elapsed seconds 0.019083738327026367 <- took less than 1 second
+Dataset=ds4 k=8 CH=1204.3784577174242
+** -> kmeans ds4 k=9 elapsed seconds 3.716001510620117 <- took 3.0 seconds
+** -> CH ds4 k=9 elapsed seconds 0.02584385871887207 <- took less than 1 second
+Dataset=ds4 k=9 CH=1160.3075495224866
+** -> kmeans ds4 k=10 elapsed seconds 4.627456188201904 <- took 4.0 seconds
+** -> CH ds4 k=10 elapsed seconds 0.02328634262084961 <- took less than 1 second
+Dataset=ds4 k=10 CH=1099.524051352342
+** -> kmeans ds4 k=11 elapsed seconds 3.9922916889190674 <- took 3.0 seconds
+** -> CH ds4 k=11 elapsed seconds 0.021286487579345703 <- took less than 1 second
+Dataset=ds4 k=11 CH=1097.7629581398894
+** -> kmeans ds4 k=12 elapsed seconds 4.578644752502441 <- took 4.0 seconds
+** -> CH ds4 k=12 elapsed seconds 0.020038366317749023 <- took less than 1 second
+Dataset=ds4 k=12 CH=1092.9798629165446
+** -> kmeans ds4 k=13 elapsed seconds 4.896742820739746 <- took 4.0 seconds
+** -> CH ds4 k=13 elapsed seconds 0.020443439483642578 <- took less than 1 second
+Dataset=ds4 k=13 CH=1108.284399149097
+** -> kmeans ds4 k=14 elapsed seconds 4.2058446407318115 <- took 4.0 seconds
+** -> CH ds4 k=14 elapsed seconds 0.02003335952758789 <- took less than 1 second
+Dataset=ds4 k=14 CH=1022.710518412131
+** -> kmeans ds4 k=15 elapsed seconds 3.9652280807495117 <- took 3.0 seconds
+** -> CH ds4 k=15 elapsed seconds 0.020458698272705078 <- took less than 1 second
+Dataset=ds4 k=15 CH=1045.0584734991312
+** -> kmeans ds4 k=16 elapsed seconds 4.434237957000732 <- took 4.0 seconds
+** -> CH ds4 k=16 elapsed seconds 0.021706104278564453 <- took less than 1 second
+Dataset=ds4 k=16 CH=1073.8459519865069
+** -> kmeans ds4 k=17 elapsed seconds 4.920874118804932 <- took 4.0 seconds
+** -> CH ds4 k=17 elapsed seconds 0.020227909088134766 <- took less than 1 second
+Dataset=ds4 k=17 CH=1049.1864274455152
+** -> kmeans ds4 k=18 elapsed seconds 5.744880437850952 <- took 5.0 seconds
+** -> CH ds4 k=18 elapsed seconds 0.02084827423095703 <- took less than 1 second
+Dataset=ds4 k=18 CH=1012.029027317961
+** -> kmeans ds4 k=19 elapsed seconds 5.74892520904541 <- took 5.0 seconds
+** -> CH ds4 k=19 elapsed seconds 0.020727157592773438 <- took less than 1 second
+Dataset=ds4 k=19 CH=1015.8443173851236
+** -> kmeans ds4 k=20 elapsed seconds 5.754143714904785 <- took 5.0 seconds
+** -> CH ds4 k=20 elapsed seconds 0.02147197723388672 <- took less than 1 second
+Dataset=ds4 k=20 CH=1029.16377470512
+** -> kmeans ds4 k=21 elapsed seconds 5.850771427154541 <- took 5.0 seconds
+** -> CH ds4 k=21 elapsed seconds 0.02104926109313965 <- took less than 1 second
+Dataset=ds4 k=21 CH=1058.9085191611875
+** -> kmeans ds4 k=22 elapsed seconds 8.24216365814209 <- took 8.0 seconds
+** -> CH ds4 k=22 elapsed seconds 0.022348880767822266 <- took less than 1 second
+Dataset=ds4 k=22 CH=1072.1078701634387
+** -> kmeans ds4 k=23 elapsed seconds 5.885218620300293 <- took 5.0 seconds
+** -> CH ds4 k=23 elapsed seconds 0.02022528648376465 <- took less than 1 second
+Dataset=ds4 k=23 CH=1109.0295120276173
+** -> kmeans ds4 k=24 elapsed seconds 7.2059690952301025 <- took 7.0 seconds
+** -> CH ds4 k=24 elapsed seconds 0.02389979362487793 <- took less than 1 second
+Dataset=ds4 k=24 CH=1081.5714318181247
+** -> kmeans ds4 k=25 elapsed seconds 6.716773986816406 <- took 6.0 seconds
+** -> CH ds4 k=25 elapsed seconds 0.02278733253479004 <- took less than 1 second
+Dataset=ds4 k=25 CH=1094.1696061930886
+** -> kmeans ds4 k=26 elapsed seconds 6.865936517715454 <- took 6.0 seconds
+** -> CH ds4 k=26 elapsed seconds 0.021036863327026367 <- took less than 1 second
+Dataset=ds4 k=26 CH=1119.9763961109809
+** -> kmeans ds4 k=27 elapsed seconds 7.133479356765747 <- took 7.0 seconds
+** -> CH ds4 k=27 elapsed seconds 0.02308177947998047 <- took less than 1 second
+Dataset=ds4 k=27 CH=1103.4450539716288
+** -> kmeans ds4 k=28 elapsed seconds 7.338420629501343 <- took 7.0 seconds
+** -> CH ds4 k=28 elapsed seconds 0.02293705940246582 <- took less than 1 second
+Dataset=ds4 k=28 CH=1099.3876566764648
+** -> kmeans ds4 k=29 elapsed seconds 8.4387845993042 <- took 8.0 seconds
+** -> CH ds4 k=29 elapsed seconds 0.023679494857788086 <- took less than 1 second
+Dataset=ds4 k=29 CH=1111.3452016088438
++-----------------------------------------------------------------------------+
+| Exit Status    : 0                                                          |
+| Finishing time : Sat Nov  3 00:38:36 2018                                   |
+| CPU time       : Usr 200.03s Sys 538.6s  WC  0h:02m:27s                     |
+| Rusage Stats   : Mem:183    PF:  2736187/1 CSv/f:  0/0     Swaps:0          |
+|                :           Msg:    0/0     IOops:  0/0     Sigs :0          |
++-----------------------------------------------------------------------------+

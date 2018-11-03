@@ -6,3 +6,96 @@
 | Starting time  : Sat Nov  3 00:36:09 2018          Qwait:   0h:00m:02s      |
 | Command        : unbuffer python bin/part1.py -s ds4 -a kmeans-sweepk       |
 +-----------------------------------------------------------------------------+
+/nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/mlai/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
+  from numpy.core.umath_tests import inner1d
+** -> kmeans ds4 k=2 elapsed seconds 1.7040143013000488 <- took 1.0 second
+** -> silscore ds4 k=2 elapsed seconds 73.23867082595825 <- took 1.0 minute, 13.0 seconds
+Dataset=ds4 k=2 sil=0.06541430010286092
+** -> kmeans ds4 k=3 elapsed seconds 2.2750978469848633 <- took 2.0 seconds
+** -> silscore ds4 k=3 elapsed seconds 73.62410616874695 <- took 1.0 minute, 13.0 seconds
+Dataset=ds4 k=3 sil=0.07660566265307966
+** -> kmeans ds4 k=4 elapsed seconds 2.4462544918060303 <- took 2.0 seconds
+** -> silscore ds4 k=4 elapsed seconds 71.44565534591675 <- took 1.0 minute, 11.0 seconds
+Dataset=ds4 k=4 sil=0.06298236273526994
+** -> kmeans ds4 k=5 elapsed seconds 2.321594476699829 <- took 2.0 seconds
+** -> silscore ds4 k=5 elapsed seconds 71.21958184242249 <- took 1.0 minute, 11.0 seconds
+Dataset=ds4 k=5 sil=0.0614261191595126
+** -> kmeans ds4 k=6 elapsed seconds 2.8354945182800293 <- took 2.0 seconds
+** -> silscore ds4 k=6 elapsed seconds 71.81721186637878 <- took 1.0 minute, 11.0 seconds
+Dataset=ds4 k=6 sil=0.07513672615095622
+** -> kmeans ds4 k=7 elapsed seconds 3.2714149951934814 <- took 3.0 seconds
+** -> silscore ds4 k=7 elapsed seconds 71.82279825210571 <- took 1.0 minute, 11.0 seconds
+Dataset=ds4 k=7 sil=0.0515133193045609
+** -> kmeans ds4 k=8 elapsed seconds 2.9209506511688232 <- took 2.0 seconds
+** -> silscore ds4 k=8 elapsed seconds 71.10337162017822 <- took 1.0 minute, 11.0 seconds
+Dataset=ds4 k=8 sil=0.0886046927165613
+** -> kmeans ds4 k=9 elapsed seconds 3.6671390533447266 <- took 3.0 seconds
+** -> silscore ds4 k=9 elapsed seconds 71.30621838569641 <- took 1.0 minute, 11.0 seconds
+Dataset=ds4 k=9 sil=0.08663002382310016
+** -> kmeans ds4 k=10 elapsed seconds 4.04180645942688 <- took 4.0 seconds
+** -> silscore ds4 k=10 elapsed seconds 69.35927271842957 <- took 1.0 minute, 9.0 seconds
+Dataset=ds4 k=10 sil=0.0809967478788575
+** -> kmeans ds4 k=11 elapsed seconds 3.361785411834717 <- took 3.0 seconds
+** -> silscore ds4 k=11 elapsed seconds 70.01042866706848 <- took 1.0 minute, 10.0 seconds
+Dataset=ds4 k=11 sil=0.09227597233075577
+** -> kmeans ds4 k=12 elapsed seconds 3.9237570762634277 <- took 3.0 seconds
+** -> silscore ds4 k=12 elapsed seconds 70.15852284431458 <- took 1.0 minute, 10.0 seconds
+Dataset=ds4 k=12 sil=0.09649010283788889
+** -> kmeans ds4 k=13 elapsed seconds 4.68082594871521 <- took 4.0 seconds
+** -> silscore ds4 k=13 elapsed seconds 70.55662512779236 <- took 1.0 minute, 10.0 seconds
+Dataset=ds4 k=13 sil=0.11073676738166804
+** -> kmeans ds4 k=14 elapsed seconds 3.9015092849731445 <- took 3.0 seconds
+** -> silscore ds4 k=14 elapsed seconds 69.1682517528534 <- took 1.0 minute, 9.0 seconds
+Dataset=ds4 k=14 sil=0.09212977760285426
+** -> kmeans ds4 k=15 elapsed seconds 3.816202402114868 <- took 3.0 seconds
+** -> silscore ds4 k=15 elapsed seconds 68.42634630203247 <- took 1.0 minute, 8.0 seconds
+Dataset=ds4 k=15 sil=0.11054534559253311
+** -> kmeans ds4 k=16 elapsed seconds 5.011066675186157 <- took 5.0 seconds
+** -> silscore ds4 k=16 elapsed seconds 69.98337578773499 <- took 1.0 minute, 9.0 seconds
+Dataset=ds4 k=16 sil=0.10421469306444017
+** -> kmeans ds4 k=17 elapsed seconds 5.066021919250488 <- took 5.0 seconds
+** -> silscore ds4 k=17 elapsed seconds 68.47053480148315 <- took 1.0 minute, 8.0 seconds
+Dataset=ds4 k=17 sil=0.10492399764613441
+** -> kmeans ds4 k=18 elapsed seconds 5.05442476272583 <- took 5.0 seconds
+** -> silscore ds4 k=18 elapsed seconds 67.96424698829651 <- took 1.0 minute, 7.0 seconds
+Dataset=ds4 k=18 sil=0.0828886063909523
+** -> kmeans ds4 k=19 elapsed seconds 5.292431831359863 <- took 5.0 seconds
+** -> silscore ds4 k=19 elapsed seconds 67.55139350891113 <- took 1.0 minute, 7.0 seconds
+Dataset=ds4 k=19 sil=0.07753961111254579
+** -> kmeans ds4 k=20 elapsed seconds 6.020580291748047 <- took 6.0 seconds
+** -> silscore ds4 k=20 elapsed seconds 67.15641617774963 <- took 1.0 minute, 7.0 seconds
+Dataset=ds4 k=20 sil=0.10883133416720776
+** -> kmeans ds4 k=21 elapsed seconds 4.829763889312744 <- took 4.0 seconds
+** -> silscore ds4 k=21 elapsed seconds 67.16430425643921 <- took 1.0 minute, 7.0 seconds
+Dataset=ds4 k=21 sil=0.12447207407061629
+** -> kmeans ds4 k=22 elapsed seconds 5.826710224151611 <- took 5.0 seconds
+** -> silscore ds4 k=22 elapsed seconds 66.67570042610168 <- took 1.0 minute, 6.0 seconds
+Dataset=ds4 k=22 sil=0.1279710109769568
+** -> kmeans ds4 k=23 elapsed seconds 5.1660425662994385 <- took 5.0 seconds
+** -> silscore ds4 k=23 elapsed seconds 66.50866746902466 <- took 1.0 minute, 6.0 seconds
+Dataset=ds4 k=23 sil=0.14226970533132044
+** -> kmeans ds4 k=24 elapsed seconds 4.953255891799927 <- took 4.0 seconds
+** -> silscore ds4 k=24 elapsed seconds 65.44271636009216 <- took 1.0 minute, 5.0 seconds
+Dataset=ds4 k=24 sil=0.13733668304930502
+** -> kmeans ds4 k=25 elapsed seconds 5.441930770874023 <- took 5.0 seconds
+** -> silscore ds4 k=25 elapsed seconds 65.36594152450562 <- took 1.0 minute, 5.0 seconds
+Dataset=ds4 k=25 sil=0.1418737736384942
+** -> kmeans ds4 k=26 elapsed seconds 6.5378992557525635 <- took 6.0 seconds
+** -> silscore ds4 k=26 elapsed seconds 65.29292273521423 <- took 1.0 minute, 5.0 seconds
+Dataset=ds4 k=26 sil=0.12253352056246505
+** -> kmeans ds4 k=27 elapsed seconds 6.510838031768799 <- took 6.0 seconds
+** -> silscore ds4 k=27 elapsed seconds 64.51650595664978 <- took 1.0 minute, 4.0 seconds
+Dataset=ds4 k=27 sil=0.1562787047402321
+** -> kmeans ds4 k=28 elapsed seconds 6.1689348220825195 <- took 6.0 seconds
+** -> silscore ds4 k=28 elapsed seconds 64.66973972320557 <- took 1.0 minute, 4.0 seconds
+Dataset=ds4 k=28 sil=0.10289082608959794
+** -> kmeans ds4 k=29 elapsed seconds 7.188663959503174 <- took 7.0 seconds
+** -> silscore ds4 k=29 elapsed seconds 63.41043519973755 <- took 1.0 minute, 3.0 seconds
+Dataset=ds4 k=29 sil=0.12817018717189135
++-----------------------------------------------------------------------------+
+| Exit Status    : 0                                                          |
+| Finishing time : Sat Nov  3 01:10:23 2018                                   |
+| CPU time       : Usr 1990.38s Sys 1060.04s WC  0h:34m:14s                     |
+| Rusage Stats   : Mem:20840  PF:  227296811/CSv/f:  0/0     Swaps:0          |
+|                :           Msg:    0/0     IOops:  0/0     Sigs :0          |
++-----------------------------------------------------------------------------+
