@@ -1,0 +1,5 @@
+#!/bin/tcsh -f
+smartlauncher -jobs | grep Run | awk '{print " nbjob --target pdx_critical remove "$4}' > rmjobs.cmd
+sh rmjobs.cmd |& tee rmjobs.log
+
+

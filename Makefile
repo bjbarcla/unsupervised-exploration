@@ -6,9 +6,9 @@ python_exe=python3.6
 datasets_dir=$(PWD)/datasets
 pips=jupyter scipy pandas matplotlib scikit-learn kaggle seaborn numpy pyyaml google-cloud-bigquery xlrd graphviz geopy kaggle psutil memory_profiler
 
-venv_name=venv
-with_venv=source $(venv_name)/bin/activate &&
-
+#venv_name=venv
+#with_venv=source $(venv_name)/bin/activate &&
+with_venv=
 datasets=ds1 ds4
 
 #MENU menu: show this menu
@@ -52,48 +52,53 @@ pristine:
 	rm -rf $(datasets_dir) $(venv_name) tf
 
 clust:
-	$(with_venv) bin/cluster_util.py -s ds1 -a kmeans-graph
+	$(with_venv) bin/part1.py -s ds1 -a kmeans-graph
 
 clust2:
-	$(with_venv) bin/cluster_util.py -s ds1 -a kmeans
+	$(with_venv) bin/part1.py -s ds1 -a kmeans
 
 
 kmeans-sweepk-CH-%:
-	$(with_venv) time unbuffer bin/cluster_util.py -s $* -a kmeans-sweepk-CH |& tee $@.log
+	$(with_venv) time unbuffer bin/part1.py -s $* -a kmeans-sweepk-CH |& tee $@.log
 
 kmeans-sweepk-%:
-	$(with_venv) time unbuffer bin/cluster_util.py -s $* -a kmeans |& tee $@.log
+	$(with_venv) time unbuffer bin/part1.py -s $* -a kmeans |& tee $@.log
 
 gmm-sweepk-%:
-	$(with_venv) time unbuffer bin/cluster_util.py -s $* -a gmm-sweepk |& tee $@.log
+	$(with_venv) time unbuffer bin/part1.py -s $* -a gmm-sweepk |& tee $@.log
 
 gmm-sweepk-CH-%:
-	$(with_venv) time unbuffer bin/cluster_util.py -s $* -a gmm-sweepk-CH |& tee $@.log
+	$(with_venv) time unbuffer bin/part1.py -s $* -a gmm-sweepk-CH |& tee $@.log
 
-
+#MENU launch-sweeps: launch all sweep jobs
+launch-sweeps:
+	./part1_launch.rb > do_launch.sh
+	sh do_launch.sh >& do_launch.log
 
 plot-kmeans-ksweep-%:
-	$(with_venv) time unbuffer bin/cluster_util.py -s $* -a kmeans-plot-ksweep
+	$(with_venv) time unbuffer bin/part1.py -s $* -a kmeans-plot-ksweep
 
 plot-gmm-ksweep-%:
-	$(with_venv) time unbuffer bin/cluster_util.py -s $* -a gmm-plot-ksweep
+	$(with_venv) time unbuffer bin/part1.py -s $* -a gmm-plot-ksweep
 
 plot-gmm-ksweep-CH-%:
-	$(with_venv) time unbuffer bin/cluster_util.py -s $* -a gmm-plot-ksweep-CH
+	$(with_venv) time unbuffer bin/part1.py -s $* -a gmm-plot-ksweep-CH
 
 plot-kmeans-ksweep-CH-%:
-	$(with_venv) time unbuffer bin/cluster_util.py -s $* -a kmeans-plot-ksweep-CH
+	$(with_venv) time unbuffer bin/part1.py -s $* -a kmeans-plot-ksweep-CH
 
 plot-kmeans-clusters-%:
-	$(with_venv) time unbuffer bin/cluster_util.py -s $* -a kmeans-plot-clusters
+	$(with_venv) time unbuffer bin/part1.py -s $* -a kmeans-plot-clusters
 
 all-sweep-plots: plot-kmeans-ksweep-CH-ds1 plot-kmeans-ksweep-CH-ds4 plot-kmeans-ksweep-ds1 plot-kmeans-ksweep-ds4 plot-gmm-ksweep-CH-ds1 plot-gmm-ksweep-CH-ds4 plot-gmm-ksweep-ds1 plot-gmm-ksweep-ds4
 	echo okay
 
+
+
 make cviz:
-	$(with_venv) bin/cluster_util.py -s ds1 -a kmeans-graph
-	$(with_venv) bin/cluster_util.py -s ds4 -a kmeans-graph
-	$(with_venv) bin/cluster_util.py -s ds1 -a gmm-graph
-	$(with_venv) bin/cluster_util.py -s ds4 -a gmm-graph
+	$(with_venv) bin/part1.py -s ds1 -a kmeans-graph
+	$(with_venv) bin/part1.py -s ds4 -a kmeans-graph
+	$(with_venv) bin/part1.py -s ds1 -a gmm-graph
+	$(with_venv) bin/part1.py -s ds4 -a gmm-graph
 
 part1-graphs: cviz all-sweep-plots

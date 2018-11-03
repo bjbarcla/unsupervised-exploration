@@ -16,7 +16,7 @@ root = dirname(dirname(__file__))
 
 from misc import *
 from sklearn import tree
-from sklearn import neural_network
+#from sklearn import neural_network
 from sklearn import ensemble
 from sklearn import svm
 from sklearn import neighbors
