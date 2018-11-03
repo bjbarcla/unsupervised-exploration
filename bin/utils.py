@@ -724,12 +724,12 @@ def eval_X_impedence_mismatch(dataset, X_train, X_train_prepared, X_test, X_test
 
 
 def get_prepared_training_and_test_data(dataset, df=None, rerun=False, reclean=False):
-
+    from sklearn import preprocessing
     X_train, y_train, X_test, y_test = get_raw_training_and_test_data(dataset, df=None, rerun=rerun, reclean=reclean)
     if X_train.shape[1] != X_test.shape[1]:
         raise(ValueError(f"Dataset {dataset} : X_train cols ({X_train.shape[1]}) != X_test cols ({X_test.shape[1]})"))
-    else:
-        print(f"Carry on... {dataset} : X_train cols ({X_train.shape[1]}) == X_test cols ({X_test.shape[1]})")
+    #else:
+        #print(f"Carry on... {dataset} : X_train cols ({X_train.shape[1]}) == X_test cols ({X_test.shape[1]})")
     
     dataprep_pipeline1 = get_dataprep_pipeline(dataset) 
     X_train_prepared = dataprep_pipeline1.fit_transform(X_train)
@@ -739,8 +739,8 @@ def get_prepared_training_and_test_data(dataset, df=None, rerun=False, reclean=F
     if X_train_prepared.shape[1] != X_test_prepared.shape[1]:
         eval_X_impedence_mismatch(dataset, X_train, X_train_prepared, X_test, X_test_prepared)
         raise(ValueError(f"Dataset {dataset} : X_train_prepared cols ({X_train_prepared.shape[1]}) != X_test_prepared cols ({X_test_prepared.shape[1]})"))
-    else:
-        print(f"Carry on... {dataset} : X_train_prepared cols ({X_train_prepared.shape[1]}) == X_test_prepared cols ({X_test_prepared.shape[1]})")
+    #else:
+    #    print(f"Carry on... {dataset} : X_train_prepared cols ({X_train_prepared.shape[1]}) == X_test_prepared cols ({X_test_prepared.shape[1]})")
 
 
     # balance it out...
@@ -757,8 +757,11 @@ def get_prepared_training_and_test_data(dataset, df=None, rerun=False, reclean=F
             sampler = eval(sampler_code)
             X_train_prepared, y_train = sampler.fit_sample(X_train_prepared, y_train)
 
-
-    return X_train_prepared, y_train, X_test_prepared, y_test
+    # standardize (0 mean, 1 variance)
+    X_train_scaled = preprocessing.scale(X_train_prepared)
+    X_test_scaled  = preprocessing.scale(X_test_prepared)
+    #print("HELLO")
+    return X_train_scaled, y_train, X_test_scaled, y_test
 
      
 # def get_classifiers_assignment1():
