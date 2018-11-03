@@ -1,6 +1,4 @@
 #!/usr/bin/env python
-import warnings
-warnings.filterwarnings("ignore")
 
 
 import sys
@@ -11,58 +9,14 @@ import pathlib
 import yaml
 from utils import *
 from cluster_lib import *
+from dimension_reduction_lib import *
+
 
 import argparse
 
 
 
 
-
-def get_dim_reducer(dataset, algo, k=None):
-    from sklearn.decomposition import PCA,FastICA
-
-    X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset)
-    features = X_train.shape[1]
-    
-    if not k:
-        k = features
-
-        
-    cache = f"{root}/datasets/{dataset}/dimreducer-{algo}-{k}.pkl"
-    if os.path.exists(cache):
-        reducer = joblib.load(cache)
-        print(f"Read {cache}")
-        return reducer
-    
-    if algo=="pca":
-        reducer = PCA(n_components=k)
-    elif algo=="ica":
-        reducer = FastICA(n_components=k, whiten=True)
-    else:
-        sys.exit(f"1 Unknown dim red algo '{algo}'")
-
-    timeit(lambda: reducer.fit(X_train), f"{algo} projection calculation for {dataset}, k={k}")
-    #reduced_X_train=timeit(lambda: reducer.transform(X_train), f"{algo} projection execution for {dataset}")
-
-    joblib.dump(reducer, cache)
-    print(f"Wrote {cache}")
-    return reducer
-
-from scipy.stats import kurtosis
-def describe_dim_reduction(dataset, algo, k=None):
-    X_train_raw, y_train_raw, X_test, y_test =  get_prepared_training_and_test_data(dataset)
-    
-    features = X_train.shape[1]
-    reducer = get_dim_reducer(dataset, algo, k=k)
-    X_train_reduced = reducer.transform(X_train)
-    print(f"X var:",np.var(X_train, axis=0))
-    print("X mean:",np.mean(X_train, axis=0))
-    print(f"X kurtosis:",kurtosis(X_train, axis=0))
-    print(f"{algo} var:",np.var(X_train_reduced, axis=0))
-    print(f"{algo} kurtosis:",kurtosis(X_train_reduced, axis=0))
-
-    
-    
     
 
 if __name__ == '__main__':
@@ -94,8 +48,16 @@ if __name__ == '__main__':
         if not opts.dralgo:
             sys.exit(f"Must specify dim reduction algo for {opts.action} action with --dralgo <algo>")
         describe_dim_reduction(dataset, opts.dralgo, k=k)
-
-        
+    elif opts.action=="ica-kurtcurve":
+        ica_kurtcurve(dataset)
+    elif opts.action=="pca-eigenplot":
+        pca_eigenplot(dataset)
+    elif opts.action=="pca-loss":
+        pca_loss(dataset,k)
+    elif opts.action=="loss":
+        reducer_loss(dataset,opts.dralgo,k)
+    elif opts.action=="lossplot":
+        reducer_loss_plot(dataset)
     else:
         print(f"Action not implemented: {opts.action}")
         exit(1)

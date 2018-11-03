@@ -306,7 +306,7 @@ def gmm_graph(dataset):
 
         pl.scatter(pca_2d[i,0],pca_2d[i,1],c=color, marker=marker, alpha=0.6)
         
-    pl.title(f'K-means clusters for dataset {dataset}')
+    pl.title(f'GMM clusters for dataset {dataset}')
     #pl.show()
     png=f"{dataset}-gmm-clusterviz.png"
     pl.savefig(png, bbox_inches='tight')

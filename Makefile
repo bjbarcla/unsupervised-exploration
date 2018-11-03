@@ -109,3 +109,10 @@ make cviz:
 	$(with_venv) bin/part1.py -s ds4 -a gmm-graph
 
 part1-graphs: cviz all-sweep-plots
+
+
+part2:
+	bin/part2.py -a ica-kurtcurve -s ds1
+	bin/part2.py -a ica-kurtcurve -s ds4
+	bin/part2.py -a pca-eigenplot -s ds1
+	bin/part2.py -a pca-eigenplot -s ds4

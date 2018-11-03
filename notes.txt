@@ -106,5 +106,19 @@ pca ds4:
  1.49820912e-28 1.01313480e-28 5.74962321e-30 1.34016077e-29
  6.33568795e-30 2.44318702e-30 3.02486831e-30 1.60678595e-30]
 
+-------------
+add to: venv/lib/python3.6/site-packages/sklearn/random_projection.py
 
+    def inverse_transform(self, X_red):
+        check_is_fitted(self, 'components_')
+        if X_red.shape[1] != self.components_.shape[0]:
+            raise ValueError(
+                'Impossible to invert projection:'
+                'X at fit stage had a different number of components. '
+                '(%s != %s)' % (X_red.shape[1], self.components_.shape[0]))
 
+        compinv = np.linalg.pinv(self.components_.toarray())
+        X_new = safe_sparse_dot(X_red, compinv.T,
+                                dense_output=self.dense_output)
+        return X_new
+---------------------------

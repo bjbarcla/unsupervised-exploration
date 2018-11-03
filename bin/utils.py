@@ -655,7 +655,18 @@ def get_raw_training_and_test_data(dataset, df=None, rerun=False, reclean=False)
     # return data
     return X_train, y_train, X_test, y_test
 
+def get_attribs(dataset):
+    num_attribs = get_ds_prop(dataset, 'numerical_attributes')
+    cat_attribs = get_ds_prop(dataset, 'categorical_attributes')
 
+    if not num_attribs:
+        raise(ValueError(f"Error: Dataset [{dataset}] is missing numerical_attributes property in spec.yml"))
+
+
+    if not cat_attribs:
+        raise(ValueError(f"Error: Dataset [{dataset}] is missing categorical_attributes property in spec.yml"))
+
+    
 def get_dataprep_pipeline(dataset):
     num_attribs = get_ds_prop(dataset, 'numerical_attributes')
     cat_attribs = get_ds_prop(dataset, 'categorical_attributes')
