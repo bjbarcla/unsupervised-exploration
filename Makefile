@@ -6,9 +6,16 @@ python_exe=python3.6
 datasets_dir=$(PWD)/datasets
 pips=jupyter scipy pandas matplotlib scikit-learn kaggle seaborn numpy pyyaml google-cloud-bigquery xlrd graphviz geopy kaggle psutil memory_profiler
 
-#venv_name=venv
-#with_venv=source $(venv_name)/bin/activate &&
+venv_name=venv
+
+ifndef EC_SITE
+with_venv=source $(venv_name)/bin/activate &&
+endif
+
+ifdef EC_SITE
 with_venv=
+endif
+
 datasets=ds1 ds4
 
 #MENU menu: show this menu
