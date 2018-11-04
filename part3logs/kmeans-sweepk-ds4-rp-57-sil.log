@@ -1,0 +1,8 @@
++-----------------------------------------------------------------------------+
+| Logfile        : kmeans-sweepk-ds4-rp-57-sil.log                            |
+| Job id         : 5091183598                 Class: SLES11SP4&&8C&&32G Qslot: /icf/fdk/pdx_critical_vp/bench11|
+| Executed on    : plxck3033                  Pool : pdx_misc                 |
+| Queueing time  : Sun Nov  4 05:42:10 2018                                   |
+| Starting time  : Sun Nov  4 05:42:16 2018          Qwait:   0h:00m:06s      |
+| Command        : part3.py -a kmeans-sweepk --ncomp 57 -s ds4 --reducer rp   |
++-----------------------------------------------------------------------------+

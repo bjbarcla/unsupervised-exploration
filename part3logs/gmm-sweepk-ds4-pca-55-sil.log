@@ -6,3 +6,181 @@
 | Starting time  : Sun Nov  4 04:13:06 2018          Qwait:   0h:00m:06s      |
 | Command        : part3.py -a gmm-sweepk --ncomp 55 -s ds4 --reducer pca     |
 +-----------------------------------------------------------------------------+
+Read /nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/class/proj3/datasets/ds4/dimreducer-pca-55.pkl
+** -> gmm k=2 cov_type=spherical elapsed seconds 2.4318695068359375e-05 <- took less than 1 second
+** -> sil gmm k=2 cov_type=spherical elapsed seconds 58.1185302734375 <- took 58.0 seconds
+Dataset=ds4 k=2 cov_type=spherical sil=0.16199925292010386
+** -> gmm k=2 cov_type=diag elapsed seconds 1.4543533325195312e-05 <- took less than 1 second
+** -> sil gmm k=2 cov_type=diag elapsed seconds 58.37129783630371 <- took 58.0 seconds
+Dataset=ds4 k=2 cov_type=diag sil=0.07350045313681172
+** -> gmm k=2 cov_type=tied elapsed seconds 1.6450881958007812e-05 <- took less than 1 second
+** -> sil gmm k=2 cov_type=tied elapsed seconds 57.43558478355408 <- took 57.0 seconds
+Dataset=ds4 k=2 cov_type=tied sil=0.07998919352943888
+** -> gmm k=2 cov_type=full elapsed seconds 1.5974044799804688e-05 <- took less than 1 second
+** -> sil gmm k=2 cov_type=full elapsed seconds 58.126951456069946 <- took 58.0 seconds
+Dataset=ds4 k=2 cov_type=full sil=0.15813240093853792
+** -> gmm k=4 cov_type=spherical elapsed seconds 1.5974044799804688e-05 <- took less than 1 second
+** -> sil gmm k=4 cov_type=spherical elapsed seconds 57.915852069854736 <- took 57.0 seconds
+Dataset=ds4 k=4 cov_type=spherical sil=-0.019525748743202224
+** -> gmm k=4 cov_type=diag elapsed seconds 1.5974044799804688e-05 <- took less than 1 second
+** -> sil gmm k=4 cov_type=diag elapsed seconds 58.72941875457764 <- took 58.0 seconds
+Dataset=ds4 k=4 cov_type=diag sil=-0.04354725960220342
+** -> gmm k=4 cov_type=tied elapsed seconds 1.5735626220703125e-05 <- took less than 1 second
+** -> sil gmm k=4 cov_type=tied elapsed seconds 58.17044138908386 <- took 58.0 seconds
+Dataset=ds4 k=4 cov_type=tied sil=0.01634146151866174
+** -> gmm k=4 cov_type=full elapsed seconds 1.6450881958007812e-05 <- took less than 1 second
+** -> sil gmm k=4 cov_type=full elapsed seconds 58.10542321205139 <- took 58.0 seconds
+Dataset=ds4 k=4 cov_type=full sil=0.06566901811682575
+** -> gmm k=6 cov_type=spherical elapsed seconds 1.6689300537109375e-05 <- took less than 1 second
+** -> sil gmm k=6 cov_type=spherical elapsed seconds 57.982059717178345 <- took 57.0 seconds
+Dataset=ds4 k=6 cov_type=spherical sil=-0.06459654391781473
+** -> gmm k=6 cov_type=diag elapsed seconds 1.5497207641601562e-05 <- took less than 1 second
+** -> sil gmm k=6 cov_type=diag elapsed seconds 58.35608530044556 <- took 58.0 seconds
+Dataset=ds4 k=6 cov_type=diag sil=-0.06432263019424368
+** -> gmm k=6 cov_type=tied elapsed seconds 1.621246337890625e-05 <- took less than 1 second
+** -> sil gmm k=6 cov_type=tied elapsed seconds 58.64051628112793 <- took 58.0 seconds
+Dataset=ds4 k=6 cov_type=tied sil=0.04047778174072093
+** -> gmm k=6 cov_type=full elapsed seconds 1.5974044799804688e-05 <- took less than 1 second
+** -> sil gmm k=6 cov_type=full elapsed seconds 58.830697536468506 <- took 58.0 seconds
+Dataset=ds4 k=6 cov_type=full sil=0.052926415883235066
+** -> gmm k=8 cov_type=spherical elapsed seconds 1.621246337890625e-05 <- took less than 1 second
+** -> sil gmm k=8 cov_type=spherical elapsed seconds 58.27299404144287 <- took 58.0 seconds
+Dataset=ds4 k=8 cov_type=spherical sil=-0.03230993367840757
+** -> gmm k=8 cov_type=diag elapsed seconds 1.6689300537109375e-05 <- took less than 1 second
+** -> sil gmm k=8 cov_type=diag elapsed seconds 58.658644914627075 <- took 58.0 seconds
+Dataset=ds4 k=8 cov_type=diag sil=-0.003835254060686274
+** -> gmm k=8 cov_type=tied elapsed seconds 1.5735626220703125e-05 <- took less than 1 second
+** -> sil gmm k=8 cov_type=tied elapsed seconds 58.77550649642944 <- took 58.0 seconds
+Dataset=ds4 k=8 cov_type=tied sil=0.022641623356632362
+** -> gmm k=8 cov_type=full elapsed seconds 1.621246337890625e-05 <- took less than 1 second
+** -> sil gmm k=8 cov_type=full elapsed seconds 58.60054636001587 <- took 58.0 seconds
+Dataset=ds4 k=8 cov_type=full sil=0.06096781508132409
+** -> gmm k=10 cov_type=spherical elapsed seconds 1.6927719116210938e-05 <- took less than 1 second
+** -> sil gmm k=10 cov_type=spherical elapsed seconds 58.08261728286743 <- took 58.0 seconds
+Dataset=ds4 k=10 cov_type=spherical sil=-0.02403233810788871
+** -> gmm k=10 cov_type=diag elapsed seconds 1.621246337890625e-05 <- took less than 1 second
+** -> sil gmm k=10 cov_type=diag elapsed seconds 58.08378791809082 <- took 58.0 seconds
+Dataset=ds4 k=10 cov_type=diag sil=-0.010882652933956596
+** -> gmm k=10 cov_type=tied elapsed seconds 1.71661376953125e-05 <- took less than 1 second
+** -> sil gmm k=10 cov_type=tied elapsed seconds 58.205278158187866 <- took 58.0 seconds
+Dataset=ds4 k=10 cov_type=tied sil=0.04448308821702556
+** -> gmm k=10 cov_type=full elapsed seconds 1.6927719116210938e-05 <- took less than 1 second
+** -> sil gmm k=10 cov_type=full elapsed seconds 58.36324071884155 <- took 58.0 seconds
+Dataset=ds4 k=10 cov_type=full sil=0.061496751126490785
+** -> gmm k=12 cov_type=spherical elapsed seconds 1.621246337890625e-05 <- took less than 1 second
+** -> sil gmm k=12 cov_type=spherical elapsed seconds 57.465447664260864 <- took 57.0 seconds
+Dataset=ds4 k=12 cov_type=spherical sil=-0.08868610892395469
+** -> gmm k=12 cov_type=diag elapsed seconds 1.5735626220703125e-05 <- took less than 1 second
+** -> sil gmm k=12 cov_type=diag elapsed seconds 58.57020902633667 <- took 58.0 seconds
+Dataset=ds4 k=12 cov_type=diag sil=-0.06796228574334141
+** -> gmm k=12 cov_type=tied elapsed seconds 1.6689300537109375e-05 <- took less than 1 second
+** -> sil gmm k=12 cov_type=tied elapsed seconds 57.6606867313385 <- took 57.0 seconds
+Dataset=ds4 k=12 cov_type=tied sil=0.056593646967145195
+** -> gmm k=12 cov_type=full elapsed seconds 1.6689300537109375e-05 <- took less than 1 second
+** -> sil gmm k=12 cov_type=full elapsed seconds 57.941673040390015 <- took 57.0 seconds
+Dataset=ds4 k=12 cov_type=full sil=0.04883666542978395
+** -> gmm k=14 cov_type=spherical elapsed seconds 1.621246337890625e-05 <- took less than 1 second
+** -> sil gmm k=14 cov_type=spherical elapsed seconds 57.15012741088867 <- took 57.0 seconds
+Dataset=ds4 k=14 cov_type=spherical sil=-0.058781857467510766
+** -> gmm k=14 cov_type=diag elapsed seconds 1.7881393432617188e-05 <- took less than 1 second
+** -> sil gmm k=14 cov_type=diag elapsed seconds 58.66103911399841 <- took 58.0 seconds
+Dataset=ds4 k=14 cov_type=diag sil=-0.03683347852579544
+** -> gmm k=14 cov_type=tied elapsed seconds 1.621246337890625e-05 <- took less than 1 second
+** -> sil gmm k=14 cov_type=tied elapsed seconds 57.93982410430908 <- took 57.0 seconds
+Dataset=ds4 k=14 cov_type=tied sil=0.07278432215215
+** -> gmm k=14 cov_type=full elapsed seconds 1.5735626220703125e-05 <- took less than 1 second
+** -> sil gmm k=14 cov_type=full elapsed seconds 58.2130012512207 <- took 58.0 seconds
+Dataset=ds4 k=14 cov_type=full sil=0.0670249041389611
+** -> gmm k=16 cov_type=spherical elapsed seconds 1.7881393432617188e-05 <- took less than 1 second
+** -> sil gmm k=16 cov_type=spherical elapsed seconds 56.83085632324219 <- took 56.0 seconds
+Dataset=ds4 k=16 cov_type=spherical sil=-0.0071027799642920655
+** -> gmm k=16 cov_type=diag elapsed seconds 1.6450881958007812e-05 <- took less than 1 second
+** -> sil gmm k=16 cov_type=diag elapsed seconds 57.91835689544678 <- took 57.0 seconds
+Dataset=ds4 k=16 cov_type=diag sil=-0.04655123662688331
+** -> gmm k=16 cov_type=tied elapsed seconds 1.71661376953125e-05 <- took less than 1 second
+** -> sil gmm k=16 cov_type=tied elapsed seconds 57.17221426963806 <- took 57.0 seconds
+Dataset=ds4 k=16 cov_type=tied sil=0.08301636419390258
+** -> gmm k=16 cov_type=full elapsed seconds 1.5735626220703125e-05 <- took less than 1 second
+** -> sil gmm k=16 cov_type=full elapsed seconds 57.22621512413025 <- took 57.0 seconds
+Dataset=ds4 k=16 cov_type=full sil=0.08301636419390258
+** -> gmm k=18 cov_type=spherical elapsed seconds 1.5974044799804688e-05 <- took less than 1 second
+** -> sil gmm k=18 cov_type=spherical elapsed seconds 56.58019423484802 <- took 56.0 seconds
+Dataset=ds4 k=18 cov_type=spherical sil=-0.017189663305390734
+** -> gmm k=18 cov_type=diag elapsed seconds 1.6450881958007812e-05 <- took less than 1 second
+** -> sil gmm k=18 cov_type=diag elapsed seconds 57.23727226257324 <- took 57.0 seconds
+Dataset=ds4 k=18 cov_type=diag sil=-0.02863116911036441
+** -> gmm k=18 cov_type=tied elapsed seconds 1.7642974853515625e-05 <- took less than 1 second
+** -> sil gmm k=18 cov_type=tied elapsed seconds 57.00776195526123 <- took 57.0 seconds
+Dataset=ds4 k=18 cov_type=tied sil=0.09211828680624984
+** -> gmm k=18 cov_type=full elapsed seconds 1.5735626220703125e-05 <- took less than 1 second
+** -> sil gmm k=18 cov_type=full elapsed seconds 57.1238055229187 <- took 57.0 seconds
+Dataset=ds4 k=18 cov_type=full sil=0.09230131976476227
+** -> gmm k=20 cov_type=spherical elapsed seconds 1.6689300537109375e-05 <- took less than 1 second
+** -> sil gmm k=20 cov_type=spherical elapsed seconds 56.052167892456055 <- took 56.0 seconds
+Dataset=ds4 k=20 cov_type=spherical sil=-0.015488153251763772
+** -> gmm k=20 cov_type=diag elapsed seconds 1.6450881958007812e-05 <- took less than 1 second
+** -> sil gmm k=20 cov_type=diag elapsed seconds 56.56709623336792 <- took 56.0 seconds
+Dataset=ds4 k=20 cov_type=diag sil=-0.0006030803216459492
+** -> gmm k=20 cov_type=tied elapsed seconds 1.6689300537109375e-05 <- took less than 1 second
+** -> sil gmm k=20 cov_type=tied elapsed seconds 56.70587348937988 <- took 56.0 seconds
+Dataset=ds4 k=20 cov_type=tied sil=0.09638517599280853
+** -> gmm k=20 cov_type=full elapsed seconds 1.5974044799804688e-05 <- took less than 1 second
+** -> sil gmm k=20 cov_type=full elapsed seconds 56.82395005226135 <- took 56.0 seconds
+Dataset=ds4 k=20 cov_type=full sil=0.09656292743912076
+** -> gmm k=22 cov_type=spherical elapsed seconds 1.52587890625e-05 <- took less than 1 second
+** -> sil gmm k=22 cov_type=spherical elapsed seconds 56.30702328681946 <- took 56.0 seconds
+Dataset=ds4 k=22 cov_type=spherical sil=-0.021291749097483666
+** -> gmm k=22 cov_type=diag elapsed seconds 1.6450881958007812e-05 <- took less than 1 second
+** -> sil gmm k=22 cov_type=diag elapsed seconds 56.68517255783081 <- took 56.0 seconds
+Dataset=ds4 k=22 cov_type=diag sil=0.0018774098434319682
+** -> gmm k=22 cov_type=tied elapsed seconds 1.621246337890625e-05 <- took less than 1 second
+** -> sil gmm k=22 cov_type=tied elapsed seconds 56.92525672912598 <- took 56.0 seconds
+Dataset=ds4 k=22 cov_type=tied sil=0.08652624632260592
+** -> gmm k=22 cov_type=full elapsed seconds 1.6927719116210938e-05 <- took less than 1 second
+** -> sil gmm k=22 cov_type=full elapsed seconds 57.113855838775635 <- took 57.0 seconds
+Dataset=ds4 k=22 cov_type=full sil=0.0871679240146355
+** -> gmm k=24 cov_type=spherical elapsed seconds 1.6450881958007812e-05 <- took less than 1 second
+** -> sil gmm k=24 cov_type=spherical elapsed seconds 56.497270822525024 <- took 56.0 seconds
+Dataset=ds4 k=24 cov_type=spherical sil=-0.020298520572066582
+** -> gmm k=24 cov_type=diag elapsed seconds 1.7881393432617188e-05 <- took less than 1 second
+** -> sil gmm k=24 cov_type=diag elapsed seconds 56.900450468063354 <- took 56.0 seconds
+Dataset=ds4 k=24 cov_type=diag sil=-0.026915855281166152
+** -> gmm k=24 cov_type=tied elapsed seconds 1.71661376953125e-05 <- took less than 1 second
+** -> sil gmm k=24 cov_type=tied elapsed seconds 57.03077173233032 <- took 57.0 seconds
+Dataset=ds4 k=24 cov_type=tied sil=0.09121263219804733
+** -> gmm k=24 cov_type=full elapsed seconds 2.7179718017578125e-05 <- took less than 1 second
+** -> sil gmm k=24 cov_type=full elapsed seconds 57.01678800582886 <- took 57.0 seconds
+Dataset=ds4 k=24 cov_type=full sil=0.11054815130132219
+** -> gmm k=26 cov_type=spherical elapsed seconds 1.6450881958007812e-05 <- took less than 1 second
+** -> sil gmm k=26 cov_type=spherical elapsed seconds 56.04456543922424 <- took 56.0 seconds
+Dataset=ds4 k=26 cov_type=spherical sil=0.020157709834349148
+** -> gmm k=26 cov_type=diag elapsed seconds 1.811981201171875e-05 <- took less than 1 second
+** -> sil gmm k=26 cov_type=diag elapsed seconds 56.3856987953186 <- took 56.0 seconds
+Dataset=ds4 k=26 cov_type=diag sil=0.0024960734986715504
+** -> gmm k=26 cov_type=tied elapsed seconds 1.7881393432617188e-05 <- took less than 1 second
+** -> sil gmm k=26 cov_type=tied elapsed seconds 56.39882493019104 </nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/mlai/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
+  from numpy.core.umath_tests import inner1d
+- took 56.0 seconds
+Dataset=ds4 k=26 cov_type=tied sil=0.11643435520044736
+** -> gmm k=26 cov_type=full elapsed seconds 1.6689300537109375e-05 <- took less than 1 second
+** -> sil gmm k=26 cov_type=full elapsed seconds 56.45899486541748 <- took 56.0 seconds
+Dataset=ds4 k=26 cov_type=full sil=0.10983219445050131
+** -> gmm k=28 cov_type=spherical elapsed seconds 1.52587890625e-05 <- took less than 1 second
+** -> sil gmm k=28 cov_type=spherical elapsed seconds 55.815001010894775 <- took 55.0 seconds
+Dataset=ds4 k=28 cov_type=spherical sil=0.014009532019340078
+** -> gmm k=28 cov_type=diag elapsed seconds 1.71661376953125e-05 <- took less than 1 second
+** -> sil gmm k=28 cov_type=diag elapsed seconds 56.09595823287964 <- took 56.0 seconds
+Dataset=ds4 k=28 cov_type=diag sil=-0.0005729486335718726
+** -> gmm k=28 cov_type=tied elapsed seconds 1.5974044799804688e-05 <- took less than 1 second
+** -> sil gmm k=28 cov_type=tied elapsed seconds 56.03554105758667 <- took 56.0 seconds
+Dataset=ds4 k=28 cov_type=tied sil=0.13186615061954354
+** -> gmm k=28 cov_type=full elapsed seconds 1.71661376953125e-05 <- took less than 1 second
+** -> sil gmm k=28 cov_type=full elapsed seconds 56.09739947319031 <- took 56.0 seconds
+Dataset=ds4 k=28 cov_type=full sil=0.12555988149598393
++-----------------------------------------------------------------------------+
+| Exit Status    : 0                                                          |
+| Finishing time : Sun Nov  4 05:10:14 2018                                   |
+| CPU time       : Usr 3344.617s Sys 1921.28s WC  0h:57m:08s                     |
+| Rusage Stats   : Mem:32595  PF:  456309855/CSv/f:  0/0     Swaps:0          |
+|                :           Msg:    0/0     IOops:  0/0     Sigs :0          |
++-----------------------------------------------------------------------------+

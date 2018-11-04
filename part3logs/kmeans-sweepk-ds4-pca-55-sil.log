@@ -6,3 +6,56 @@
 | Starting time  : Sun Nov  4 04:13:06 2018          Qwait:   0h:00m:03s      |
 | Command        : part3.py -a kmeans-sweepk --ncomp 55 -s ds4 --reducer pca  |
 +-----------------------------------------------------------------------------+
+** -> pca projection calculation for ds4, k=55 elapsed seconds 0.12917065620422363 <- took less than 1 second
+Wrote /nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/class/proj3/datasets/ds4/dimreducer-pca-55.pkl
+** -> kmeans ds4 reduced by pca with n_components=55 clust_k=2 elapsed seconds 0.44847846031188965 <- took less than 1 second
+** -> silscore ds4 k=2 elapsed seconds 56.977580547332764 <- took 56.0 seconds
+Dataset=ds4 k=2 sil=0.09814315459974322
+** -> kmeans ds4 reduced by pca with n_components=55 clust_k=4 elapsed seconds 0.9584841728210449 <- took less than 1 second
+** -> silscore ds4 k=4 elapsed seconds 57.66606402397156 <- took 57.0 seconds
+Dataset=ds4 k=4 sil=0.05502844655495278
+** -> kmeans ds4 reduced by pca with n_components=55 clust_k=6 elapsed seconds 1.038928747177124 <- took 1.0 second
+** -> silscore ds4 k=6 elapsed seconds 57.97556519508362 <- took 57.0 seconds
+Dataset=ds4 k=6 sil=0.04183020498615396
+** -> kmeans ds4 reduced by pca with n_components=55 clust_k=8 elapsed seconds 1.2196807861328125 <- took 1.0 second
+** -> silscore ds4 k=8 elapsed seconds 57.24945902824402 <- took 57.0 seconds
+Dataset=ds4 k=8 sil=0.030240013856727897
+** -> kmeans ds4 reduced by pca with n_components=55 clust_k=10 elapsed seconds 1.5633766651153564 <- took 1.0 second
+** -> silscore ds4 k=10 elapsed seconds 58.54645133018494 <- took 58.0 seconds
+Dataset=ds4 k=10 sil=0.04406144019178454
+** -> kmeans ds4 reduced by pca with n_components=55 clust_k=12 elapsed seconds 1.7749361991882324 <- took 1.0 second
+** -> silscore ds4 k=12 elapsed seconds 57.299092292785645 <- took 57.0 seconds
+Dataset=ds4 k=12 sil=0.015433699660682228
+** -> kmeans ds4 reduced by pca with n_components=55 clust_k=14 elapsed seconds 1.6073720455169678 <- took 1.0 second
+** -> silscore ds4 k=14 elapsed seconds 58.41769814491272 <- took 58.0 seconds
+Dataset=ds4 k=14 sil=0.049078167234295686
+** -> kmeans ds4 reduced by pca with n_components=55 clust_k=16 elapsed seconds 1.8325066566467285 <- took 1.0 second
+** -> silscore ds4 k=16 elapsed seconds 58.683634519577026 <- took 58.0 seconds
+Dataset=ds4 k=16 sil=0.07907634862010089
+** -> kmeans ds4 reduced by pca with n_components=55 clust_k=18 elapsed seconds 2.497455596923828 <- took 2.0 seconds
+** -> silscore ds4 k=18 elapsed seconds 57.212255001068115 <- took 57.0 seconds
+Dataset=ds4 k=18 sil=0.08197135103940506
+** -> kmeans ds4 reduced by pca with n_components=55 clust_k=20 elapsed seconds 2.3706462383270264 <- took 2.0 seconds
+** -> silscore ds4 k=20 elapsed seconds 56.68671154975891 <- took 56.0 seconds
+Dataset=ds4 k=20 sil=0.09722360053566358
+** -> kmeans ds4 reduced by pca with n_components=55 clust_k=22 elapsed seconds 2.817613363265991 <- took 2.0 seconds
+** -> silscore ds4 k=22 elapsed seconds 56.13426899909973 <- took 56.0 seconds
+Dataset=ds4 k=22 sil=0.09708362262778761
+** -> kmeans ds4 reduced by pca with n_components=55 clust_k=24 elapsed seconds 2.7685070037841797 <- took 2.0 seconds
+** -> silscore ds4 k=24 elapsed seconds 56.69070911407471 <- took 56.0 seconds
+Dataset=ds4 k=24 sil=0.13781994843997514
+** -> kmeans ds4 reduced by pca with n_components=55 clust_k=26 elapsed seconds 2.78509783744812 <- took 2.0 seconds
+** -> silscore ds4 k=26 elapsed seconds 56.52702593803406 <- took 56.0 seconds
+Dataset=ds4 k=26 sil=0.1545605221164495
+** -> kmeans ds4 reduced by pca with n_components=55 clust_k=28 elapsed seconds 3.020886182785034 <- took 3.0 seconds
+** -> silscore ds4 k=28 elapsed seconds 55.40355205535889 <- took 55.0 seconds
+Dataset=ds4 k=28 sil=0.13466053826221802
+/nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/mlai/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
+  from numpy.core.umath_tests import inner1d
++-----------------------------------------------------------------------------+
+| Exit Status    : 0                                                          |
+| Finishing time : Sun Nov  4 04:26:57 2018                                   |
+| CPU time       : Usr 769.4s  Sys 313.607s WC  0h:13m:51s                     |
+| Rusage Stats   : Mem:34041  PF:  114830212/CSv/f:  0/0     Swaps:0          |
+|                :           Msg:    0/0     IOops:  0/0     Sigs :0          |
++-----------------------------------------------------------------------------+

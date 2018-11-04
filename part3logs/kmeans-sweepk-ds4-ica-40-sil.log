@@ -6,3 +6,56 @@
 | Starting time  : Sun Nov  4 04:13:18 2018          Qwait:   0h:00m:06s      |
 | Command        : part3.py -a kmeans-sweepk --ncomp 40 -s ds4 --reducer ica  |
 +-----------------------------------------------------------------------------+
+** -> ica projection calculation for ds4, k=40 elapsed seconds 8.4114670753479 <- took 8.0 seconds
+Wrote /nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/class/proj3/datasets/ds4/dimreducer-ica-40.pkl
+** -> kmeans ds4 reduced by ica with n_components=40 clust_k=2 elapsed seconds 0.6536698341369629 <- took less than 1 second
+** -> silscore ds4 k=2 elapsed seconds 70.68944978713989 <- took 1.0 minute, 10.0 seconds
+Dataset=ds4 k=2 sil=0.6865053395018308
+** -> kmeans ds4 reduced by ica with n_components=40 clust_k=4 elapsed seconds 1.0191833972930908 <- took 1.0 second
+** -> silscore ds4 k=4 elapsed seconds 70.1547634601593 <- took 1.0 minute, 10.0 seconds
+Dataset=ds4 k=4 sil=0.07519124266175423
+** -> kmeans ds4 reduced by ica with n_components=40 clust_k=6 elapsed seconds 1.4724209308624268 <- took 1.0 second
+** -> silscore ds4 k=6 elapsed seconds 72.03806662559509 <- took 1.0 minute, 12.0 seconds
+Dataset=ds4 k=6 sil=0.04957806795864288
+** -> kmeans ds4 reduced by ica with n_components=40 clust_k=8 elapsed seconds 1.8864922523498535 <- took 1.0 second
+** -> silscore ds4 k=8 elapsed seconds 71.9620726108551 <- took 1.0 minute, 11.0 seconds
+Dataset=ds4 k=8 sil=0.0706668577722708
+** -> kmeans ds4 reduced by ica with n_components=40 clust_k=10 elapsed seconds 2.064249277114868 <- took 2.0 seconds
+** -> silscore ds4 k=10 elapsed seconds 72.20476770401001 <- took 1.0 minute, 12.0 seconds
+Dataset=ds4 k=10 sil=0.059908777839997894
+** -> kmeans ds4 reduced by ica with n_components=40 clust_k=12 elapsed seconds 2.440991163253784 <- took 2.0 seconds
+** -> silscore ds4 k=12 elapsed seconds 76.65211701393127 <- took 1.0 minute, 16.0 seconds
+Dataset=ds4 k=12 sil=0.03946066961527926
+** -> kmeans ds4 reduced by ica with n_components=40 clust_k=14 elapsed seconds 2.8173515796661377 <- took 2.0 seconds
+** -> silscore ds4 k=14 elapsed seconds 76.91269898414612 <- took 1.0 minute, 16.0 seconds
+Dataset=ds4 k=14 sil=0.10091836863702887
+** -> kmeans ds4 reduced by ica with n_components=40 clust_k=16 elapsed seconds 2.7214367389678955 <- took 2.0 seconds
+** -> silscore ds4 k=16 elapsed seconds 74.98431611061096 <- took 1.0 minute, 14.0 seconds
+Dataset=ds4 k=16 sil=0.101712621278903
+** -> kmeans ds4 reduced by ica with n_components=40 clust_k=18 elapsed seconds 2.83771014213562 <- took 2.0 seconds
+** -> silscore ds4 k=18 elapsed seconds 76.79780101776123 <- took 1.0 minute, 16.0 seconds
+Dataset=ds4 k=18 sil=0.1215139717496256
+** -> kmeans ds4 reduced by ica with n_components=40 clust_k=20 elapsed seconds 3.3777730464935303 <- took 3.0 seconds
+** -> silscore ds4 k=20 elapsed seconds 76.06068778038025 <- took 1.0 minute, 16.0 seconds
+Dataset=ds4 k=20 sil=0.1520347121027829
+** -> kmeans ds4 reduced by ica with n_components=40 clust_k=22 elapsed seconds 3.9419727325439453 <- took 3.0 seconds
+** -> silscore ds4 k=22 elapsed seconds 73.64227890968323 <- took 1.0 minute, 13.0 seconds
+Dataset=ds4 k=22 sil=0.1296194828258407
+** -> kmeans ds4 reduced by ica with n_components=40 clust_k=24 elapsed seconds 3.835371255874634 <- took 3.0 seconds
+** -> silscore ds4 k=24 elapsed seconds 73.89323568344116 <- took 1.0 minute, 13.0 seconds
+Dataset=ds4 k=24 sil=0.1565087070533883
+** -> kmeans ds4 reduced by ica with n_components=40 clust_k=26 elapsed seconds 3.8555619716644287 <- took 3.0 seconds
+** -> silscore ds4 k=26 elapsed seconds 73.45397400856018 <- took 1.0 minute, 13.0 seconds
+Dataset=ds4 k=26 sil=0.17720302771497096
+** -> kmeans ds4 reduced by ica with n_components=40 clust_k=28 elapsed seconds 4.3325514793396 <- took 4.0 seconds
+** -> silscore ds4 k=28 elapsed seconds 73.00806140899658 <- took 1.0 minute, 13.0 seconds
+Dataset=ds4 k=28 sil=0.1707178316065606
+/nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/mlai/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
+  from numpy.core.umath_tests import inner1d
++-----------------------------------------------------------------------------+
+| Exit Status    : 0                                                          |
+| Finishing time : Sun Nov  4 04:31:23 2018                                   |
+| CPU time       : Usr 1136.647s Sys 617.706s WC  0h:18m:05s                     |
+| Rusage Stats   : Mem:35116  PF:  119404878/CSv/f:  0/0     Swaps:0          |
+|                :           Msg:    0/0     IOops:  0/0     Sigs :0          |
++-----------------------------------------------------------------------------+

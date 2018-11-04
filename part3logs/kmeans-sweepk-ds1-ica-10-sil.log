@@ -6,3 +6,76 @@
 | Starting time  : Sun Nov  4 04:13:18 2018          Qwait:   0h:00m:08s      |
 | Command        : part3.py -a kmeans-sweepk --ncomp 10 -s ds1 --reducer ica  |
 +-----------------------------------------------------------------------------+
+Read /nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/class/proj3/datasets/ds1/dimreducer-ica-10.pkl
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=2 elapsed seconds 0.8862230777740479 <- took less than 1 second
+** -> silscore ds1 k=2 elapsed seconds 211.75790929794312 <- took 3.0 minutes, 31.0 seconds
+Dataset=ds1 k=2 sil=0.3563965650551456
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=6 elapsed seconds 0.7034084796905518 <- took less than 1 second
+** -> silscore ds1 k=6 elapsed seconds 208.794424533844 <- took 3.0 minutes, 28.0 seconds
+Dataset=ds1 k=6 sil=0.3558435597907253
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=10 elapsed seconds 2.0246455669403076 <- took 2.0 seconds
+** -> silscore ds1 k=10 elapsed seconds 207.9362018108368 <- took 3.0 minutes, 27.0 seconds
+Dataset=ds1 k=10 sil=0.44249781007225364
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=14 elapsed seconds 1.4759025573730469 <- took 1.0 second
+** -> silscore ds1 k=14 elapsed seconds 206.37392282485962 <- took 3.0 minutes, 26.0 seconds
+Dataset=ds1 k=14 sil=0.5632847280142479
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=18 elapsed seconds 2.6996400356292725 <- took 2.0 seconds
+** -> silscore ds1 k=18 elapsed seconds 210.50916004180908 <- took 3.0 minutes, 30.0 seconds
+Dataset=ds1 k=18 sil=0.618612177662818
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=22 elapsed seconds 3.3827028274536133 <- took 3.0 seconds
+** -> silscore ds1 k=22 elapsed seconds 206.8425009250641 <- took 3.0 minutes, 26.0 seconds
+Dataset=ds1 k=22 sil=0.648884240296526
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=26 elapsed seconds 4.336139678955078 <- took 4.0 seconds
+** -> silscore ds1 k=26 elapsed seconds 199.94205021858215 <- took 3.0 minutes, 19.0 seconds
+Dataset=ds1 k=26 sil=0.6828802491987453
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=30 elapsed seconds 5.412894010543823 <- took 5.0 seconds
+** -> silscore ds1 k=30 elapsed seconds 199.55510830879211 <- took 3.0 minutes, 19.0 seconds
+Dataset=ds1 k=30 sil=0.6658077367974381
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=34 elapsed seconds 5.804959058761597 <- took 5.0 seconds
+** -> silscore ds1 k=34 elapsed seconds 198.28695940971375 <- took 3.0 minutes, 18.0 seconds
+Dataset=ds1 k=34 sil=0.6614309761071813
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=38 elapsed seconds 6.760131120681763 <- took 6.0 seconds
+** -> silscore ds1 k=38 elapsed seconds 195.90318727493286 <- took 3.0 minutes, 15.0 seconds
+Dataset=ds1 k=38 sil=0.6581159821320808
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=42 elapsed seconds 8.171775102615356 <- took 8.0 seconds
+** -> silscore ds1 k=42 elapsed seconds 193.66498041152954 <- took 3.0 minutes, 13.0 seconds
+Dataset=ds1 k=42 sil=0.6534785676466629
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=46 elapsed seconds 6.497999429702759 <- took 6.0 seconds
+** -> silscore ds1 k=46 elapsed seconds 196.7896671295166 <- took 3.0 minutes, 16.0 seconds
+Dataset=ds1 k=46 sil=0.6584589382742885
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=50 elapsed seconds 7.600282430648804 <- took 7.0 seconds
+** -> silscore ds1 k=50 elapsed seconds 193.12122869491577 <- took 3.0 minutes, 13.0 seconds
+Dataset=ds1 k=50 sil=0.6573117620719808
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=54 elapsed seconds 8.40731406211853 <- took 8.0 seconds
+** -> silscore ds1 k=54 elapsed seconds 196.9520766735077 <- took 3.0 minutes, 16.0 seconds
+Dataset=ds1 k=54 sil=0.6555283636021891
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=58 elapsed seconds 8.77872920036316 <- took 8.0 seconds
+** -> silscore ds1 k=58 elapsed seconds 193.53570103645325 <- took 3.0 minutes, 13.0 seconds
+Dataset=ds1 k=58 sil=0.6524398137683686
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=62 elapsed seconds 10.7174551486969 <- took 10.0 seconds
+** -> silscore ds1 k=62 elapsed seconds 196.53116989135742 <- took 3.0 minutes, 16.0 seconds
+Dataset=ds/nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/mlai/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
+  from numpy.core.umath_tests import inner1d
+1 k=62 sil=0.6489710771385757
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=66 elapsed seconds 18.76960325241089 <- took 18.0 seconds
+** -> silscore ds1 k=66 elapsed seconds 197.30767464637756 <- took 3.0 minutes, 17.0 seconds
+Dataset=ds1 k=66 sil=0.6548857916760568
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=70 elapsed seconds 19.998024702072144 <- took 19.0 seconds
+** -> silscore ds1 k=70 elapsed seconds 194.85141921043396 <- took 3.0 minutes, 14.0 seconds
+Dataset=ds1 k=70 sil=0.6384120460976395
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=74 elapsed seconds 22.301489114761353 <- took 22.0 seconds
+** -> silscore ds1 k=74 elapsed seconds 193.1761302947998 <- took 3.0 minutes, 13.0 seconds
+Dataset=ds1 k=74 sil=0.6170709911562231
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=78 elapsed seconds 26.855685234069824 <- took 26.0 seconds
+** -> silscore ds1 k=78 elapsed seconds 194.4922091960907 <- took 3.0 minutes, 14.0 seconds
+Dataset=ds1 k=78 sil=0.6162431340952088
+** -> kmeans ds1 reduced by ica with n_components=10 clust_k=82 elapsed seconds 24.732125282287598 <- took 24.0 seconds
+** -> silscore ds1 k=82 elapsed seconds 193.10161900520325 <- took 3.0 minutes, 13.0 seconds
+Dataset=ds1 k=82 sil=0.5975340833745076
++-----------------------------------------------------------------------------+
+| Exit Status    : 0                                                          |
+| Finishing time : Sun Nov  4 05:26:30 2018                                   |
+| CPU time       : Usr 4406.731s Sys 1742.368s WC  1h:13m:12s                     |
+| Rusage Stats   : Mem:87356  PF:  474799166/CSv/f:  0/0     Swaps:0          |
+|                :           Msg:    0/0     IOops:  0/0     Sigs :0          |
++-----------------------------------------------------------------------------+

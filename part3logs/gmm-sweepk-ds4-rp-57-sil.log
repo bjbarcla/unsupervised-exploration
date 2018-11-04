@@ -1,0 +1,8 @@
++-----------------------------------------------------------------------------+
+| Logfile        : gmm-sweepk-ds4-rp-57-sil.log                               |
+| Job id         : 5091183591                 Class: SLES11SP4&&8C&&32G Qslot: /icf/fdk/pdx_critical_vp/bench11|
+| Executed on    : plxcfb016                  Pool : pdx_misc                 |
+| Queueing time  : Sun Nov  4 05:42:08 2018                                   |
+| Starting time  : Sun Nov  4 05:42:16 2018          Qwait:   0h:00m:08s      |
+| Command        : part3.py -a gmm-sweepk --ncomp 57 -s ds4 --reducer rp      |
++-----------------------------------------------------------------------------+
