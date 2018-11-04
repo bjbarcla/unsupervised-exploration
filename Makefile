@@ -102,7 +102,7 @@ all-sweep-plots: plot-kmeans-ksweep-CH-ds1 plot-kmeans-ksweep-CH-ds4 plot-kmeans
 	echo okay
 
 
-
+#MENU cviz: plot clusters on pca projected 2d image
 make cviz:
 	$(with_venv) bin/part1.py -s ds1 -a kmeans-graph
 	$(with_venv) bin/part1.py -s ds4 -a kmeans-graph
@@ -111,8 +111,8 @@ make cviz:
 
 part1-graphs: cviz all-sweep-plots
 
-
-part2:
+#MENU: part2-curves: plot sweeps of n_components
+part2-curves:
 	bin/part2.py -a ica-kurtcurve -s ds1
 	bin/part2.py -a ica-kurtcurve -s ds4
 	bin/part2.py -a pca-eigenplot -s ds1

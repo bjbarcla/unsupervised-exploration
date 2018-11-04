@@ -12,6 +12,8 @@ datasets:
       best-cov-type: tied
       
       kmeans-graph: pca
+      mlp_topology: [200, 200, 200]
+
       #best-k: 10
       synthesize_attributes:
         - new_attrib: 'outcome_type'
@@ -69,6 +71,8 @@ datasets:
       best-k-gmm: 2    # again, no strong sil score, srongest at k=2, going with that again.  diag tied and full cov_types good in CH, going with tied for consistency
       best-cov-type: tied
       kmeans-graph: pca
+      mlp_topology: [50, 20, 1]
+      
       numerical_attributes:
         - age
         - capital-gain

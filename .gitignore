@@ -19,4 +19,4 @@ results
 *.prev/
 bad*
 snapshot
-
+__pycache__

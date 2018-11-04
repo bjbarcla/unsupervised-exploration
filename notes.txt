@@ -1,3 +1,33 @@
+clustering
+
+init            time    inertia homo    compl   v-meas  ARI     AMI     silhouette
+bin/part1.py -a kmeans-bench -s ds1
+k-means k=25    4.26s   106979  0.185   0.044   0.072   0.024   0.044   0.656
+bin/part1.py -a kmeans-bench -s ds4
+k-means k=2     1.88s   2368762 0.195   0.155   0.173   0.181   0.155   0.066
+
+
+
+
+
+
+ds1
+===
+      best-k-kmeans: 25 # for kmeans knee of CH score and silh score both ~25
+      best-k-gmm: 25 # knee of kmeans CH score and silh score both ~25; tied and diag cov type both good choices, going with tied
+      best-cov-type: tied
+
+      
+
+ds4
+===
+      best-k-kmeans: 2 # no good sil score, best at k=27 of only 0.156; best CH score at 2 - going with that
+      best-k-gmm: 2    # again, no strong sil score, srongest at k=2, going with that again.  diag tied and full cov_types good in CH, going with tied for consistency
+      best-cov-type: tied
+
+
+
+
 orig dataset:
 ds4--
 X kurtosis: [-1.83504011e-01  1.62509629e+02  6.37103847e-01  2.03373938e+01
@@ -122,3 +152,17 @@ add to: venv/lib/python3.6/site-packages/sklearn/random_projection.py
                                 dense_output=self.dense_output)
         return X_new
 ---------------------------
+
+
+nbjob run --target pdx_soft --qslot /icf/fdk/soft --class 'SLES11&&2C&&8G&&NOSUSP' --log-file /home/bb/cs7641/proj1/t/bbarclay7/results/ds1.cvs-neural_networks-accuracy.log  bin/dataset_util.py --action cvsearch_one --dataset ds1 --classifier neural_networks --cores 2 --scoring accuracy
+nbjob run --target pdx_soft --qslot /icf/fdk/soft --class 'SLES11&&2C&&8G&&NOSUSP' --log-file /home/bb/cs7641/proj1/t/bbarclay7/results/ds4.cvs-neural_networks-accuracy.log  bin/dataset_util.py --action cvsearch_one --dataset ds4 --classifier neural_networks --cores 2 --scoring accuracy
+
+ bin/analyze_util.py -a do_analyses --cores 2 --gigs 16  | grep -v balanced | grep neur | grep accuracy | grep 'ds[14]'
+# missing /home/bb/cs7641/proj1/t/bbarclay7/results/ds1.neural_networks.accuracy.cvsearch.pkl
+# missing /home/bb/cs7641/proj1/t/bbarclay7/results/ds1.neural_networks.accuracy.best_model.pkl
+# missing /home/bb/cs7641/proj1/t/bbarclay7/results/ds1.cvs-neural_networks-accuracy.log
+# NOPE -- cvsearch incomplete : ['ds1', 'neural_networks', 'accuracy']
+# missing /home/bb/cs7641/proj1/t/bbarclay7/results/ds4.neural_networks.accuracy.cvsearch.pkl
+# missing /home/bb/cs7641/proj1/t/bbarclay7/results/ds4.neural_networks.accuracy.best_model.pkl
+# missing /home/bb/cs7641/proj1/t/bbarclay7/results/ds4.cvs-neural_networks-accuracy.log
+# NOPE -- cvsearch incomplete : ['ds4', 'neural_networks', 'accuracy']
