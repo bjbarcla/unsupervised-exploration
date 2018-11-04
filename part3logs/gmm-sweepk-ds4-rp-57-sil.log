@@ -6,3 +6,22 @@
 | Starting time  : Sun Nov  4 05:42:16 2018          Qwait:   0h:00m:08s      |
 | Command        : part3.py -a gmm-sweepk --ncomp 57 -s ds4 --reducer rp      |
 +-----------------------------------------------------------------------------+
+/nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/mlai/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
+  from numpy.core.umath_tests import inner1d
+Traceback (most recent call last):
+  File "bin/part3.py", line 115, in <module>
+    transformer, reduction = get_reducer_X_transformer(dataset,reducer,ncomp)
+  File "bin/part3.py", line 25, in get_reducer_X_transformer
+    red = get_dim_reducer(dataset, reducer, n_components)
+  File "/nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/class/proj3/bin/dimension_reduction_lib.py", line 68, in get_dim_reducer
+    reducer = get_rp_reducer(X_train, k)
+  File "/nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/class/proj3/bin/dimension_reduction_lib.py", line 28, in get_rp_reducer
+    X_projected = reducer.inverse_transform(X_train_reduced)
+AttributeError: 'SparseRandomProjection' object has no attribute 'inverse_transform'
++-----------------------------------------------------------------------------+
+| Exit Status    : 1                                                          |
+| Finishing time : Sun Nov  4 05:42:19 2018                                   |
+| CPU time       : Usr 1.82s   Sys 5.06s   WC  0h:00m:03s                     |
+| Rusage Stats   : Mem:0      PF:  0/0       CSv/f:  0/0     Swaps:0          |
+|                :           Msg:    0/0     IOops:  0/0     Sigs :0          |
++-----------------------------------------------------------------------------+

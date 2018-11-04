@@ -1,0 +1,8 @@
++-----------------------------------------------------------------------------+
+| Logfile        : kmeans-sweepk-ds1-lda-5-CH.log                             |
+| Job id         : 5091213919                 Class: SLES11SP4&&8C&&32G Qslot: /icf/fdk/pdx_critical_vp/bench8|
+| Executed on    : plxc0186                   Pool : pdx_misc                 |
+| Queueing time  : Sun Nov  4 05:59:56 2018                                   |
+| Starting time  : Sun Nov  4 06:00:01 2018          Qwait:   0h:00m:05s      |
+| Command        : part3.py -a kmeans-sweepk-CH --ncomp 5 -s ds1 --reducer lda |
++-----------------------------------------------------------------------------+

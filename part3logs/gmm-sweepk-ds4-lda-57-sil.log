@@ -1,0 +1,8 @@
++-----------------------------------------------------------------------------+
+| Logfile        : gmm-sweepk-ds4-lda-57-sil.log                              |
+| Job id         : 5091214259                 Class: SLES11SP4&&8C&&32G Qslot: /icf/fdk/pdx_critical_vp/bench12|
+| Executed on    : plxck3018                  Pool : pdx_misc                 |
+| Queueing time  : Sun Nov  4 06:00:07 2018                                   |
+| Starting time  : Sun Nov  4 06:00:15 2018          Qwait:   0h:00m:08s      |
+| Command        : part3.py -a gmm-sweepk --ncomp 57 -s ds4 --reducer lda     |
++-----------------------------------------------------------------------------+
