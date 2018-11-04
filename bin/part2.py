@@ -54,6 +54,8 @@ if __name__ == '__main__':
         pca_eigenplot(dataset)
     elif opts.action=="pca-loss":
         pca_loss(dataset,k)
+    elif opts.action=="rp-loss":
+        rp_loss(dataset,k)
     elif opts.action=="loss":
         reducer_loss(dataset,opts.dralgo,k)
     elif opts.action=="lossplot":

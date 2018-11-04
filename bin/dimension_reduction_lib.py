@@ -7,6 +7,39 @@ import yaml
 from utils import *
 
 
+def get_rp_reducer(X_train, k, stats=False):
+    from sklearn import random_projection
+    #X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset)
+    features = X_train.shape[1]
+    algo="rp"
+    if not k:
+        k = features
+
+    best_reducer = None
+    best_reducer_loss = 100
+    losses = []
+
+    reducers_to_try = 25
+
+    for _ in range(0,reducers_to_try):
+        reducer = random_projection.SparseRandomProjection(n_components=k)
+        reducer.fit(X_train)
+        X_train_reduced = reducer.transform(X_train)
+        X_projected = reducer.inverse_transform(X_train_reduced)
+        loss = ((X_train - X_projected) ** 2).mean()
+        if stats:
+            losses.append(loss)
+        if loss < best_reducer_loss:
+            best_reducer = reducer
+            best_reducer_loss = loss
+
+    if stats:
+        mean=np.mean(losses)
+        variance=np.var(losses)
+        stddev = np.sqrt(variance)
+        return best_reducer,best_reducer_loss,mean,stddev
+    else:
+        return best_reducer
     
     
 def get_dim_reducer(dataset, algo, k=None, reset=False):
@@ -32,7 +65,7 @@ def get_dim_reducer(dataset, algo, k=None, reset=False):
     elif algo=="ica":
         reducer = FastICA(n_components=k, whiten=True)
     elif algo=="rp":
-        reducer = random_projection.SparseRandomProjection(n_components=k)
+        reducer = get_rp_reducer(X_train, k)
     elif algo=="lda":
         reducer = LDA(n_components=k)
     elif algo=="tsne":
@@ -51,6 +84,11 @@ def get_dim_reducer(dataset, algo, k=None, reset=False):
         
     print(f"Wrote {cache}")
     return reducer
+
+
+
+
+
 
 from scipy.stats import kurtosis
 def describe_dim_reduction(dataset, algo, k=None):
@@ -106,6 +144,41 @@ def reducer_loss(dataset, algo, k):
     loss = ((X_train - X_projected) ** 2).mean()
     print(loss)
 
+
+def rp_loss(dataset, algo):
+    algo="rp"
+    X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset)
+    features = X_train.shape[1]
+
+    ks = []
+    losses = []
+    stddevs = []
+    
+    for k in range(2,features+1):
+        reducer,loss,mean,stddev = get_rp_reducer(X_train, k, stats=True)
+        ks.append(k)
+        losses.append(loss)
+        stddevs.append(stddev)
+        #print(f"rp loss,{k},{loss},{mean},{stddev}")
+
+    plt.figure()
+    plt.title(f"Dataset {dataset}: Reconstruction loss for randomized projections")
+    plt.xlabel("n_components")
+    plt.ylabel("loss")
+    plt.grid()
+
+    upper = []
+    for idx in range(0,len(losses)):
+        upper.append( losses[idx] + 2 * stddevs[idx] )
+        
+    plt.fill_between(ks, upper, # losses + 2*stddevs,
+                     losses, alpha=0.1,
+                     color="r")
+    plt.plot(ks, losses, 'x-', color="g",
+             label="loss")
+    png=f"{dataset}-rp-loss.png"
+    plt.savefig(png, bbox_inches='tight')
+    print(f"Wrote {png}")
 
     
 def reducer_loss_plot(dataset):

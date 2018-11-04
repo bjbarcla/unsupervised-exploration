@@ -45,7 +45,8 @@ datasets:
       # bin/part2.py -a pca-eigenplot -s ds4
       # bin/part2.py -a pca-loss -s ds1
       # bin/part2.py -a pca-loss -s ds4
-
+      # bin/part2.py -a rp-loss -s ds1
+      # bin/part2.py -a rp-loss -s ds4
     
       ## part 2 result
       best-pca-ncomponents: [5,10] # eigenvalue knee at 10 (10,0.9700086769391271 ; 11,0.5781346889840361)  ##:( loss curve knee @ 10,0.06909826158065971 ; 
