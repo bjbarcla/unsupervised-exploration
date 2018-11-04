@@ -12,6 +12,7 @@ import pathlib
 import yaml
 from utils import *
 from cluster_lib import *
+from cluster_p3_lib import *
 from dimension_reduction_lib import *
 
 import argparse
@@ -49,13 +50,37 @@ if __name__ == '__main__':
             print(f"{ds}:    {spec['datasets'][ds]['name']}")
         exit(0)
 
+    elif opts.action=="graphs":
+        for reducer in ["pca","ica","rp","lda"]:
+            for dataset in ["ds1","ds4"]:
+                ncomps = spec['datasets'][dataset][f"best-{reducer}-ncomponents"]
+                for ncomp in ncomps:
+                    for algo in ["kmeans","gmm"]:
+                        logfile=f"part3logs/{algo}-sweepk-{dataset}-{reducer}-{ncomp}-sil.log"
+                        png=f"part3res/{dataset}-{algo}-{reducer}-{ncomp}-silhouette-ksweep.png"
+                        measure="silhouette"
+                        clust_plot_sweep_p3(dataset, measure, logfile, algo, png,reducer,ncomp)
+
+                        logfile=f"part3logs/{algo}-sweepk-{dataset}-{reducer}-{ncomp}-CH.log"
+                        png=f"part3res/{dataset}-{algo}-{reducer}-{ncomp}-CH-ksweep.png"
+                        measure="CH"
+                        clust_plot_sweep_p3(dataset, measure, logfile, algo, png,reducer,ncomp)
+                        
+                        
+                        
+                        
+                        
+
+                        
+
+                        #{algo}-sweepk-{dataset}-{reducer}-{ncomp}-sil.log"
+                        
+
+
     elif opts.action=="jobs":
-        jf="part3-lda.jobs"
+        jf="part3-all.jobs"
         with open(jf,"w") as fh:
-            #for reducer in ["pca","ica","rp","tsne"]:
-            #for reducer in ["pca","ica"]:
-            #for reducer in ["rp"]:                                
-            for reducer in ["lda"]:                                
+            for reducer in ["pca","ica","rp","lda"]:
                 for dataset in ["ds1","ds4"]:
                     #print( spec['datasets'][dataset] )
                     ncomps = spec['datasets'][dataset][f"best-{reducer}-ncomponents"]
