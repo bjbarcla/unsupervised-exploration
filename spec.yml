@@ -55,6 +55,11 @@ datasets:
       # ds1-ica-avgabskurtosos-ksweep.csv  ds1-ica-avgabskurtosos-ksweep.png  ds1-ica-kurtoses-ksweep.csv  ds1-ica-loss-curve.csv  ds1-ica-loss-curve.png
       best-rp-ncomponents: [5,10]   # tbd
       best-tsne-ncomponents: [3] # 2 or 3.  picked 3
+
+
+      ## part3 steps
+      # bin/part3.py  -a jobs
+      # sh part3.jobs
     
       ## part 4 config
       mlp_topology: [200, 200, 200]
@@ -127,7 +132,7 @@ datasets:
       best-pca-ncomponents: [30,55] # middle of knee of eigenvalue curve @ 30,1.013772940339259 ; drop @ 55,0.4202837092070921
       # ds4-pca-eigenplot.png  ds4-pca-eigenvals.csv
       best-ica-ncomponents: [40,57] # avg abs max 57,312.105135997082; knee at 40,232.44964758605926
-      best-rp-ncomponents: [20,40]   # tbd
+      best-rp-ncomponents: [30,40,57]   # tbd
       best-tsne-ncomponents: [3] # 2 or 3.  picked 3
 
     
