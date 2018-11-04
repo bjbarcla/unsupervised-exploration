@@ -34,13 +34,8 @@ def shave(x):
 
 def get_perf_stats(model, X, y):
     yhat = model.predict(X)
-
     precisions, recalls, fscores, support = precision_recall_fscore_support(y, yhat, average=None)
-    
     cnf = confusion_matrix(y, yhat)
-
-    #print(cnf)
-
 
     total = sum( [sum(x) for x in cnf])
     correct = shave(cnf[0][0] + cnf[1][1])
@@ -48,19 +43,10 @@ def get_perf_stats(model, X, y):
     prec = shave(avg(precisions))
     f1 = shave(avg(fscores))
     rec = shave(avg(recalls))
-
-    #print(accuracy)
-
-    #sys.exit("stop")
     agg=avg([acc, prec, f1, rec])
     return acc, prec, f1, rec, agg
 
 
-def cook_X(recipe,X):
-    if recipe=="Unmodified":
-        return X
-    else:
-        sys.exit("unimplemented recipe provided to cook_X: "+recipe)
         
 def get_reducer_X_transformer(dataset,reducer,n_components):
     red = get_dim_reducer(dataset, reducer, n_components)
@@ -70,18 +56,96 @@ def get_reducer_X_transformer(dataset,reducer,n_components):
     reduction=f"{reducer} with n_components={n_components}"
     return transformer, reduction
 
+
+def onehot_cluster_features(X,clusterer):
+    labels = clusterer.predict(X)
+    new_feature_categorical = np.reshape(labels, (len(labels),1))
+    from sklearn.preprocessing import OneHotEncoder
+    enc = OneHotEncoder(handle_unknown='ignore')
+    enc.fit(new_feature_categorical)
+    new_features_onehot = enc.transform(new_feature_categorical)
+    return new_features_onehot
+    
+def augment_X_labels(X, clusterer):
+    new_features_onehot = onehot_cluster_features(X,clusterer).toarray()
+    #print(X.shape)
+    #print(type(X))
+    #print(new_features_onehot.shape)
+    #print(type(new_features_onehot))
+    final = np.hstack((X,new_features_onehot))
+    #print(final.shape)
+    return final
+
+def replace_X_labels(X, clusterer):
+    new_features_onehot = onehot_cluster_features(X,clusterer)
+    return new_features_onehot
+
+
+
+def get_cluster_X_transformer(dataset, clusteralgo, augment_or_replace):
+    X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset)
+    
+    if clusteralgo=="gmm":
+        from sklearn.mixture import GaussianMixture
+        k = spec['datasets'][dataset]['best-k-gmm']
+        cov_type = spec['datasets'][dataset]['best-cov-type']
+        clusterer = GaussianMixture(n_components=k, covariance_type=cov_type, max_iter=200, random_state=0) #, f"gmm k={k} cov_type={cov_type}")
+        reduction=f"{augment_or_replace} features with {clusteralgo} (k={k},cov_type={cov_type})"
+    elif clusteralgo=="kmeans":
+        from sklearn.cluster import KMeans
+        k = spec['datasets'][dataset]['best-k-kmeans']
+        reduction=f"{augment_or_replace} features with {clusteralgo} (k={k})"
+        clusterer = KMeans(n_clusters=k, random_state=1) #, f"kmeans {dataset} k={k}")
+    else:
+        raise(ValueError(f"illegal cluster algo [{clusteralgo}]"))
+    timeit(lambda: clusterer.fit(X_train), f"{clusteralgo} fit for {augment_or_replace} transformer for dataset {dataset}")
+
+    #X_train_labels=clusterer.predict(X_train)
+    #X_test_labels =clusterer.predict(X_test)
+    #print( X_train_labels.head )
+
+    if augment_or_replace == "augment":
+        transformer = lambda X: augment_X_labels(X, clusterer)
+    elif augment_or_replace == "replace":
+        transformer = lambda X: replace_X_labels(X, clusterer)
+    else:
+        raise(ValueError(f"Illegal value for augment_or_replace: [{augment_or_replace}]"))
+
+    return transformer,reduction
+
+
     
 def nn_train_score(dataset, recipe, iter=1):
 
+    mcl = re.match('(kmeans|gmm)_(augment|replace)', recipe)
     m4=re.match('([^_]+)_(\d+)d', recipe)
-    if m4:
+    mdos=re.match('([^_]+)_(\d+)d_(kmeans|gmm)_(augment|replace)', recipe)
+    
+    if mcl:
+        clusteralgo=mcl.group(1)
+        augment_or_replace = mcl.group(2)
+        transformer, reduction = get_cluster_X_transformer(dataset, clusteralgo, augment_or_replace)
+    elif m4:
         reducer = m4.group(1)
         ncomp = int(m4.group(2))
         transformer, reduction = get_reducer_X_transformer(dataset,reducer,ncomp)
         #print(f"HELLO {reduction}")
         #sys.exit("stop")
-    else:
+    elif mdos: #porque no los dos?
+        reducer = m4.group(1)
+        ncomp = int(m4.group(2))
+        clusteralgo=mcl.group(3)
+        augment_or_replace = mcl.group(4)
+        transformer1, reduction1 = get_cluster_X_transformer(dataset, clusteralgo, augment_or_replace)
+        transformer2, reduction2 = get_reducer_X_transformer(dataset,reducer,ncomp)
+        reduction = f"{reduction1} then {reduction2}"
+        transformer = lambda x: transformer2(transformer1(x))
+        
+    elif recipe=="Unmodified":
         transformer = lambda x: x
+        reduction = "Unmodified"
+    else:
+        raise(ValueError(f"Unhandled recipe [{recipe}]"))
         
     X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset, x_transformer=transformer)
     
