@@ -97,6 +97,7 @@ plot-kmeans-ksweep-CH-%:
 plot-kmeans-clusters-%:
 	$(with_venv) time unbuffer bin/part1.py -s $* -a kmeans-plot-clusters
 
+#MENU all-sweep-plots: make graphs for cluster k sweeps
 all-sweep-plots: plot-kmeans-ksweep-CH-ds1 plot-kmeans-ksweep-CH-ds4 plot-kmeans-ksweep-ds1 plot-kmeans-ksweep-ds4 plot-gmm-ksweep-CH-ds1 plot-gmm-ksweep-CH-ds4 plot-gmm-ksweep-ds1 plot-gmm-ksweep-ds4
 	echo okay
 
