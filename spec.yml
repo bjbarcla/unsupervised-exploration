@@ -48,9 +48,9 @@ datasets:
 
     
       ## part 2 result
-      best-pca-ncomponents: [10] # eigenvalue knee at 10 (10,0.9700086769391271 ; 11,0.5781346889840361)  ##:( loss curve knee @ 10,0.06909826158065971 ; 
+      best-pca-ncomponents: [5,10] # eigenvalue knee at 10 (10,0.9700086769391271 ; 11,0.5781346889840361)  ##:( loss curve knee @ 10,0.06909826158065971 ; 
       # ds1-pca-eigenvals.csv   ds1-pca-eigenplot.png   ##:( ds1-pca-loss-curve.png ds1-pca-loss-curve.csv
-      best-ica-ncomponents: [10] # avg abs kurtosis maximized at nc=10  ##:(; recon loss curve knee at 10
+      best-ica-ncomponents: [5,10] # avg abs kurtosis maximized at nc=10  ##:(; recon loss curve knee at 10
       # ds1-ica-avgabskurtosos-ksweep.csv  ds1-ica-avgabskurtosos-ksweep.png  ds1-ica-kurtoses-ksweep.csv  ds1-ica-loss-curve.csv  ds1-ica-loss-curve.png
       best-rp-ncomponents: [5,10]   # tbd
       best-tsne-ncomponents: [3] # 2 or 3.  picked 3
@@ -114,7 +114,7 @@ datasets:
       datafile: census_income_fixed2.csv
 
       ## part 1 config
-      k-sweep: [2,30,1]
+      k-sweep: [2,30,2]
       kmeans-graph: pca
 
       ## part 1 result

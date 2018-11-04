@@ -26,7 +26,7 @@ def get_reducer_X_transformer(dataset,reducer,n_components):
 
     transformer = lambda X: red.transform(X)
     
-    reduction=f"{reducer} with n_components={k}"
+    reduction=f"{reducer} with n_components={n_components}"
     return transformer, reduction
 
 #actions_list="list,kmeans-sweepk,kmeans-graph,kmeans-plot-ksweep,gmm-sweepk,kmeans-plot-clusters,gmm-plot-ksweep,gmm-sweepk-CH,gmm-plot-ksweep-CH,kmeans-sweepk-CH,kmeans-plot-ksweep-CH,gmm-graph"
@@ -60,16 +60,16 @@ if __name__ == '__main__':
                     for ncomp in ncomps:
                         for algo in ["gmm","kmeans"]:
                             logfile=f"part3logs/{algo}-sweepk-{dataset}-{reducer}-{ncomp}-sil.log"
-                            fh.write(f"launcher.sh --log-file {logfile} bin/part3.py -a {algo}-sweepk -ncomp {ncomp} -s {dataset}\n")
+                            fh.write(f"launcher.sh --log-file {logfile} bin/part3.py -a {algo}-sweepk --ncomp {ncomp} -s {dataset} --reducer {reducer}\n")
                             logfile=f"part3logs/{algo}-sweepk-{dataset}-{reducer}-{ncomp}-CH.log"
-                            fh.write(f"launcher.sh --log-file {logfile} bin/part3.py -a {algo}-sweepk-CH -ncomp {ncomp} -s {dataset}\n")
+                            fh.write(f"launcher.sh --log-file {logfile} bin/part3.py -a {algo}-sweepk-CH --ncomp {ncomp} -s {dataset} --reducer {reducer}\n")
         print(f"Wrote {jf}")
         
     elif opts.action=="kmeans-sweepk":
         # do all the same data prep as we did in the analysis project
         ncomp=int(opts.ncomp)
         reducer=opts.reducer
-        transformer = get_reducer_X_transformer(dataset,reducer,n_components)
+        transformer, reduction = get_reducer_X_transformer(dataset,reducer,ncomp)
         X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset, x_transformer=transformer)
         # http://scikit-learn.org/stable/modules/clustering.html#clustering-evaluation
         from sklearn import metrics
@@ -79,14 +79,18 @@ if __name__ == '__main__':
         ks = spec['datasets'][dataset]['k-sweep']
 
         for k in range(*ks):
-            kmeans_model = timeit(lambda: KMeans(n_clusters=k, random_state=1).fit(X_train), f"kmeans {dataset} reduced by {reduction} k={k}")
+            kmeans_model = timeit(lambda: KMeans(n_clusters=k, random_state=1).fit(X_train), f"kmeans {dataset} reduced by {reduction} clust_k={k}")
             labels = kmeans_model.labels_
             sil_score = timeit(lambda: metrics.silhouette_score(X_train, labels, metric='euclidean'), f"silscore {dataset} k={k}")
             print(f"Dataset={dataset} k={k} sil={sil_score}")
 
     elif opts.action=="kmeans-sweepk-CH":
         # do all the same data prep as we did in the analysis project
-        X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset)
+        ncomp=int(opts.ncomp)
+        reducer=opts.reducer
+        transformer, reduction = get_reducer_X_transformer(dataset,reducer,ncomp)
+
+        X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset, x_transformer=transformer)
         # http://scikit-learn.org/stable/modules/clustering.html#clustering-evaluation
         from sklearn import metrics
         from sklearn.cluster import KMeans
@@ -103,7 +107,13 @@ if __name__ == '__main__':
     elif opts.action=="gmm-sweepk":
         from sklearn.mixture import GaussianMixture
         from sklearn import metrics
-        X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset)
+        
+        #X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset)
+        ncomp=int(opts.ncomp)
+        reducer=opts.reducer
+        transformer, reduction = get_reducer_X_transformer(dataset,reducer,ncomp)
+        X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset, x_transformer=transformer)
+
         #k=2
         ks = spec['datasets'][dataset]['k-sweep']
         #cov_type in ['spherical', 'diag', 'tied', 'full']
@@ -118,7 +128,12 @@ if __name__ == '__main__':
     elif opts.action=="gmm-sweepk-ics":
         from sklearn.mixture import GaussianMixture
         from sklearn import metrics
-        X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset)
+        #X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset)
+        ncomp=int(opts.ncomp)
+        reducer=opts.reducer
+        transformer, reduction = get_reducer_X_transformer(dataset,reducer,ncomp)
+        X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset, x_transformer=transformer)
+        
         #k=2
         ks = spec['datasets'][dataset]['k-sweep']
         #cov_type in ['spherical', 'diag', 'tied', 'full']
@@ -174,7 +189,13 @@ if __name__ == '__main__':
     elif opts.action=="gmm-sweepk-CH": # http://scikit-learn.org/stable/modules/clustering.html#clustering-evaluation
         from sklearn.mixture import GaussianMixture
         from sklearn import metrics
-        X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset)
+
+        ncomp=int(opts.ncomp)
+        reducer=opts.reducer
+        transformer, reduction = get_reducer_X_transformer(dataset,reducer,ncomp)
+        X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset, x_transformer=transformer)
+
+        #X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset)
         #k=2
         ks = spec['datasets'][dataset]['k-sweep']
         #cov_type in ['spherical', 'diag', 'tied', 'full']
