@@ -50,11 +50,12 @@ if __name__ == '__main__':
         exit(0)
 
     elif opts.action=="jobs":
-        jf="part3-rp.jobs"
+        jf="part3-lda.jobs"
         with open(jf,"w") as fh:
             #for reducer in ["pca","ica","rp","tsne"]:
             #for reducer in ["pca","ica"]:
-            for reducer in ["rp"]:                                
+            #for reducer in ["rp"]:                                
+            for reducer in ["lda"]:                                
                 for dataset in ["ds1","ds4"]:
                     #print( spec['datasets'][dataset] )
                     ncomps = spec['datasets'][dataset][f"best-{reducer}-ncomponents"]
