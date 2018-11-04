@@ -13,7 +13,7 @@ datasets:
       
       kmeans-graph: pca
       mlp_topology: [200, 200, 200]
-
+      #mlp_topology: [100,100,100]
       #best-k: 10
       synthesize_attributes:
         - new_attrib: 'outcome_type'
@@ -72,7 +72,7 @@ datasets:
       best-cov-type: tied
       kmeans-graph: pca
       mlp_topology: [50, 20, 1]
-      
+      #mlp_topology: [40,40,10]
       numerical_attributes:
         - age
         - capital-gain

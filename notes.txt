@@ -7,7 +7,21 @@ bin/part1.py -a kmeans-bench -s ds4
 k-means k=2     1.88s   2368762 0.195   0.155   0.173   0.181   0.155   0.066
 
 
+Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
+8GB ram
 
+ds1 nn train - unmodified 817M 8 cores
+ds4 nn train - unmodified 859M 
+
+Read datasets/ds1/mlp-model--200-200-200--Unmodified-iter-1.pkl
+ds1 (Unmodified)0.815,0.834,0.791,0.778,0.804,0.798,0.814,0.773,0.761,0.787
+Read datasets/ds4/mlp-model--50-20-1--Unmodified-iter-1.pkl
+ds4 (Unmodified)0.885,0.871,0.827,0.799,0.846,0.845,0.803,0.765,0.743,0.789
+"Dataset","Xval Accuracy","Xval Precision","Xval F1 Score","Xval Recall","Xval Aggregate"
+Read datasets/ds1/mlp-model--100-100-100--Unmodified-iter-1.pkl
+ds1 (Unmodified)0.812,0.842,0.785,0.771,0.802,0.801,0.825,0.772,0.760,0.789
+Read datasets/ds4/mlp-model--40-40-10--Unmodified-iter-1.pkl
+ds4 (Unmodified)0.896,0.863,0.853,0.843,0.864,0.846,0.792,0.781,0.772,0.798
 
 
 

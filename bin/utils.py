@@ -734,7 +734,7 @@ def eval_X_impedence_mismatch(dataset, X_train, X_train_prepared, X_test, X_test
 
 
 
-def get_prepared_training_and_test_data(dataset, df=None, rerun=False, reclean=False):
+def get_prepared_training_and_test_data(dataset, df=None, rerun=False, reclean=False, x_transformer=None):
     from sklearn import preprocessing
     X_train, y_train, X_test, y_test = get_raw_training_and_test_data(dataset, df=None, rerun=rerun, reclean=reclean)
     if X_train.shape[1] != X_test.shape[1]:
@@ -771,8 +771,15 @@ def get_prepared_training_and_test_data(dataset, df=None, rerun=False, reclean=F
     # standardize (0 mean, 1 variance)
     X_train_scaled = preprocessing.scale(X_train_prepared)
     X_test_scaled  = preprocessing.scale(X_test_prepared)
+
+    if x_transformer:
+        X_train_final = x_transformer(X_train_scaled)
+        X_test_final  = x_transformer(X_test_scaled)
+    else:
+        X_train_final = X_train_scaled
+        X_test_final = X_test_scaled
     #print("HELLO")
-    return X_train_scaled, y_train, X_test_scaled, y_test
+    return X_train_final, y_train, X_test_final, y_test
 
      
 # def get_classifiers_assignment1():

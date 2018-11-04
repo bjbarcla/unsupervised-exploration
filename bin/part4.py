@@ -38,14 +38,21 @@ if __name__ == '__main__':
         exit(0)
     if opts.action=="report":
         iter = 1
-        header = '"Dataset","Xval Accuracy","Xval Precision","Xval F1 Score","Xval Recall","Xval Aggregate"'
+        rep = ""
+        header = '"Dataset","Xval Accuracy","Xval Precision","Xval F1 Score","Xval Recall","Xval Aggregate","Test Set Accuracy","Test Set Precision","Test Set F1 Score","Test Set Recall","Test Set Aggregate","Train Time"'
+        rep += header + "\n"
         print(header)
         for dataset in ["ds1","ds4"]:
             for recipe in "Unmodified".split(","):
-                tracc, trprec, trf1, trrec, tragg,tstacc, tstprec, tstf1, tstrec, tstagg = nn_train_score(dataset, recipe, iter=iter)
-                row = f"{dataset} ({recipe})" + ",".join( [f"{x:.3f}" for x in [tracc, trprec, trf1, trrec, tragg,tstacc, tstprec, tstf1, tstrec, tstagg]] )
+                tracc, trprec, trf1, trrec, tragg,tstacc, tstprec, tstf1, tstrec, tstagg, traintime = nn_train_score(dataset, recipe, iter=iter)
+                row = f'"{dataset} ({recipe})",' + ",".join( [f"{x:.3f}" for x in [tracc, trprec, trf1, trrec, tragg,tstacc, tstprec, tstf1, tstrec, tstagg]] ) + f",{traintime}"
                 print(row)
-
+                rep += row + "\n"
+        repfile="part4_report.csv"
+        with open(repfile,"w") as fh:
+            fh.write(rep)
+        print(f"Write {repfile}")
+            
     else:
         print(f"Action not implemented: {opts.action}")
         exit(1)

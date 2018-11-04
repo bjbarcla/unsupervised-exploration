@@ -75,6 +75,10 @@ def nn_train_score(dataset, recipe, iter=1):
     if os.path.exists(pkl):
         model = joblib.load(pkl)
         print(f"Read {pkl}")
+        fh = open(ttime)
+        delta = float(fh.read())
+        fh.close()
+        print(f"Read {ttime}")
     else:
         maxiter=500
         if dataset=="ds1":
@@ -112,7 +116,7 @@ def nn_train_score(dataset, recipe, iter=1):
     tracc, trprec, trf1, trrec, tragg = get_perf_stats(model, X_train, y_train)
     tstacc, tstprec, tstf1, tstrec, tstagg = get_perf_stats(model, X_test, y_test)
 
-    return tracc, trprec, trf1, trrec, tragg,tstacc, tstprec, tstf1, tstrec, tstagg
+    return tracc, trprec, trf1, trrec, tragg,tstacc, tstprec, tstf1, tstrec, tstagg, delta
 
 
     
