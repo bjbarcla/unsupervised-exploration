@@ -7,8 +7,8 @@ datasets:
         - "unzip austin-animal-center-shelter-intakes-and-outcomes.zip"
       datafile: aac_intakes_outcomes.csv
       k-sweep: [2,86,4]
-      best-k-kmeans: 40
-      best-k-gmm: 20
+      best-k-kmeans: 25 # for kmeans knee of CH score and silh score both ~25
+      best-k-gmm: 25 # knee of kmeans CH score and silh score both ~25; tied and diag cov type both good choices, going with tied
       best-cov-type: tied
       
       kmeans-graph: pca
@@ -65,9 +65,9 @@ datasets:
 #        - "/bin/false"
       datafile: census_income_fixed2.csv
       k-sweep: [2,30,1]
-      best-k-kmeans: 5
-      best-k-gmm: 7
-      best-cov-type: spherical
+      best-k-kmeans: 2 # no good sil score, best at k=27 of only 0.156; best CH score at 2 - going with that
+      best-k-gmm: 2    # again, no strong sil score, srongest at k=2, going with that again.  diag tied and full cov_types good in CH, going with tied for consistency
+      best-cov-type: tied
       kmeans-graph: pca
       numerical_attributes:
         - age
