@@ -67,6 +67,7 @@ def get_dim_reducer(dataset, algo, k=None, reset=False):
     elif algo=="rp":
         reducer = get_rp_reducer(X_train, k)
     elif algo=="lda":
+        print(f"k={k}")
         reducer = LDA(n_components=k)
     elif algo=="tsne":
         reducer = TSNE(n_components=k)
@@ -257,6 +258,29 @@ def pca_eigenplot(dataset):
     csv=f"{dataset}-pca-eigenvals.csv"
     with open(csv,"w") as fh:
         for k,d in zip(pcs,eigs):
+            fh.write(f"{k},{d}\n")
+    print("Wrote "+csv)
+
+def lda_explained_variance_ratios(dataset):
+    X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset)
+    
+    features = X_train.shape[1]
+
+    pcs = list(range(1,features+1))
+    reducer = get_dim_reducer(dataset, "lda",features)
+    evrs=reducer.explained_variance_ratio_
+    print(evrs)
+    plt.title(f"Dataset {dataset}: LDA Component Explained Variance Ratios")
+    plt.plot(pcs,evrs, 'x-', label=f"explained variance ratio")
+    plt.xlabel("principal component")
+    plt.ylabel(f"explained variance ratio")
+    png=f"{dataset}-lda-evr.png"
+    plt.savefig(png, bbox_inches='tight')
+    print("Wrote "+png)
+               
+    csv=f"{dataset}-lda-evr.csv"
+    with open(csv,"w") as fh:
+        for k,d in zip(pcs,evrs):
             fh.write(f"{k},{d}\n")
     print("Wrote "+csv)
 

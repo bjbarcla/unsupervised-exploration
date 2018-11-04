@@ -9,6 +9,7 @@ from utils import *
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import confusion_matrix, precision_recall_fscore_support
 import time
+from dimension_reduction_lib import *
 
 def evaluate_model_data(model, X, y):
     y_pred = model.predict(X)
@@ -61,12 +62,28 @@ def cook_X(recipe,X):
     else:
         sys.exit("unimplemented recipe provided to cook_X: "+recipe)
         
+def get_reducer_X_transformer(dataset,reducer,n_components):
+    red = get_dim_reducer(dataset, reducer, n_components)
+
+    transformer = lambda X: red.transform(X)
+    
+    reduction=f"{reducer} with n_components={n_components}"
+    return transformer, reduction
+
     
 def nn_train_score(dataset, recipe, iter=1):
-    X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset)
 
-    X_train = cook_X(recipe, X_train)
-    X_test = cook_X(recipe, X_test)
+    m4=re.match('([^_]+)_(\d+)d', recipe)
+    if m4:
+        reducer = m4.group(1)
+        ncomp = int(m4.group(2))
+        transformer, reduction = get_reducer_X_transformer(dataset,reducer,ncomp)
+        #print(f"HELLO {reduction}")
+        #sys.exit("stop")
+    else:
+        transformer = lambda x: x
+        
+    X_train, y_train, X_test, y_test =  get_prepared_training_and_test_data(dataset, x_transformer=transformer)
     
     topology = spec['datasets'][dataset]['mlp_topology']
     mlpid = re.sub('\s+','',re.sub('[\[\](),]+','-',str(topology)) + "-" + recipe)

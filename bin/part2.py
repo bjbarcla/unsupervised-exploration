@@ -52,6 +52,8 @@ if __name__ == '__main__':
         ica_kurtcurve(dataset)
     elif opts.action=="pca-eigenplot":
         pca_eigenplot(dataset)
+    elif opts.action=="lda-evrplot":
+        lda_explained_variance_ratios(dataset)
     elif opts.action=="pca-loss":
         pca_loss(dataset,k)
     elif opts.action=="rp-loss":

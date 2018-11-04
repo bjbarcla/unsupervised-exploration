@@ -55,7 +55,7 @@ datasets:
       # ds1-ica-avgabskurtosos-ksweep.csv  ds1-ica-avgabskurtosos-ksweep.png  ds1-ica-kurtoses-ksweep.csv  ds1-ica-loss-curve.csv  ds1-ica-loss-curve.png
       best-rp-ncomponents: [5,10]   # be consistent to be comparable
       best-lda-ncomponents: [5,10]  # be consistent to be comparable
-
+      
 
       ## part3 steps
       # bin/part3.py  -a jobs
@@ -65,6 +65,9 @@ datasets:
       mlp_topology: [200, 200, 200]
       #mlp_topology: [100,100,100]
       #best-k: 10
+
+      ## part 4 steps
+      # unbuffer bin/part4.py  -a report |& tee p4rep3.log
 
     
       synthesize_attributes:

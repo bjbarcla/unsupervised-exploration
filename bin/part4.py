@@ -42,8 +42,16 @@ if __name__ == '__main__':
         header = '"Dataset","Xval Accuracy","Xval Precision","Xval F1 Score","Xval Recall","Xval Aggregate","Test Set Accuracy","Test Set Precision","Test Set F1 Score","Test Set Recall","Test Set Aggregate","Train Time"'
         rep += header + "\n"
         print(header)
-        for dataset in ["ds1","ds4"]:
-            for recipe in "Unmodified".split(","):
+
+
+
+        for dataset in ["ds4","ds1"]:
+            recipes = ["Unmodified"]
+            for dra in "pca","ica","rp","lda":
+                ns = spec['datasets'][dataset][f"best-{dra}-ncomponents"]
+                for n in ns:
+                    recipes.append(f"{dra}_{n}d")
+            for recipe in recipes:
                 tracc, trprec, trf1, trrec, tragg,tstacc, tstprec, tstf1, tstrec, tstagg, traintime = nn_train_score(dataset, recipe, iter=iter)
                 row = f'"{dataset} ({recipe})",' + ",".join( [f"{x:.3f}" for x in [tracc, trprec, trf1, trrec, tragg,tstacc, tstprec, tstf1, tstrec, tstagg]] ) + f",{traintime}"
                 print(row)
