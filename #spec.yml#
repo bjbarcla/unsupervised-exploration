@@ -1,0 +1,171 @@
+datasets:
+  ds1:
+      name: aac_intakes_outcomes
+      format: csv
+      getcmds:
+        - "kaggle datasets download -d aaronschlegel/austin-animal-center-shelter-intakes-and-outcomes"
+        - "unzip austin-animal-center-shelter-intakes-and-outcomes.zip"
+      datafile: aac_intakes_outcomes.csv
+
+      ## part 1 config
+      kmeans-graph: pca
+      k-sweep: [2,86,4]
+
+      ## part 1 steps
+      # make -n launch-sweeps
+      # ./part1_launch.rb > do_launch.sh
+      # sh do_launch.sh >& do_launch.log
+      # make -n all-sweep-plots
+      # source venv/bin/activate && time unbuffer bin/part1.py -s ds1 -a kmeans-plot-ksweep-CH
+      # source venv/bin/activate && time unbuffer bin/part1.py -s ds4 -a kmeans-plot-ksweep-CH
+      # source venv/bin/activate && time unbuffer bin/part1.py -s ds1 -a kmeans-plot-ksweep
+      # source venv/bin/activate && time unbuffer bin/part1.py -s ds4 -a kmeans-plot-ksweep
+      # source venv/bin/activate && time unbuffer bin/part1.py -s ds1 -a gmm-plot-ksweep-CH
+      # source venv/bin/activate && time unbuffer bin/part1.py -s ds4 -a gmm-plot-ksweep-CH
+      # source venv/bin/activate && time unbuffer bin/part1.py -s ds1 -a gmm-plot-ksweep
+      # source venv/bin/activate && time unbuffer bin/part1.py -s ds4 -a gmm-plot-ksweep
+      # make -n cviz
+      # source venv/bin/activate && bin/part1.py -s ds1 -a kmeans-graph
+      # source venv/bin/activate && bin/part1.py -s ds4 -a kmeans-graph
+      # source venv/bin/activate && bin/part1.py -s ds1 -a gmm-graph
+      # source venv/bin/activate && bin/part1.py -s ds4 -a gmm-graph
+      
+      ## part 1 result
+      best-k-kmeans: 25 # for kmeans knee of CH score and silh score both ~25
+      best-k-gmm: 25 # knee of kmeans CH score and silh score both ~25; tied and diag cov type both good choices, going with tied
+      best-cov-type: tied
+
+
+      ## part 2 steps
+      #  #:( bin/part2.py -a lossplot -s ds1
+      # make -n part2-curves
+      # bin/part2.py -a ica-kurtcurve -s ds1
+      # bin/part2.py -a ica-kurtcurve -s ds4
+      # bin/part2.py -a pca-eigenplot -s ds1
+      # bin/part2.py -a pca-eigenplot -s ds4
+      # bin/part2.py -a pca-loss -s ds1
+      # bin/part2.py -a pca-loss -s ds4
+      # bin/part2.py -a rp-loss -s ds1
+      # bin/part2.py -a rp-loss -s ds4
+    
+      ## part 2 result
+      best-pca-ncomponents: [5,10] # eigenvalue knee at 10 (10,0.9700086769391271 ; 11,0.5781346889840361)  ##:( loss curve knee @ 10,0.06909826158065971 ; 
+      # ds1-pca-eigenvals.csv   ds1-pca-eigenplot.png   ##:( ds1-pca-loss-curve.png ds1-pca-loss-curve.csv
+      best-ica-ncomponents: [5,10] # avg abs kurtosis maximized at nc=10  ##:(; recon loss curve knee at 10
+      # ds1-ica-avgabskurtosos-ksweep.csv  ds1-ica-avgabskurtosos-ksweep.png  ds1-ica-kurtoses-ksweep.csv  ds1-ica-loss-curve.csv  ds1-ica-loss-curve.png
+      best-rp-ncomponents: [5,10]   # be consistent to be comparable
+      best-lda-ncomponents: [5,10]  # be consistent to be comparable
+      
+
+      ## part3 steps
+      # bin/part3.py  -a jobs
+      # sh part3.jobs
+    
+      ## part 4 config
+      mlp_topology: [200, 200, 200]
+      #mlp_topology: [100,100,100]
+      #best-k: 10
+
+      ## part 4 steps
+      # unbuffer bin/part4.py  -a report |& tee p4rep3.log
+
+    
+      synthesize_attributes:
+        - new_attrib: 'outcome_type'
+          source_attrib: 'outcome_type'
+          method: 'regex_match_threshold'
+          regex:  'Adopt|Return'
+          newval_if_match:   'happy'
+          newval_if_nomatch: 'sad'
+          
+      scoring: f1
+      target_attrib: outcome_type
+      categorical_attributes:
+        - intake_type
+        - animal_type
+#        - breed
+        - 'sex_upon_intake'
+#        - color
+#        - 'intake_weekday'
+        
+      numerical_attributes: 
+        - 'age_upon_intake_(days)'
+        - 'time_in_shelter_days'
+
+      all_attribs: ['age_upon_outcome', 'animal_id_outcome', 'date_of_birth',
+      'outcome_subtype', 'outcome_type', 'sex_upon_outcome',
+      'age_upon_outcome_(days)', 'age_upon_outcome_(years)',
+      'age_upon_outcome_age_group', 'outcome_datetime', 'outcome_month',
+       'outcome_year', 'outcome_monthyear', 'outcome_weekday', 'outcome_hour',
+       'outcome_number', 'dob_year', 'dob_month', 'dob_monthyear',
+       'age_upon_intake', 'animal_id_intake', 'animal_type', 'breed', 'color',
+       'found_location', 'intake_condition', 'intake_type', 'sex_upon_intake',
+       'count', 'age_upon_intake_(days)', 'age_upon_intake_(years)',
+       'age_upon_intake_age_group', 'intake_datetime', 'intake_month',
+       'intake_year', 'intake_monthyear', 'intake_weekday', 'intake_hour',
+       'intake_number', 'time_in_shelter', 'time_in_shelter_days']
+  ds4:
+      name: census_income
+      format: csv
+      getcmds:
+        - "wget http://archive.ics.uci.edu/ml/machine-learning-databases/adult/Index"
+        - "wget http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data"
+        - "wget http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.names"
+        - "wget http://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.test"
+      getfiles: [adult.names, adult.test, adult.data]
+      cleancmds:
+        - "cat adult.names | grep -v '^|' | grep : | sed 's/:.*//' | tr '\n' ',' | sed 's/,$//' > header.csv"
+        - "echo ',income_gt_50k' >> header.csv"
+        - "cat adult.data adult.test | sed 's/>50K\\.\\?/y/' | sed 's/<=50K\\.\\?/n/' > all.data"
+        - "cat header.csv all.data | grep -v '^|' > census_income_fixed2.csv"
+#        - "head census_income_fixed2.csv"
+#        - "/bin/false"
+      datafile: census_income_fixed2.csv
+
+      ## part 1 config
+      k-sweep: [2,30,2]
+      kmeans-graph: pca
+
+      ## part 1 result
+      best-k-kmeans: 2 # no good sil score, best at k=27 of only 0.156; best CH score at 2 - going with that
+      best-k-gmm: 2    # again, no strong sil score, srongest at k=2, going with that again.  diag tied and full cov_types good in CH, going with tied for consistency
+      best-cov-type: tied
+
+      ## part 2 result
+      best-pca-ncomponents: [30,55] # middle of knee of eigenvalue curve @ 30,1.013772940339259 ; drop @ 55,0.4202837092070921
+      # ds4-pca-eigenplot.png  ds4-pca-eigenvals.csv
+      best-ica-ncomponents: [40,57] # avg abs max 57,312.105135997082; knee at 40,232.44964758605926
+      best-rp-ncomponents: [30,40,57]   # tbd
+      best-tsne-ncomponents: [3] # be consistent to be comparable
+      best-lda-ncomponents: [30,40,57]  # be consistent to be comparable
+
+    
+
+      ## part 4 config
+      mlp_topology: [50, 20, 1]
+      #mlp_topology: [40,40,10]
+
+
+    
+      numerical_attributes:
+        - age
+        - capital-gain
+        - education-num
+        - capital-loss
+        - hours-per-week
+        - fnlwgt
+      categorical_attributes:
+        - workclass
+        - education
+        - marital-status
+        - occupation
+        - relationship
+        - race
+#        - native-country
+      target_attrib: 'income_gt_50k'
+      verdict: ~
+      verdict_reason: ~
+
+#experiments:
+#  e1:
+    

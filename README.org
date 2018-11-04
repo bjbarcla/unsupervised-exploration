@@ -1,0 +1,67 @@
+
+* Platform Requirements
+  1. provides "python3.6", wget, unbuffer (from expect package) and standard unix commands in the $PATH
+  2. has the GCC toolchain (some python pips call gcc; I use gnu make)
+  3. HTTP access to the internet
+* Experiment Specification
+  Experiments are specified in the "spec.yml" file.  It configures automation that will enable 5 experiment parts:
+   0. Acquire two public datasets used in the following
+   1. Apply clustering to the datasets
+   2. Perform dimensionality reduction 
+   3. Apply clustering to the result of step 2
+   4. Train ANNs on data from 0 and 2
+   5. Train ANNs on data from 1
+* Thumbnail of the data specified in spec.yml
+** `datasets`
+   - ds1
+     - commands to acquire dataset 1 (already present in this repo)
+     - configuration details to drive the various experiments
+     - key results captured from each step used to drive subsequent experiments
+   - ds4
+     - same information as ds1, tailored to this dataset
+* Workflow
+Experiments are executed in sequence through various make targets and commands.  
+
+
+** aquire datasets - get all datasets
+  : make getall
+  setup kaggle credentials (API token)
+         The kaggle python module to download some of the datasets.
+         You need to setup your API token in  ~/.kaggle/kaggle.json .
+
+
+** Determine k value for clusters
+  : make launch-sweeps
+  This command runs several jobs to measure clustering performance for Gausian Mixture Models and K-Means to select the best number of clusters
+
+** Create graphs for sweeps above  
+  : make all sweep plots
+
+** Create plots visualizing GMM and K-Means clusters for both datasets
+  : make cviz
+
+** Plot various curves to assist in selecting the number of components to target for dimensionality reduction
+  : make part2-curves
+
+
+    These files were examined, and a selection of n_components were chosen for four dimensionality reduction algorithms:
+      1. PCA - principal components analysis
+      2. ICA - independent components analysis
+      3. RP  - randomized projections
+      4. LDA - linear discriminant analyis
+
+** Review outputs of previous step and capture 
+
+
+
+
+   This generates the following files:
+
+    | dataset | File                              | Notes                                                   |
+    |---------+-----------------------------------+---------------------------------------------------------|
+    | ds1     | ds1-pca-eigenplot.png             | review to find n_components for PCA reduction           |
+    | ds1     | ds1-pca-eigenvals.csv             | data from above to find exact values                    |
+    | ds1     | ds1-ica-avgabskurtosos-ksweep.png | review to find n_components for ICA reduction           |
+    | ds1     | ds1-ica-avgabskurtosos-ksweep.csv | data from above to find exact values                    |
+    | ds1     | ds1-rp-loss.png                   | visualize reconstruction loss of randomized projections |
+

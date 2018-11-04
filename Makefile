@@ -54,9 +54,9 @@ tf/get-%: tf/$(venv_name)
 tidy:
 	find -name \*~ -print0 | xargs -0 rm -f
 
-#MENU pristine:   return workspace to initial state
-pristine:
-	rm -rf $(datasets_dir) $(venv_name) tf
+##MENU pristine:   return workspace to initial state
+#pristine:
+#	rm -rf $(datasets_dir) $(venv_name) tf
 
 clust:
 	$(with_venv) bin/part1.py -s ds1 -a kmeans-graph
