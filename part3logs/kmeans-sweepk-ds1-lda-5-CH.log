@@ -6,3 +6,76 @@
 | Starting time  : Sun Nov  4 06:00:01 2018          Qwait:   0h:00m:05s      |
 | Command        : part3.py -a kmeans-sweepk-CH --ncomp 5 -s ds1 --reducer lda |
 +-----------------------------------------------------------------------------+
+Read /nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/class/proj3/datasets/ds1/dimreducer-lda-5.pkl
+** -> kmeans ds1 k=2 elapsed seconds 0.15243816375732422 <- took less than 1 second
+** -> CH ds1 k=2 elapsed seconds 0.007863283157348633 <- took less than 1 second
+Dataset=ds1 k=2 CH=110371.16220372943
+** -> kmeans ds1 k=6 elapsed seconds 0.8472981452941895 <- took less than 1 second
+** -> CH ds1 k=6 elapsed seconds 0.006560564041137695 <- took less than 1 second
+Dataset=ds1 k=6 CH=328982.2692694464
+** -> kmeans ds1 k=10 elapsed seconds 2.0569980144500732 <- took 2.0 seconds
+** -> CH ds1 k=10 elapsed seconds 0.007378816604614258 <- took less than 1 second
+Dataset=ds1 k=10 CH=437644.3618921066
+** -> kmeans ds1 k=14 elapsed seconds 2.2264785766601562 <- took 2.0 seconds
+** -> CH ds1 k=14 elapsed seconds 0.008779764175415039 <- took less than 1 second
+Dataset=ds1 k=14 CH=548786.0330040458
+** -> kmeans ds1 k=18 elapsed seconds 2.847883939743042 <- took 2.0 seconds
+** -> CH ds1 k=18 elapsed seconds 0.010254383087158203 <- took less than 1 second
+Dataset=ds1 k=18 CH=673958.799092293
+** -> kmeans ds1 k=22 elapsed seconds 5.083846807479858 <- took 5.0 seconds
+** -> CH ds1 k=22 elapsed seconds 0.010306596755981445 <- took less than 1 second
+Dataset=ds1 k=22 CH=821748.7166963208
+** -> kmeans ds1 k=26 elapsed seconds 4.75270414352417 <- took 4.0 seconds
+** -> CH ds1 k=26 elapsed seconds 0.012194633483886719 <- took less than 1 second
+Dataset=ds1 k=26 CH=996518.5854948735
+** -> kmeans ds1 k=30 elapsed seconds 9.720032215118408 <- took 9.0 seconds
+** -> CH ds1 k=30 elapsed seconds 0.016720056533813477 <- took less than 1 second
+Dataset=ds1 k=30 CH=1135030.8411635202
+** -> kmeans ds1 k=34 elapsed seconds 10.145006656646729 <- took 10.0 seconds
+** -> CH ds1 k=34 elapsed seconds 0.014882802963256836 <- took less than 1 second
+Dataset=ds1 k=34 CH=1262308.9552043402
+** -> kmeans ds1 k=38 elapsed seconds 7.551137447357178 <- took 7.0 seconds
+** -> CH ds1 k=38 elapsed seconds 0.0182645320892334 <- took less than 1 second
+Dataset=ds1 k=38 CH=1392506.0165226539
+** -> kmeans ds1 k=42 elapsed seconds 7.987367153167725 <- took 7.0 seconds
+** -> CH ds1 k=42 elapsed seconds 0.01725912094116211 <- took less than 1 second
+Dataset=ds1 k=42 CH=1486129.4910019853
+** -> kmeans ds1 k=46 elapsed seconds 8.778598070144653 <- took 8.0 seconds
+** -> CH ds1 k=46 elapsed seconds 0.019405603408813477 <- took less than 1 second
+Dataset=ds1 k=46 CH=1599411.2229909652
+** -> kmeans ds1 k=50 elapsed seconds 8.461940050125122 <- took 8.0 seconds
+** -> CH ds1 k=50 elapsed seconds 0.019994258880615234 <- took less than 1 second
+Dataset=ds1 k=50 CH=1742558.5437051998
+** -> kmeans ds1 k=54 elapsed seconds 9.0305757522583 <- took 9.0 seconds
+** -> CH ds1 k=54 elapsed seconds 0.020705699920654297 <- took less than 1 second
+Dataset=ds1 k=54 CH=1883469.6020369716
+** -> kmeans ds1 k=58 elapsed seconds 9.812288522720337 <- took 9.0 seconds
+** -> CH ds1 k=58 elapsed seconds 0.023228168487548828 <- took less than 1 second
+Dataset=ds1 k=58 CH=1987873.7295607536
+** -> kmeans ds1 k=62 elapsed seconds 11.229207754135132 <- took 11.0 seconds
+** -> CH ds1 k=62 elapsed seconds 0.02138829231262207 <- took less than 1 second
+Dataset=ds1 k=62 CH=2208653.037559442
+** -> kmeans ds1 k=66 elapsed seconds 16.484047889709473 <- took 16.0 seconds
+** -> CH ds1 k=66 elapsed seconds 0.024452924728393555 <- took less than 1 second
+Dataset=ds1 k=66 CH=2312782.664304698
+** -> kmeans ds1 k=70 elapsed seconds 17.43907642364502 <- took 17.0 seconds
+** -> CH ds1 k=70 elapsed seconds 0.02297806739807129 <- took less than 1 second
+Dataset=ds1 k=70 CH=2523330.5525001455
+** -> kmeans ds1 k=74 elapsed seconds 16.561378479003906 <- took 16.0 seconds
+** -> CH ds1 k=74 elapsed seconds 0.02643275260925293 <- took less than 1 second
+Dataset=ds1 k=74 CH=2662058.281392496
+** -> kmeans ds1 k=78 elapsed seconds 16.671442985534668 <- took 16.0 seconds
+** -> CH ds1 k=78 elapsed seconds 0.025386333465576172 <- took less than 1 second
+Dataset=ds1 k=78 CH=2840959.8910239944
+** -> kmeans ds1 k=82 elapsed seconds 19.00042/nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/mlai/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
+  from numpy.core.umath_tests import inner1d
+5577163696 <- took 19.0 seconds
+** -> CH ds1 k=82 elapsed seconds 0.02606368064880371 <- took less than 1 second
+Dataset=ds1 k=82 CH=3024813.6202882943
++-----------------------------------------------------------------------------+
+| Exit Status    : 0                                                          |
+| Finishing time : Sun Nov  4 06:03:13 2018                                   |
+| CPU time       : Usr 285.289s Sys 1480.832s WC  0h:03m:12s                     |
+| Rusage Stats   : Mem:216    PF:  18950074/0CSv/f:  0/0     Swaps:0          |
+|                :           Msg:    0/0     IOops:  0/0     Sigs :0          |
++-----------------------------------------------------------------------------+

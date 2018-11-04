@@ -1,27 +1,61 @@
 +-----------------------------------------------------------------------------+
 | Logfile        : kmeans-sweepk-ds4-rp-57-sil.log                            |
-| Job id         : 5091183598                 Class: SLES11SP4&&8C&&32G Qslot: /icf/fdk/pdx_critical_vp/bench11|
-| Executed on    : plxck3033                  Pool : pdx_misc                 |
-| Queueing time  : Sun Nov  4 05:42:10 2018                                   |
-| Starting time  : Sun Nov  4 05:42:16 2018          Qwait:   0h:00m:06s      |
+| Job id         : 5091306580                 Class: SLES11SP4&&8C&&32G Qslot: /icf/fdk/pdx_critical_vp/bench11|
+| Executed on    : plxcfb016                  Pool : pdx_misc                 |
+| Queueing time  : Sun Nov  4 07:00:35 2018                                   |
+| Starting time  : Sun Nov  4 07:00:38 2018          Qwait:   0h:00m:03s      |
 | Command        : part3.py -a kmeans-sweepk --ncomp 57 -s ds4 --reducer rp   |
 +-----------------------------------------------------------------------------+
+** -> rp projection calculation for ds4, k=57 elapsed seconds 0.0036864280700683594 <- took less than 1 second
+Wrote /nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/class/proj3/datasets/ds4/dimreducer-rp-57.pkl
+** -> kmeans ds4 reduced by rp with n_components=57 clust_k=2 elapsed seconds 1.831056833267212 <- took 1.0 second
+** -> silscore ds4 k=2 elapsed seconds 62.15486931800842 <- took 1.0 minute, 2.0 seconds
+Dataset=ds4 k=2 sil=0.083613541686941
+** -> kmeans ds4 reduced by rp with n_components=57 clust_k=4 elapsed seconds 2.740126609802246 <- took 2.0 seconds
+** -> silscore ds4 k=4 elapsed seconds 63.10408663749695 <- took 1.0 minute, 3.0 seconds
+Dataset=ds4 k=4 sil=0.07206530093243424
+** -> kmeans ds4 reduced by rp with n_components=57 clust_k=6 elapsed seconds 3.0988738536834717 <- took 3.0 seconds
+** -> silscore ds4 k=6 elapsed seconds 62.75126791000366 <- took 1.0 minute, 2.0 seconds
+Dataset=ds4 k=6 sil=0.06877466565617961
+** -> kmeans ds4 reduced by rp with n_components=57 clust_k=8 elapsed seconds 3.9261066913604736 <- took 3.0 seconds
+** -> silscore ds4 k=8 elapsed seconds 62.32350254058838 <- took 1.0 minute, 2.0 seconds
+Dataset=ds4 k=8 sil=0.07641641929866888
+** -> kmeans ds4 reduced by rp with n_components=57 clust_k=10 elapsed seconds 5.349100351333618 <- took 5.0 seconds
+** -> silscore ds4 k=10 elapsed seconds 62.90073919296265 <- took 1.0 minute, 2.0 seconds
+Dataset=ds4 k=10 sil=0.09149528154182528
+** -> kmeans ds4 reduced by rp with n_components=57 clust_k=12 elapsed seconds 4.706768274307251 <- took 4.0 seconds
+** -> silscore ds4 k=12 elapsed seconds 61.23907685279846 <- took 1.0 minute, 1.0 second
+Dataset=ds4 k=12 sil=0.1013438186992403
+** -> kmeans ds4 reduced by rp with n_components=57 clust_k=14 elapsed seconds 3.8806419372558594 <- took 3.0 seconds
+** -> silscore ds4 k=14 elapsed seconds 61.74568486213684 <- took 1.0 minute, 1.0 second
+Dataset=ds4 k=14 sil=0.11176260848946348
+** -> kmeans ds4 reduced by rp with n_components=57 clust_k=16 elapsed seconds 7.3190717697143555 <- took 7.0 seconds
+** -> silscore ds4 k=16 elapsed seconds 60.97653841972351 <- took 1.0 minute
+Dataset=ds4 k=16 sil=0.10915122237098301
+** -> kmeans ds4 reduced by rp with n_components=57 clust_k=18 elapsed seconds 4.948856592178345 <- took 4.0 seconds
+** -> silscore ds4 k=18 elapsed seconds 59.528974533081055 <- took 59.0 seconds
+Dataset=ds4 k=18 sil=0.10737708161566445
+** -> kmeans ds4 reduced by rp with n_components=57 clust_k=20 elapsed seconds 6.03425145149231 <- took 6.0 seconds
+** -> silscore ds4 k=20 elapsed seconds 61.016276359558105 <- took 1.0 minute, 1.0 second
+Dataset=ds4 k=20 sil=0.1254335677185569
+** -> kmeans ds4 reduced by rp with n_components=57 clust_k=22 elapsed seconds 8.587347984313965 <- took 8.0 seconds
+** -> silscore ds4 k=22 elapsed seconds 59.49310040473938 <- took 59.0 seconds
+Dataset=ds4 k=22 sil=0.1281947860152262
+** -> kmeans ds4 reduced by rp with n_components=57 clust_k=24 elapsed seconds 7.268773555755615 <- took 7.0 seconds
+** -> silscore ds4 k=24 elapsed seconds 59.74332070350647 <- took 59.0 seconds
+Dataset=ds4 k=24 sil=0.1386789262149636
+** -> kmeans ds4 reduced by rp with n_components=57 clust_k=26 elapsed seconds 9.37396788597107 <- took 9.0 seconds
+** -> silscore ds4 k=26 elapsed seconds 59.30053400993347 <- took 59.0 seconds
+Dataset=ds4 k=26 sil=0.14445160002445515
+** -> kmeans ds4 reduced by rp with n_components=57 clust_k=28 elapsed seconds 7.390099048614502 <- took 7.0 seconds
+** -> silscore ds4 k=28 elapsed seconds 58.59426164627075 <- took 58.0 seconds
+Dataset=ds4 k=28 sil=0.15150288050993022
 /nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/mlai/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
   from numpy.core.umath_tests import inner1d
-Traceback (most recent call last):
-  File "bin/part3.py", line 73, in <module>
-    transformer, reduction = get_reducer_X_transformer(dataset,reducer,ncomp)
-  File "bin/part3.py", line 25, in get_reducer_X_transformer
-    red = get_dim_reducer(dataset, reducer, n_components)
-  File "/nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/class/proj3/bin/dimension_reduction_lib.py", line 68, in get_dim_reducer
-    reducer = get_rp_reducer(X_train, k)
-  File "/nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/class/proj3/bin/dimension_reduction_lib.py", line 28, in get_rp_reducer
-    X_projected = reducer.inverse_transform(X_train_reduced)
-AttributeError: 'SparseRandomProjection' object has no attribute 'inverse_transform'
 +-----------------------------------------------------------------------------+
-| Exit Status    : 1                                                          |
-| Finishing time : Sun Nov  4 05:42:19 2018                                   |
-| CPU time       : Usr 1.644s  Sys 3.92s   WC  0h:00m:03s                     |
-| Rusage Stats   : Mem:0      PF:  0/0       CSv/f:  0/0     Swaps:0          |
+| Exit Status    : 0                                                          |
+| Finishing time : Sun Nov  4 07:16:15 2018                                   |
+| CPU time       : Usr 873.81s Sys 560.535s WC  0h:15m:37s                     |
+| Rusage Stats   : Mem:23141  PF:  115939050/CSv/f:  0/0     Swaps:0          |
 |                :           Msg:    0/0     IOops:  0/0     Sigs :0          |
 +-----------------------------------------------------------------------------+

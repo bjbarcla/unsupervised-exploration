@@ -6,3 +6,55 @@
 | Starting time  : Sun Nov  4 06:00:15 2018          Qwait:   0h:00m:06s      |
 | Command        : part3.py -a kmeans-sweepk-CH --ncomp 57 -s ds4 --reducer lda |
 +-----------------------------------------------------------------------------+
+Read /nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/class/proj3/datasets/ds4/dimreducer-lda-57.pkl
+** -> kmeans ds4 k=2 elapsed seconds 0.3689093589782715 <- took less than 1 second
+** -> CH ds4 k=2 elapsed seconds 0.003951311111450195 <- took less than 1 second
+Dataset=ds4 k=2 CH=78578.10973423977
+** -> kmeans ds4 k=4 elapsed seconds 0.7998979091644287 <- took less than 1 second
+** -> CH ds4 k=4 elapsed seconds 0.002515077590942383 <- took less than 1 second
+Dataset=ds4 k=4 CH=104833.77618188533
+** -> kmeans ds4 k=6 elapsed seconds 0.7688083648681641 <- took less than 1 second
+** -> CH ds4 k=6 elapsed seconds 0.0028443336486816406 <- took less than 1 second
+Dataset=ds4 k=6 CH=137424.67084967167
+** -> kmeans ds4 k=8 elapsed seconds 1.0502159595489502 <- took 1.0 second
+** -> CH ds4 k=8 elapsed seconds 0.0028421878814697266 <- took less than 1 second
+Dataset=ds4 k=8 CH=177652.66458561333
+** -> kmeans ds4 k=10 elapsed seconds 1.5892302989959717 <- took 1.0 second
+** -> CH ds4 k=10 elapsed seconds 0.003399372100830078 <- took less than 1 second
+Dataset=ds4 k=10 CH=214924.8084243506
+** -> kmeans ds4 k=12 elapsed seconds 1.2831034660339355 <- took 1.0 second
+** -> CH ds4 k=12 elapsed seconds 0.0036115646362304688 <- took less than 1 second
+Dataset=ds4 k=12 CH=251258.25483011288
+** -> kmeans ds4 k=14 elapsed seconds 4.193276643753052 <- took 4.0 seconds
+** -> CH ds4 k=14 elapsed seconds 0.004424571990966797 <- took less than 1 second
+Dataset=ds4 k=14 CH=283460.08369044133
+** -> kmeans ds4 k=16 elapsed seconds 1.8605585098266602 <- took 1.0 second
+** -> CH ds4 k=16 elapsed seconds 0.004256725311279297 <- took less than 1 second
+Dataset=ds4 k=16 CH=316217.5699800267
+** -> kmeans ds4 k=18 elapsed seconds 1.7508344650268555 <- took 1.0 second
+** -> CH ds4 k=18 elapsed seconds 0.004882097244262695 <- took less than 1 second
+Dataset=ds4 k=18 CH=352388.0670042168
+** -> kmeans ds4 k=20 elapsed seconds 2.541816473007202 <- took 2.0 seconds
+** -> CH ds4 k=20 elapsed seconds 0.004846811294555664 <- took less than 1 second
+Dataset=ds4 k=20 CH=389664.304523513
+** -> kmeans ds4 k=22 elapsed seconds 1.8308382034301758 <- took 1.0 second
+** -> CH ds4 k=22 elapsed seconds 0.005007743835449219 <- took less than 1 second
+Dataset=ds4 k=22 CH=428660.0671516262
+** -> kmeans ds4 k=24 elapsed seconds 2.1089251041412354 <- took 2.0 seconds
+** -> CH ds4 k=24 elapsed seconds 0.005235195159912109 <- took less than 1 second
+Dataset=ds4 k=24 CH=464523.5859736712
+** -> kmeans ds4 k=26 elapsed seconds 2.2924644947052 <- took 2.0 seconds
+** -> CH ds4 k=26 elapsed seconds 0.005647897720336914 <- took less than 1 second
+Dataset=ds4 k=26 CH=499347.65922663023
+** -> kmeans ds4 k=28 elapsed seconds 2.061156988143921 <- took 2.0 seconds
+** -> CH ds4 k=28 elapsed seconds 0.005730867385864258 <- took less than 1 second
+Dataset=ds4 k=28 CH=526732.1109652354
+/nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/mlai/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
+  from numpy.core.umath_tests import inner1d
++-----------------------------------------------------------------------------+
+| Exit Status    : 0                                                          |
+| Finishing time : Sun Nov  4 06:00:48 2018                                   |
+| CPU time       : Usr 55.403s Sys 243.871s WC  0h:00m:33s                     |
+| Rusage Stats   : Mem:122    PF:  91089/1   CSv/f:  0/0     Swaps:0          |
+|                :           Msg:    0/0     IOops:  0/0     Sigs :0          |
++-----------------------------------------------------------------------------+
