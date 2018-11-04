@@ -1,0 +1,8 @@
+launcher.sh --log-file part3logs/gmm-sweepk-ds1-tsne-3-sil.log bin/part3.py -a gmm-sweepk --ncomp 3 -s ds1 --reducer tsne
+launcher.sh --log-file part3logs/gmm-sweepk-ds1-tsne-3-CH.log bin/part3.py -a gmm-sweepk-CH --ncomp 3 -s ds1 --reducer tsne
+launcher.sh --log-file part3logs/kmeans-sweepk-ds1-tsne-3-sil.log bin/part3.py -a kmeans-sweepk --ncomp 3 -s ds1 --reducer tsne
+launcher.sh --log-file part3logs/kmeans-sweepk-ds1-tsne-3-CH.log bin/part3.py -a kmeans-sweepk-CH --ncomp 3 -s ds1 --reducer tsne
+launcher.sh --log-file part3logs/gmm-sweepk-ds4-tsne-3-sil.log bin/part3.py -a gmm-sweepk --ncomp 3 -s ds4 --reducer tsne
+launcher.sh --log-file part3logs/gmm-sweepk-ds4-tsne-3-CH.log bin/part3.py -a gmm-sweepk-CH --ncomp 3 -s ds4 --reducer tsne
+launcher.sh --log-file part3logs/kmeans-sweepk-ds4-tsne-3-sil.log bin/part3.py -a kmeans-sweepk --ncomp 3 -s ds4 --reducer tsne
+launcher.sh --log-file part3logs/kmeans-sweepk-ds4-tsne-3-CH.log bin/part3.py -a kmeans-sweepk-CH --ncomp 3 -s ds4 --reducer tsne
