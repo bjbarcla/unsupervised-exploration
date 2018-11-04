@@ -1,27 +1,61 @@
 +-----------------------------------------------------------------------------+
 | Logfile        : kmeans-sweepk-ds4-rp-40-CH.log                             |
-| Job id         : 5091183575                 Class: SLES11SP4&&8C&&32G Qslot: /icf/fdk/pdx_critical_vp/bench11|
-| Executed on    : plxcfb016                  Pool : pdx_misc                 |
-| Queueing time  : Sun Nov  4 05:42:08 2018                                   |
-| Starting time  : Sun Nov  4 05:42:16 2018          Qwait:   0h:00m:08s      |
+| Job id         : 5091306556                 Class: SLES11SP4&&8C&&32G Qslot: /icf/fdk/pdx_critical_vp/bench10|
+| Executed on    : plxch4069                  Pool : pdx_misc                 |
+| Queueing time  : Sun Nov  4 07:00:33 2018                                   |
+| Starting time  : Sun Nov  4 07:00:35 2018          Qwait:   0h:00m:02s      |
 | Command        : part3.py -a kmeans-sweepk-CH --ncomp 40 -s ds4 --reducer rp |
 +-----------------------------------------------------------------------------+
+** -> rp projection calculation for ds4, k=40 elapsed seconds 0.0030760765075683594 <- took less than 1 second
+Wrote /nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/class/proj3/datasets/ds4/dimreducer-rp-40.pkl
+** -> kmeans ds4 k=2 elapsed seconds 0.9095897674560547 <- took less than 1 second
+** -> CH ds4 k=2 elapsed seconds 0.012730836868286133 <- took less than 1 second
+Dataset=ds4 k=2 CH=2941.9501686227813
+** -> kmeans ds4 k=4 elapsed seconds 1.5682971477508545 <- took 1.0 second
+** -> CH ds4 k=4 elapsed seconds 0.013261556625366211 <- took less than 1 second
+Dataset=ds4 k=4 CH=2335.479985422384
+** -> kmeans ds4 k=6 elapsed seconds 1.894207239151001 <- took 1.0 second
+** -> CH ds4 k=6 elapsed seconds 0.013292312622070312 <- took less than 1 second
+Dataset=ds4 k=6 CH=1967.515081791498
+** -> kmeans ds4 k=8 elapsed seconds 2.3578763008117676 <- took 2.0 seconds
+** -> CH ds4 k=8 elapsed seconds 0.013878107070922852 <- took less than 1 second
+Dataset=ds4 k=8 CH=1795.1329158727526
+** -> kmeans ds4 k=10 elapsed seconds 3.046043634414673 <- took 3.0 seconds
+** -> CH ds4 k=10 elapsed seconds 0.013546466827392578 <- took less than 1 second
+Dataset=ds4 k=10 CH=1706.544244728088
+** -> kmeans ds4 k=12 elapsed seconds 3.8284494876861572 <- took 3.0 seconds
+** -> CH ds4 k=12 elapsed seconds 0.013881683349609375 <- took less than 1 second
+Dataset=ds4 k=12 CH=1723.297428803032
+** -> kmeans ds4 k=14 elapsed seconds 3.4093244075775146 <- took 3.0 seconds
+** -> CH ds4 k=14 elapsed seconds 0.01402592658996582 <- took less than 1 second
+Dataset=ds4 k=14 CH=1649.79781521499
+** -> kmeans ds4 k=16 elapsed seconds 4.8101966381073 <- took 4.0 seconds
+** -> CH ds4 k=16 elapsed seconds 0.013989686965942383 <- took less than 1 second
+Dataset=ds4 k=16 CH=1622.494246282267
+** -> kmeans ds4 k=18 elapsed seconds 4.597576856613159 <- took 4.0 seconds
+** -> CH ds4 k=18 elapsed seconds 0.014869451522827148 <- took less than 1 second
+Dataset=ds4 k=18 CH=1621.1766736097989
+** -> kmeans ds4 k=20 elapsed seconds 5.526952505111694 <- took 5.0 seconds
+** -> CH ds4 k=20 elapsed seconds 0.014380931854248047 <- took less than 1 second
+Dataset=ds4 k=20 CH=1611.136611741432
+** -> kmeans ds4 k=22 elapsed seconds 5.467872142791748 <- took 5.0 seconds
+** -> CH ds4 k=22 elapsed seconds 0.014711856842041016 <- took less than 1 second
+Dataset=ds4 k=22 CH=1628.914776788304
+** -> kmeans ds4 k=24 elapsed seconds 6.204333782196045 <- took 6.0 seconds
+** -> CH ds4 k=24 elapsed seconds 0.014793872833251953 <- took less than 1 second
+Dataset=ds4 k=24 CH=1625.869259784602
+** -> kmeans ds4 k=26 elapsed seconds 5.8398213386535645 <- took 5.0 seconds
+** -> CH ds4 k=26 elapsed seconds 0.015158414840698242 <- took less than 1 second
+Dataset=ds4 k=26 CH=1606.8260449591419
+** -> kmeans ds4 k=28 elapsed seconds 5.661943435668945 <- took 5.0 seconds
+** -> CH ds4 k=28 elapsed seconds 0.01545095443725586 <- took less than 1 second
+Dataset=ds4 k=28 CH=1554.0855795813213
 /nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/mlai/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
   from numpy.core.umath_tests import inner1d
-Traceback (most recent call last):
-  File "bin/part3.py", line 92, in <module>
-    transformer, reduction = get_reducer_X_transformer(dataset,reducer,ncomp)
-  File "bin/part3.py", line 25, in get_reducer_X_transformer
-    red = get_dim_reducer(dataset, reducer, n_components)
-  File "/nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/class/proj3/bin/dimension_reduction_lib.py", line 68, in get_dim_reducer
-    reducer = get_rp_reducer(X_train, k)
-  File "/nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/class/proj3/bin/dimension_reduction_lib.py", line 28, in get_rp_reducer
-    X_projected = reducer.inverse_transform(X_train_reduced)
-AttributeError: 'SparseRandomProjection' object has no attribute 'inverse_transform'
 +-----------------------------------------------------------------------------+
-| Exit Status    : 1                                                          |
-| Finishing time : Sun Nov  4 05:42:18 2018                                   |
-| CPU time       : Usr 2.008s  Sys 5.12s   WC  0h:00m:02s                     |
-| Rusage Stats   : Mem:0      PF:  0/0       CSv/f:  0/0     Swaps:0          |
+| Exit Status    : 0                                                          |
+| Finishing time : Sun Nov  4 07:01:35 2018                                   |
+| CPU time       : Usr 73.792s Sys 120.563s WC  0h:01m:00s                     |
+| Rusage Stats   : Mem:196    PF:  105153/0  CSv/f:  0/0     Swaps:0          |
 |                :           Msg:    0/0     IOops:  0/0     Sigs :0          |
 +-----------------------------------------------------------------------------+

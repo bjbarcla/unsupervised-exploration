@@ -1,27 +1,82 @@
 +-----------------------------------------------------------------------------+
 | Logfile        : kmeans-sweepk-ds1-rp-5-CH.log                              |
-| Job id         : 5091183345                 Class: SLES11SP4&&8C&&32G Qslot: /icf/fdk/pdx_critical_vp/bench3|
-| Executed on    : plxcj7015                  Pool : pdx_misc                 |
-| Queueing time  : Sun Nov  4 05:41:58 2018                                   |
-| Starting time  : Sun Nov  4 05:42:03 2018          Qwait:   0h:00m:05s      |
+| Job id         : 5091306373                 Class: SLES11SP4&&8C&&32G Qslot: /icf/fdk/pdx_critical_vp/bench1|
+| Executed on    : pdxjdi001                  Pool : pdx_misc                 |
+| Queueing time  : Sun Nov  4 07:00:20 2018                                   |
+| Starting time  : Sun Nov  4 07:00:21 2018          Qwait:   0h:00m:01s      |
 | Command        : part3.py -a kmeans-sweepk-CH --ncomp 5 -s ds1 --reducer rp |
 +-----------------------------------------------------------------------------+
 /nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/mlai/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
   from numpy.core.umath_tests import inner1d
-Traceback (most recent call last):
-  File "bin/part3.py", line 92, in <module>
-    transformer, reduction = get_reducer_X_transformer(dataset,reducer,ncomp)
-  File "bin/part3.py", line 25, in get_reducer_X_transformer
-    red = get_dim_reducer(dataset, reducer, n_components)
-  File "/nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/class/proj3/bin/dimension_reduction_lib.py", line 68, in get_dim_reducer
-    reducer = get_rp_reducer(X_train, k)
-  File "/nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/class/proj3/bin/dimension_reduction_lib.py", line 28, in get_rp_reducer
-    X_projected = reducer.inverse_transform(X_train_reduced)
-AttributeError: 'SparseRandomProjection' object has no attribute 'inverse_transform'
+** -> rp projection calculation for ds1, k=5 elapsed seconds 0.008176803588867188 <- took less than 1 second
+Wrote /nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/class/proj3/datasets/ds1/dimreducer-rp-5.pkl
+** -> kmeans ds1 k=2 elapsed seconds 0.31195712089538574 <- took less than 1 second
+** -> CH ds1 k=2 elapsed seconds 0.007639408111572266 <- took less than 1 second
+Dataset=ds1 k=2 CH=49631.68132261662
+** -> kmeans ds1 k=6 elapsed seconds 0.7684116363525391 <- took less than 1 second
+** -> CH ds1 k=6 elapsed seconds 0.010124444961547852 <- took less than 1 second
+Dataset=ds1 k=6 CH=61085.67476096228
+** -> kmeans ds1 k=10 elapsed seconds 1.4244999885559082 <- took 1.0 second
+** -> CH ds1 k=10 elapsed seconds 0.011517524719238281 <- took less than 1 second
+Dataset=ds1 k=10 CH=80244.7017500542
+** -> kmeans ds1 k=14 elapsed seconds 1.2270712852478027 <- took 1.0 second
+** -> CH ds1 k=14 elapsed seconds 0.012845516204833984 <- took less than 1 second
+Dataset=ds1 k=14 CH=105960.07180692775
+** -> kmeans ds1 k=18 elapsed seconds 2.2582714557647705 <- took 2.0 seconds
+** -> CH ds1 k=18 elapsed seconds 0.014432430267333984 <- took less than 1 second
+Dataset=ds1 k=18 CH=122070.98314724713
+** -> kmeans ds1 k=22 elapsed seconds 2.0818932056427 <- took 2.0 seconds
+** -> CH ds1 k=22 elapsed seconds 0.014187335968017578 <- took less than 1 second
+Dataset=ds1 k=22 CH=141519.11900060624
+** -> kmeans ds1 k=26 elapsed seconds 2.2090067863464355 <- took 2.0 seconds
+** -> CH ds1 k=26 elapsed seconds 0.015191078186035156 <- took less than 1 second
+Dataset=ds1 k=26 CH=149693.09429892196
+** -> kmeans ds1 k=30 elapsed seconds 2.7142045497894287 <- took 2.0 seconds
+** -> CH ds1 k=30 elapsed seconds 0.016546249389648438 <- took less than 1 second
+Dataset=ds1 k=30 CH=161029.4725330577
+** -> kmeans ds1 k=34 elapsed seconds 2.7738564014434814 <- took 2.0 seconds
+** -> CH ds1 k=34 elapsed seconds 0.017317533493041992 <- took less than 1 second
+Dataset=ds1 k=34 CH=173581.95297461486
+** -> kmeans ds1 k=38 elapsed seconds 2.8719189167022705 <- took 2.0 seconds
+** -> CH ds1 k=38 elapsed seconds 0.0186464786529541 <- took less than 1 second
+Dataset=ds1 k=38 CH=195508.5295097882
+** -> kmeans ds1 k=42 elapsed seconds 3.0668458938598633 <- took 3.0 seconds
+** -> CH ds1 k=42 elapsed seconds 0.019755125045776367 <- took less than 1 second
+Dataset=ds1 k=42 CH=204494.43710185736
+** -> kmeans ds1 k=46 elapsed seconds 3.9552087783813477 <- took 3.0 seconds
+** -> CH ds1 k=46 elapsed seconds 0.02108597755432129 <- took less than 1 second
+Dataset=ds1 k=46 CH=215537.30997685407
+** -> kmeans ds1 k=50 elapsed seconds 4.299642324447632 <- took 4.0 seconds
+** -> CH ds1 k=50 elapsed seconds 0.023069381713867188 <- took less than 1 second
+Dataset=ds1 k=50 CH=232066.5462848513
+** -> kmeans ds1 k=54 elapsed seconds 4.491738796234131 <- took 4.0 seconds
+** -> CH ds1 k=54 elapsed seconds 0.02346491813659668 <- took less than 1 second
+Dataset=ds1 k=54 CH=237501.00400002828
+** -> kmeans ds1 k=58 elapsed seconds 4.5988311767578125 <- took 4.0 seconds
+** -> CH ds1 k=58 elapsed seconds 0.024697303771972656 <- took less than 1 second
+Dataset=ds1 k=58 CH=247501.89556156605
+** -> kmeans ds1 k=62 elapsed seconds 5.166990756988525 <- took 5.0 seconds
+** -> CH ds1 k=62 elapsed seconds 0.025394916534423828 <- took less than 1 second
+Dataset=ds1 k=62 CH=261122.78830079237
+** -> kmeans ds1 k=66 elapsed seconds 6.441740274429321 <- took 6.0 seconds
+** -> CH ds1 k=66 elapsed seconds 0.02633523941040039 <- took less than 1 second
+Dataset=ds1 k=66 CH=282441.6293342235
+** -> kmeans ds1 k=70 elapsed seconds 6.733973979949951 <- took 6.0 seconds
+** -> CH ds1 k=70 elapsed seconds 0.027383804321289062 <- took less than 1 second
+Dataset=ds1 k=70 CH=288414.874406021
+** -> kmeans ds1 k=74 elapsed seconds 7.385082483291626 <- took 7.0 seconds
+** -> CH ds1 k=74 elapsed seconds 0.02860736846923828 <- took less than 1 second
+Dataset=ds1 k=74 CH=299057.53198159835
+** -> kmeans ds1 k=78 elapsed seconds 12.197558879852295 <- took 12.0 seconds
+** -> CH ds1 k=78 elapsed seconds 0.0321502685546875 <- took less than 1 second
+Dataset=ds1 k=78 CH=328383.7120756337
+** -> kmeans ds1 k=82 elapsed seconds 12.348320484161377 <- took 12.0 seconds
+** -> CH ds1 k=82 elapsed seconds 0.03632783889770508 <- took less than 1 second
+Dataset=ds1 k=82 CH=336326.2813260278
 +-----------------------------------------------------------------------------+
-| Exit Status    : 1                                                          |
-| Finishing time : Sun Nov  4 05:42:06 2018                                   |
-| CPU time       : Usr 1.848s  Sys 2.964s  WC  0h:00m:03s                     |
-| Rusage Stats   : Mem:0      PF:  0/0       CSv/f:  0/0     Swaps:0          |
+| Exit Status    : 0                                                          |
+| Finishing time : Sun Nov  4 07:01:56 2018                                   |
+| CPU time       : Usr 277.581s Sys 1636.854s WC  0h:01m:35s                     |
+| Rusage Stats   : Mem:228    PF:  7215783/0 CSv/f:  0/0     Swaps:0          |
 |                :           Msg:    0/0     IOops:  0/0     Sigs :0          |
 +-----------------------------------------------------------------------------+
