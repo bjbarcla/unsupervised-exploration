@@ -1,0 +1,61 @@
++-----------------------------------------------------------------------------+
+| Logfile        : kmeans-sweepk-ds4-ica-40-CH.log                            |
+| Job id         : 5091043529                 Class: SLES11SP4&&8C&&32G Qslot: /icf/fdk/pdx_critical_vp/bench12|
+| Executed on    : plxck3018                  Pool : pdx_misc                 |
+| Queueing time  : Sun Nov  4 04:13:12 2018                                   |
+| Starting time  : Sun Nov  4 04:13:18 2018          Qwait:   0h:00m:06s      |
+| Command        : part3.py -a kmeans-sweepk-CH --ncomp 40 -s ds4 --reducer ica |
++-----------------------------------------------------------------------------+
+/nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/mlai/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
+  from numpy.core.umath_tests import inner1d
+** -> ica projection calculation for ds4, k=40 elapsed seconds 9.792848587036133 <- took 9.0 seconds
+Wrote /nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/class/proj3/datasets/ds4/dimreducer-ica-40.pkl
+** -> kmeans ds4 k=2 elapsed seconds 1.3753471374511719 <- took 1.0 second
+** -> CH ds4 k=2 elapsed seconds 0.012798547744750977 <- took less than 1 second
+Dataset=ds4 k=2 CH=963.9815772409521
+** -> kmeans ds4 k=4 elapsed seconds 2.108879804611206 <- took 2.0 seconds
+** -> CH ds4 k=4 elapsed seconds 0.014268159866333008 <- took less than 1 second
+Dataset=ds4 k=4 CH=930.0695860078613
+** -> kmeans ds4 k=6 elapsed seconds 2.6416218280792236 <- took 2.0 seconds
+** -> CH ds4 k=6 elapsed seconds 0.0171968936920166 <- took less than 1 second
+Dataset=ds4 k=6 CH=984.2141391650872
+** -> kmeans ds4 k=8 elapsed seconds 2.8596155643463135 <- took 2.0 seconds
+** -> CH ds4 k=8 elapsed seconds 0.0185544490814209 <- took less than 1 second
+Dataset=ds4 k=8 CH=991.4381198039251
+** -> kmeans ds4 k=10 elapsed seconds 2.8838822841644287 <- took 2.0 seconds
+** -> CH ds4 k=10 elapsed seconds 0.013196229934692383 <- took less than 1 second
+Dataset=ds4 k=10 CH=1027.3827003628023
+** -> kmeans ds4 k=12 elapsed seconds 3.410537004470825 <- took 3.0 seconds
+** -> CH ds4 k=12 elapsed seconds 0.013712644577026367 <- took less than 1 second
+Dataset=ds4 k=12 CH=1052.3820844061452
+** -> kmeans ds4 k=14 elapsed seconds 3.869887590408325 <- took 3.0 seconds
+** -> CH ds4 k=14 elapsed seconds 0.013724803924560547 <- took less than 1 second
+Dataset=ds4 k=14 CH=1085.0435698047104
+** -> kmeans ds4 k=16 elapsed seconds 3.8106770515441895 <- took 3.0 seconds
+** -> CH ds4 k=16 elapsed seconds 0.020433664321899414 <- took less than 1 second
+Dataset=ds4 k=16 CH=1150.806817173553
+** -> kmeans ds4 k=18 elapsed seconds 4.815545082092285 <- took 4.0 seconds
+** -> CH ds4 k=18 elapsed seconds 0.015630722045898438 <- took less than 1 second
+Dataset=ds4 k=18 CH=1191.060779813884
+** -> kmeans ds4 k=20 elapsed seconds 5.150295257568359 <- took 5.0 seconds
+** -> CH ds4 k=20 elapsed seconds 0.01634526252746582 <- took less than 1 second
+Dataset=ds4 k=20 CH=1248.6352901822681
+** -> kmeans ds4 k=22 elapsed seconds 5.494792938232422 <- took 5.0 seconds
+** -> CH ds4 k=22 elapsed seconds 0.017564058303833008 <- took less than 1 second
+Dataset=ds4 k=22 CH=1288.5258290336976
+** -> kmeans ds4 k=24 elapsed seconds 6.31931734085083 <- took 6.0 seconds
+** -> CH ds4 k=24 elapsed seconds 0.018709659576416016 <- took less than 1 second
+Dataset=ds4 k=24 CH=1426.0120882227745
+** -> kmeans ds4 k=26 elapsed seconds 6.323497295379639 <- took 6.0 seconds
+** -> CH ds4 k=26 elapsed seconds 0.01595473289489746 <- took less than 1 second
+Dataset=ds4 k=26 CH=1427.5968353774335
+** -> kmeans ds4 k=28 elapsed seconds 6.64368200302124 <- took 6.0 seconds
+** -> CH ds4 k=28 elapsed seconds 0.01769256591796875 <- took less than 1 second
+Dataset=ds4 k=28 CH=1442.3524658717843
++-----------------------------------------------------------------------------+
+| Exit Status    : 0                                                          |
+| Finishing time : Sun Nov  4 04:14:33 2018                                   |
+| CPU time       : Usr 90.213s Sys 262.084s WC  0h:01m:15s                     |
+| Rusage Stats   : Mem:225    PF:  111031/0  CSv/f:  0/0     Swaps:0          |
+|                :           Msg:    0/0     IOops:  0/0     Sigs :0          |
++-----------------------------------------------------------------------------+

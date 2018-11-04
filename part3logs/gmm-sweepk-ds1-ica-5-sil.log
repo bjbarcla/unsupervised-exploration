@@ -1,0 +1,8 @@
++-----------------------------------------------------------------------------+
+| Logfile        : gmm-sweepk-ds1-ica-5-sil.log                               |
+| Job id         : 5091043313                 Class: SLES11SP4&&8C&&32G Qslot: /icf/fdk/pdx_critical_vp/bench11|
+| Executed on    : plxcfb015                  Pool : pdx_misc                 |
+| Queueing time  : Sun Nov  4 04:13:05 2018                                   |
+| Starting time  : Sun Nov  4 04:13:09 2018          Qwait:   0h:00m:04s      |
+| Command        : part3.py -a gmm-sweepk --ncomp 5 -s ds1 --reducer ica      |
++-----------------------------------------------------------------------------+

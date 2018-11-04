@@ -1,0 +1,61 @@
++-----------------------------------------------------------------------------+
+| Logfile        : kmeans-sweepk-ds4-ica-57-CH.log                            |
+| Job id         : 5091043611                 Class: SLES11SP4&&8C&&32G Qslot: /icf/fdk/pdx_critical_vp/bench13|
+| Executed on    : plxck3004                  Pool : pdx_misc                 |
+| Queueing time  : Sun Nov  4 04:13:17 2018                                   |
+| Starting time  : Sun Nov  4 04:13:18 2018          Qwait:   0h:00m:01s      |
+| Command        : part3.py -a kmeans-sweepk-CH --ncomp 57 -s ds4 --reducer ica |
++-----------------------------------------------------------------------------+
+** -> ica projection calculation for ds4, k=57 elapsed seconds 16.602622032165527 <- took 16.0 seconds
+Wrote /nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/class/proj3/datasets/ds4/dimreducer-ica-57.pkl
+** -> kmeans ds4 k=2 elapsed seconds 0.45543408393859863 <- took less than 1 second
+** -> CH ds4 k=2 elapsed seconds 0.013661861419677734 <- took less than 1 second
+Dataset=ds4 k=2 CH=958.1799524566447
+** -> kmeans ds4 k=4 elapsed seconds 0.8616132736206055 <- took less than 1 second
+** -> CH ds4 k=4 elapsed seconds 0.013534784317016602 <- took less than 1 second
+Dataset=ds4 k=4 CH=812.646373635537
+** -> kmeans ds4 k=6 elapsed seconds 0.9960203170776367 <- took less than 1 second
+** -> CH ds4 k=6 elapsed seconds 0.01402902603149414 <- took less than 1 second
+Dataset=ds4 k=6 CH=809.6120104179956
+** -> kmeans ds4 k=8 elapsed seconds 1.2922422885894775 <- took 1.0 second
+** -> CH ds4 k=8 elapsed seconds 0.014919281005859375 <- took less than 1 second
+Dataset=ds4 k=8 CH=796.4728185241736
+** -> kmeans ds4 k=10 elapsed seconds 1.377610683441162 <- took 1.0 second
+** -> CH ds4 k=10 elapsed seconds 0.014246225357055664 <- took less than 1 second
+Dataset=ds4 k=10 CH=807.9637682298218
+** -> kmeans ds4 k=12 elapsed seconds 1.5242633819580078 <- took 1.0 second
+** -> CH ds4 k=12 elapsed seconds 0.014757871627807617 <- took less than 1 second
+Dataset=ds4 k=12 CH=843.5213809685263
+** -> kmeans ds4 k=14 elapsed seconds 1.9376697540283203 <- took 1.0 second
+** -> CH ds4 k=14 elapsed seconds 0.015198945999145508 <- took less than 1 second
+Dataset=ds4 k=14 CH=877.8021512418172
+** -> kmeans ds4 k=16 elapsed seconds 1.7764594554901123 <- took 1.0 second
+** -> CH ds4 k=16 elapsed seconds 0.014713525772094727 <- took less than 1 second
+Dataset=ds4 k=16 CH=925.5653964419668
+** -> kmeans ds4 k=18 elapsed seconds 2.174906015396118 <- took 2.0 seconds
+** -> CH ds4 k=18 elapsed seconds 0.015569210052490234 <- took less than 1 second
+Dataset=ds4 k=18 CH=912.0971763204759
+** -> kmeans ds4 k=20 elapsed seconds 2.296081304550171 <- took 2.0 seconds
+** -> CH ds4 k=20 elapsed seconds 0.015679359436035156 <- took less than 1 second
+Dataset=ds4 k=20 CH=940.2196412187551
+** -> kmeans ds4 k=22 elapsed seconds 2.286911964416504 <- took 2.0 seconds
+** -> CH ds4 k=22 elapsed seconds 0.015596866607666016 <- took less than 1 second
+Dataset=ds4 k=22 CH=993.31317396132
+** -> kmeans ds4 k=24 elapsed seconds 2.1172120571136475 <- took 2.0 seconds
+** -> CH ds4 k=24 elapsed seconds 0.015506744384765625 <- took less than 1 second
+Dataset=ds4 k=24 CH=1059.400241402848
+** -> kmeans ds4 k=26 elapsed seconds 2.7216122150421143 <- took 2.0 seconds
+** -> CH ds4 k=26 elapsed seconds 0.016276836395263672 <- took less than 1 second
+Dataset=ds4 k=26 CH=1064.8848567452837
+** -> kmeans ds4 k=28 elapsed seconds 2.8571784496307373 <- took 2.0 seconds
+** -> CH ds4 k=28 elapsed seconds 0.016755104064941406 <- took less than 1 second
+Dataset=ds4 k=28 CH=1092.1560410102938
+/nfs/pdx/disks/icf_env_disk001/bjbarcla/gwa/issues/ml/mlai/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.
+  from numpy.core.umath_tests import inner1d
++-----------------------------------------------------------------------------+
+| Exit Status    : 0                                                          |
+| Finishing time : Sun Nov  4 04:14:06 2018                                   |
+| CPU time       : Usr 76.596s Sys 198.148s WC  0h:00m:48s                     |
+| Rusage Stats   : Mem:236    PF:  114313/2  CSv/f:  0/0     Swaps:0          |
+|                :           Msg:    0/0     IOops:  0/0     Sigs :0          |
++-----------------------------------------------------------------------------+

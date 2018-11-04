@@ -1,0 +1,8 @@
++-----------------------------------------------------------------------------+
+| Logfile        : kmeans-sweepk-ds1-ica-10-CH.log                            |
+| Job id         : 5091043393                 Class: SLES11SP4&&8C&&32G Qslot: /icf/fdk/pdx_critical_vp/bench12|
+| Executed on    : plxck3017                  Pool : pdx_misc                 |
+| Queueing time  : Sun Nov  4 04:13:10 2018                                   |
+| Starting time  : Sun Nov  4 04:13:18 2018          Qwait:   0h:00m:08s      |
+| Command        : part3.py -a kmeans-sweepk-CH --ncomp 10 -s ds1 --reducer ica |
++-----------------------------------------------------------------------------+
