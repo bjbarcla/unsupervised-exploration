@@ -119,3 +119,6 @@ part2-curves:
 	bin/part2.py -a pca-eigenplot -s ds4
 	bin/part2.py -a	pca-loss -s ds1
 	bin/part2.py -a	pca-loss -s ds4
+#MENU part3_scores.csv: gen
+part3_scores.csv:
+	bin/part3.py -a graphs | grep INFO | sed 's/INFO //' > part3_scores.csv
