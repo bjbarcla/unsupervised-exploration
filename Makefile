@@ -111,9 +111,11 @@ make cviz:
 
 part1-graphs: cviz all-sweep-plots
 
-#MENU: part2-curves: plot sweeps of n_components
+#MENU part2-curves: plot sweeps of n_components
 part2-curves:
 	bin/part2.py -a ica-kurtcurve -s ds1
 	bin/part2.py -a ica-kurtcurve -s ds4
 	bin/part2.py -a pca-eigenplot -s ds1
 	bin/part2.py -a pca-eigenplot -s ds4
+	bin/part2.py -a	pca-loss -s ds1
+	bin/part2.py -a	pca-loss -s ds4
